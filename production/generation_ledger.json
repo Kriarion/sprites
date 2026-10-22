@@ -1,0 +1,52 @@
+{
+  "ledger_schema_version": "1.0.0",
+  "project": "dragonball-aqw-asset-pack",
+  "policy": {
+    "max_generations_per_session": 10,
+    "target_new_generations": [6, 8],
+    "target_reserved_corrections": [2, 4],
+    "interactive_variant_mode_allowed": false,
+    "source_of_truth": "this file",
+    "rule": "total_executed must equal executed_new + executed_corrections; session must stop at 10"
+  },
+  "totals": {
+    "sessions_completed": 0,
+    "generations_executed": 0,
+    "assets_approved": 0,
+    "generations_per_approved_asset": null
+  },
+  "sessions": [
+    {
+      "session_id": "DB-SESSION-0000",
+      "date": "2026-10-22",
+      "type": "PLANNING",
+      "objective": "Fase 0: leitura dos guides, auditoria de ferramentas, planejamento, roadmap, Visual Bible em prosa, especificacoes tecnicas, ADRs 0001-0005, infraestrutura de registros",
+      "planned_new": 0,
+      "reserved_corrections": 0,
+      "executed_new": 0,
+      "executed_corrections": 0,
+      "total_executed": 0,
+      "assets_created": [],
+      "assets_approved": [],
+      "assets_rejected": [],
+      "corrections": [],
+      "notes": "Sessao sem geracao de imagem. Nenhum asset declarado. Documentacao e infraestrutura apenas.",
+      "next_session": "DB-SESSION-0001"
+    }
+  ],
+  "planned_next": {
+    "session_id": "DB-SESSION-0001",
+    "type": "REFERENCE",
+    "objective": "Calibracao de estilo (dummy neutro) + spike de decomposicao de pecas em grade",
+    "planned_new": 6,
+    "reserved_corrections": 4,
+    "calls": [
+      { "id": "G1", "asset": "DB_REF_STYLE_DUMMY", "content": "dummy neutro M/F frente e perfil" },
+      { "id": "G2", "asset": "DB_REF_SHADING_MATERIALS", "content": "estudo de 3 tons, half-shadow, 4 materiais" },
+      { "id": "G3", "asset": "DB_PART_SHEET_A_SPIKE", "content": "grade 4x4 com 12 pecas de corpo em fundo magenta" },
+      { "id": "G4", "asset": "DB_REF_HEAD_SHEET", "content": "4 cabecas neutras (M, F, infantil, musculosa)" },
+      { "id": "G5", "asset": "DB_REF_WEAPON_SHEET", "content": "4 armas oversized com cabo alinhado" },
+      { "id": "G6", "asset": "DB_REF_UI_PROBE", "content": "moldura, barras e 6 icones em grade" }
+    ]
+  }
+}

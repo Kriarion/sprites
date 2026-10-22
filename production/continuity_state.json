@@ -1,0 +1,79 @@
+{
+  "state_schema_version": "1.0.0",
+  "project": "dragonball-aqw-asset-pack",
+  "current_phase": "FASE_0_CONCLUIDA",
+  "current_wave": "W0",
+  "next_wave": "W1",
+  "last_completed_session": "DB-SESSION-0000",
+  "next_session": "DB-SESSION-0001",
+  "standards": {
+    "visual_bible": "1.0.0",
+    "technical": "1.0.0",
+    "naming": "1.0.0",
+    "rig": "1.0.0",
+    "animation": "1.0.0",
+    "ui": "1.0.0",
+    "pack": "0.1.0"
+  },
+  "gen_budget": {
+    "max_per_session": 10,
+    "next_session_planned_new": 6,
+    "next_session_reserved": 4,
+    "sessions_completed": 0,
+    "generations_executed_lifetime": 0
+  },
+  "approved_assets": [],
+  "pending_assets": [],
+  "blocked_assets": [],
+  "reworked_assets": [],
+  "known_issues": [
+    {
+      "id": "ISSUE-001",
+      "severity": "high",
+      "title": "Separacao de pecas nao validada em imagem",
+      "detail": "ADR-0001 propoe grade deterministica + chroma-key. Nenhum teste real executado. O pipeline tools/key.py e tools/decompose.py ainda nao existem.",
+      "blocks": "FASE_1 (M1), logo FASE_2/3",
+      "next_action": "spike na DB-SESSION-0001 e fechamento do ADR-0001"
+    },
+    {
+      "id": "ISSUE-002",
+      "severity": "medium",
+      "title": "Ferramentas de pipeline nao implementadas",
+      "detail": "tools/ contem apenas contrato e requirements. Sem key/decompose/compose/validate/atlas, nenhum asset pode ser APPROVED (gate G2/G3).",
+      "blocks": "G2, G3",
+      "next_action": "implementar em DB-SESSION-0001/0002"
+    },
+    {
+      "id": "ISSUE-003",
+      "severity": "medium",
+      "title": "Visual Bible nao validada em imagem",
+      "detail": "art_style_guide 1.0.0 e normativa em prosa; numeros de contorno, paleta e proporcao sao alvos, nao medicoes.",
+      "blocks": "congelamento do estilo (M1)",
+      "next_action": "calibrar com G1/G2 da DB-SESSION-0001 e publicar 1.1.0"
+    },
+    {
+      "id": "ISSUE-004",
+      "severity": "low",
+      "title": "Sem fontes de sistema para previews com texto",
+      "detail": "fc-list retorna 0 fontes. Previews de UI devem evitar texto ou embutir fonte propria.",
+      "blocks": "previews de UI com texto",
+      "next_action": "decidir em W11; UI e entregue sem texto por desenho"
+    }
+  ],
+  "next_priorities": [
+    "1. DB-SESSION-0001: spike de estilo + decomposicao (6 novas / 4 reserva)",
+    "2. Implementar tools/key.py, tools/decompose.py, tools/validate.py",
+    "3. DB-SESSION-0002: fechar Visual Bible 1.1.0 e ADR-0001 com numeros reais",
+    "4. W2: corpos base masculino/feminino com 21 pecas e rig JSON",
+    "5. W3: vertical slice Goku ate M3"
+  ],
+  "decisions_pending_human": [
+    {
+      "id": "PENDING-001",
+      "title": "Aprovacao do plano e do roadmap para iniciar FASE 1",
+      "detail": "Documentacao completa entregue. Producao de imagem nao iniciada. Aguardando aprovacao explicita."
+    }
+  ],
+  "last_updated": "2026-10-22",
+  "updated_by_session": "DB-SESSION-0000"
+}

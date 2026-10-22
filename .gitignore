@@ -1,0 +1,31 @@
+# --- Ambiente de pipeline (reprodutível, não versionado) ---
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# --- Temporários de processamento (nunca entregáveis) ---
+production/rejected/**
+!production/rejected/README.md
+tools/_tmp/
+exports/_work/
+*.tmp
+*.log
+
+# --- Lixo de sistema ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editores ---
+.vscode/
+.idea/
+*.swp
+
+# --- Regra de tamanho ---
+# Nenhum arquivo acima de ~5 MB deve ser commitado sem ADR.
+# Assets maiores (mapas 4096+, PSD/FLA master) ficam em armazenamento externo
+# referenciado em production/asset_registry.json (campo "external_storage").

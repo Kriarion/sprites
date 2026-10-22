@@ -1,0 +1,34 @@
+{
+  "template": "PART_SHEET_B",
+  "version": "1.0.0",
+  "purpose": "Cabeca, cabelo, helm e expressoes",
+  "canvas_px": [1024, 1024],
+  "grid": { "cols": 4, "rows": 4 },
+  "cell_px": 256,
+  "content_px": 224,
+  "gutter_px": 16,
+  "background": "#FF00FF",
+  "background_alt": "#00FF00",
+  "trim_px": 2,
+  "prompt_order": [
+    "head", "hair_front", "hair_back", "helm",
+    "face_eyes_open", "face_eyes_blink", "face_mouth_neutral", "face_mouth_open",
+    "empty", "empty", "empty", "empty",
+    "empty", "empty", "empty", "empty"
+  ],
+  "cells": [
+    { "index": 0, "part": "head",               "anchor": "neck",      "layer": 15, "pivot": [0.50, 0.94] },
+    { "index": 1, "part": "hair_front",         "anchor": "hair.front","layer": 16, "pivot": [0.50, 0.90] },
+    { "index": 2, "part": "hair_back",          "anchor": "hair.back", "layer": 2,  "pivot": [0.50, 0.10], "shaded": true },
+    { "index": 3, "part": "helm",               "anchor": "helm",      "layer": 16, "pivot": [0.50, 0.92] },
+    { "index": 4, "part": "face_eyes_open",     "anchor": "face",      "layer": 15, "pivot": [0.50, 0.50] },
+    { "index": 5, "part": "face_eyes_blink",    "anchor": "face",      "layer": 15, "pivot": [0.50, 0.50] },
+    { "index": 6, "part": "face_mouth_neutral", "anchor": "face",      "layer": 15, "pivot": [0.50, 0.50] },
+    { "index": 7, "part": "face_mouth_open",    "anchor": "face",      "layer": 15, "pivot": [0.50, 0.50] }
+  ],
+  "notes": [
+    "face_eyes_* e face_mouth_* sao overlays da cabeca: mesmo canvas e mesmo ponto de pivo.",
+    "hair_front e helm ocupam a mesma camada 16 e sao mutuamente exclusivos por slot.",
+    "A cabeca deve caber na proporcao canonica: 36 u de altura (art_style_guide §5.1)."
+  ]
+}

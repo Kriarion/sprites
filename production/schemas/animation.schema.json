@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kriarion.local/schemas/animation.schema.json",
+  "title": "Animation Timeline",
+  "description": "Timeline de animação por rig. Tempo em ms, rotação em graus horário-positivo.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["animation", "rig", "fps", "duration_ms", "loop", "tracks"],
+  "properties": {
+    "animation": {
+      "enum": ["idle", "idle_combat", "blink", "walk", "run", "jump", "fall", "land",
+               "attack01", "attack02", "heavy", "ki_cast", "ki_charge", "hit", "knockback",
+               "death", "revive", "transform", "fly", "emote_wave", "emote_dance", "emote_laugh", "sit"]
+    },
+    "rig": { "type": "string" },
+    "fps": { "type": "integer", "minimum": 1, "maximum": 120 },
+    "duration_ms": { "type": "integer", "minimum": 50, "maximum": 10000 },
+    "loop": { "type": "boolean" },
+    "tracks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 2,
+        "items": {
+          "type": "object",
+          "required": ["t"],
+          "properties": {
+            "t": { "type": "number", "minimum": 0 },
+            "x": { "type": "number" },
+            "y": { "type": "number" },
+            "rot": { "type": "number", "minimum": -360, "maximum": 360 },
+            "scale": { "type": "number", "minimum": 0.1, "maximum": 4 },
+            "alpha": { "type": "number", "minimum": 0, "maximum": 1 },
+            "ease": { "enum": ["linear", "in", "out", "inout"] }
+          }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["t", "type"],
+        "properties": {
+          "t": { "type": "number", "minimum": 0 },
+          "type": {
+            "enum": ["hit_frame", "projectile_spawn", "muzzle_flash", "footstep", "land_impact",
+                     "camera_shake", "flash", "form_swap", "sfx", "spawn", "death_end",
+                     "blink", "charge_tick", "aura_burst", "leave_ground", "revive_end", "dust"]
+          },
+          "value": {},
+          "data": { "type": "object" }
+        }
+      }
+    },
+    "hitbox_events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["t", "box"],
+        "properties": {
+          "t": { "type": "number" },
+          "box": { "type": "string" },
+          "shape": { "enum": ["rect", "capsule"] },
+          "x": { "type": "number" },
+          "y": { "type": "number" },
+          "w": { "type": "number" },
+          "h": { "type": "number" },
+          "r": { "type": "number" },
+          "damage_mult": { "type": "number", "minimum": 0 }
+        }
+      }
+    },
+    "hurtbox": {
+      "type": "object",
+      "properties": {
+        "shape": { "enum": ["rect", "capsule"] },
+        "x": { "type": "number" }, "y": { "type": "number" },
+        "w": { "type": "number" }, "h": { "type": "number" }, "r": { "type": "number" }
+      }
+    },
+    "preview": { "type": ["string", "null"] }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "template": "PART_SHEET_A",
+  "version": "1.0.0",
+  "purpose": "Corpo completo (tronco, pelve, membros) em uma unica folha 4x4",
+  "canvas_px": [1024, 1024],
+  "grid": { "cols": 4, "rows": 4 },
+  "cell_px": 256,
+  "content_px": 224,
+  "gutter_px": 16,
+  "background": "#FF00FF",
+  "background_alt": "#00FF00",
+  "trim_px": 2,
+  "scale_note": "desenhado para leitura em 4x; entrega 2x e 1x por downscale LANCZOS",
+  "prompt_order": [
+    "torso", "pelvis", "thigh_front", "thigh_back",
+    "shin_front", "shin_back", "foot_front", "foot_back",
+    "upperarm_front", "upperarm_back", "forearm_front", "forearm_back",
+    "hand_front", "hand_back", "empty", "empty"
+  ],
+  "cells": [
+    { "index": 0,  "part": "torso",           "anchor": "spine_low",      "layer": 11, "pivot": [0.50, 0.92], "min_height_u": 40 },
+    { "index": 1,  "part": "pelvis",          "anchor": "root",           "layer": 10, "pivot": [0.50, 0.10], "min_height_u": 16 },
+    { "index": 2,  "part": "thigh_front",     "anchor": "hip.front",      "layer": 12, "pivot": [0.50, 0.06], "min_height_u": 42 },
+    { "index": 3,  "part": "thigh_back",      "anchor": "hip.back",       "layer": 7,  "pivot": [0.50, 0.06], "min_height_u": 42, "shaded": true },
+    { "index": 4,  "part": "shin_front",      "anchor": "knee.front",     "layer": 13, "pivot": [0.50, 0.06], "min_height_u": 40 },
+    { "index": 5,  "part": "shin_back",       "anchor": "knee.back",      "layer": 8,  "pivot": [0.50, 0.06], "min_height_u": 40, "shaded": true },
+    { "index": 6,  "part": "foot_front",      "anchor": "ankle.front",    "layer": 14, "pivot": [0.45, 0.18], "min_height_u": 12 },
+    { "index": 7,  "part": "foot_back",       "anchor": "ankle.back",     "layer": 9,  "pivot": [0.45, 0.18], "min_height_u": 12, "shaded": true },
+    { "index": 8,  "part": "upperarm_front",  "anchor": "shoulder.front", "layer": 18, "pivot": [0.50, 0.10], "min_height_u": 30 },
+    { "index": 9,  "part": "upperarm_back",   "anchor": "shoulder.back",  "layer": 4,  "pivot": [0.50, 0.10], "min_height_u": 30, "shaded": true },
+    { "index": 10, "part": "forearm_front",   "anchor": "elbow.front",    "layer": 19, "pivot": [0.50, 0.06], "min_height_u": 28 },
+    { "index": 11, "part": "forearm_back",    "anchor": "elbow.back",     "layer": 5,  "pivot": [0.50, 0.06], "min_height_u": 28, "shaded": true },
+    { "index": 12, "part": "hand_front",      "anchor": "wrist.front",    "layer": 20, "pivot": [0.50, 0.12], "min_height_u": 16 },
+    { "index": 13, "part": "hand_back",       "anchor": "wrist.back",     "layer": 6,  "pivot": [0.50, 0.12], "min_height_u": 16, "shaded": true },
+    { "index": 14, "part": null,              "anchor": null,             "layer": null, "pivot": null },
+    { "index": 15, "part": null,              "anchor": null,             "layer": null, "pivot": null }
+  ],
+  "notes": [
+    "A fracao de pivo e relativa a bbox final da peca (0..1), medida apos o trim.",
+    "Pecas marcadas shaded:true devem ser desenhadas com a convencao half-shadow (art_style_guide §4.2).",
+    "Nenhuma peca pode tocar o gutter de 16 px da sua celula.",
+    "Cabeca, cabelo, helm e face NAO pertencem a este template: ver PART_SHEET_B."
+  ]
+}

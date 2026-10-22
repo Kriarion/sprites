@@ -1,0 +1,169 @@
+{
+  "palette_schema_version": "1.0.0",
+  "note": "Paletas canonicas iniciais. Valores aproximados para direcao de arte; a paleta oficial de cada asset e extraida da ficha canonica aprovada e registrada em color_masks. Nao e amostragem de imagem oficial de terceiros.",
+  "global": {
+    "outline": "#100D14",
+    "outline_inner_mix": 0.35,
+    "shadow_opacity": 0.26,
+    "deep_shadow_opacity": 0.45,
+    "highlight_opacity": 0.48,
+    "half_shadow_multiplier": 0.55,
+    "half_shadow_desaturate": 0.15
+  },
+  "characters": {
+    "goku_base": {
+      "skin": "#F2C79B",
+      "gi_orange": "#F26B21",
+      "gi_orange_shadow": "#B54A12",
+      "undershirt_blue": "#2B4C9B",
+      "belt_blue": "#1E3A78",
+      "boots_blue": "#223C6E",
+      "wristband_blue": "#2B4C9B",
+      "hair_black": "#1A1A22",
+      "eye_iris": "#3A2A1A"
+    },
+    "goku_ssj": {
+      "hair_gold": "#FFD24A",
+      "hair_gold_shadow": "#D99B22",
+      "aura_core": "#FFF6C2",
+      "aura_edge": "#FFB300",
+      "eye_iris": "#3BA55D",
+      "skin": "#F2C79B",
+      "gi_orange": "#F26B21"
+    },
+    "goku_ssb": {
+      "hair_blue": "#4FC3F7",
+      "hair_blue_shadow": "#2A8FC4",
+      "aura_core": "#D8F4FF",
+      "aura_edge": "#29B6F6",
+      "eye_iris": "#2E86C1"
+    },
+    "goku_ui": {
+      "hair_silver": "#C8D0D8",
+      "hair_silver_shadow": "#8E9AA6",
+      "aura_core": "#FFFFFF",
+      "aura_edge": "#9FD8FF",
+      "eye_iris": "#BFD4E6"
+    },
+    "vegeta_base": {
+      "armor_white": "#EDEDE6",
+      "armor_shadow": "#B9B9B0",
+      "suit_blue": "#2A3F7E",
+      "gloves_white": "#EDEDE6",
+      "trim_gold": "#E0B13C",
+      "hair_black": "#17171F",
+      "skin": "#F0C39A"
+    },
+    "piccolo": {
+      "skin_green": "#6EA34C",
+      "skin_green_shadow": "#4A7233",
+      "gi_purple": "#5B3E8E",
+      "gi_purple_shadow": "#3C2861",
+      "cape_white": "#E8E4DA",
+      "belt_blue": "#2C3E82",
+      "turban_white": "#E8E4DA",
+      "antenna": "#4A7233"
+    },
+    "gohan_adult": {
+      "skin": "#F2C79B",
+      "gi_purple": "#4B6E9E",
+      "gi_purple_shadow": "#33507A",
+      "belt_red": "#B33A3A",
+      "boots_red": "#B33A3A",
+      "hair_black": "#1A1A22"
+    },
+    "krillin": {
+      "skin": "#F0C39A",
+      "gi_orange": "#F26B21",
+      "gi_orange_shadow": "#B54A12",
+      "belt_blue": "#1E3A78",
+      "head_dots": "#C98F63"
+    },
+    "trunks_future": {
+      "hair_lavender": "#B9A2D9",
+      "hair_lavender_shadow": "#8A74A8",
+      "jacket_denim": "#3E4E73",
+      "jacket_shadow": "#2A3550",
+      "shirt_black": "#1B1B22",
+      "boots_yellow": "#E0B13C"
+    },
+    "bulma": {
+      "hair_teal": "#2FA6A6",
+      "hair_shadow": "#1E7373",
+      "shirt_white": "#F2EFE6",
+      "pants_purple": "#6B4E9E",
+      "skin": "#F5CDA7"
+    },
+    "frieza_final": {
+      "body_white": "#EDEFF2",
+      "body_shadow": "#B8BEC7",
+      "bio_purple": "#7B4FA8",
+      "gem_red": "#C0392B",
+      "eye_red": "#D2463A",
+      "lips": "#8E4A6B"
+    },
+    "cell_perfect": {
+      "body_green": "#7CB342",
+      "body_green_shadow": "#4E7A22",
+      "plates_black": "#16161C",
+      "spots_orange": "#E08A2E",
+      "wings_purple": "#5B3E8E",
+      "eye_pink": "#E56A9A"
+    },
+    "majin_buu": {
+      "skin_pink": "#F2A7C3",
+      "skin_pink_shadow": "#C97A98",
+      "cape_purple": "#7E57A8",
+      "pants_white": "#EFE7DA",
+      "belt_gold": "#E0B13C",
+      "eyes_red": "#B33A4A"
+    }
+  },
+  "elements": {
+    "ki_standard": { "core": "#FFFFFF", "mid": "#8FE3FF", "edge": "#2E9BFF", "blend": "add" },
+    "kamehameha": { "core": "#FFFFFF", "mid": "#9FE8FF", "edge": "#1F6FE0", "blend": "add" },
+    "ki_evil": { "core": "#FFFFFF", "mid": "#E8B4FF", "edge": "#8A2BE2", "blend": "add" },
+    "fire": { "core": "#FFF8D0", "mid": "#FFC24B", "edge": "#E0411B", "blend": "add" },
+    "electric": { "core": "#FFFFFF", "mid": "#C8F0FF", "edge": "#4FD2FF", "blend": "add" },
+    "divine_god": { "core": "#FFFFFF", "mid": "#FFD9A0", "edge": "#C77BFF", "blend": "screen" },
+    "divine_blue": { "core": "#FFFFFF", "mid": "#A0E4FF", "edge": "#2E6BFF", "blend": "screen" },
+    "hakai": { "core": "#FFFFFF", "mid": "#C9A0FF", "edge": "#5B1FA8", "blend": "add" },
+    "heal_buff": { "core": "#FFFFFF", "mid": "#B8FFD0", "edge": "#2FD07A", "blend": "screen" },
+    "shadow_drain": { "core": "#E9D8FF", "mid": "#6E4B9E", "edge": "#1A0F2B", "blend": "normal" },
+    "dust_smoke": { "core": "#D8C9B4", "mid": "#A8977E", "edge": "#6E6152", "blend": "normal" }
+  },
+  "materials": {
+    "metal_polished": { "base": "#9AA6B5", "shadow": "#5C6675", "highlight": "#F2F6FF" },
+    "metal_dark": { "base": "#4A4E58", "shadow": "#25282F", "highlight": "#A8B0BC" },
+    "gold_trim": { "base": "#C9A227", "shadow": "#7D6114", "highlight": "#F1DC8A" },
+    "leather": { "base": "#6B4A32", "shadow": "#3F2A1C", "highlight": "#9C7250" },
+    "cloth": { "base": "#F26B21", "shadow": "#B54A12", "highlight": "#FFA166" },
+    "stone": { "base": "#6E6A63", "shadow": "#43403B", "highlight": "#9A958C" },
+    "wood": { "base": "#8A5A33", "shadow": "#573620", "highlight": "#B98552" }
+  },
+  "ui": {
+    "panel_bg": "#14121A",
+    "panel_bg_alpha": 0.88,
+    "border_outer": "#0B0A0F",
+    "trim_gold": "#C9A227",
+    "trim_gold_light": "#F1DC8A",
+    "stone_dark": "#2A2733",
+    "hp": "#D92B2B",
+    "hp_bg": "#7A1010",
+    "ki": "#2E7BFF",
+    "ki_bg": "#12285C",
+    "xp": "#8A4BFF",
+    "xp_bg": "#2C1653",
+    "class": "#37C46B",
+    "class_bg": "#123A23",
+    "text": "#F2EFE6",
+    "text_secondary": "#B9B2A4",
+    "alert": "#FF5A3C"
+  },
+  "environments": {
+    "kame_house": { "sky_dawn": "#FFD9A0", "sky_day": "#8FD4F5", "sea": "#2E9BC4", "sand": "#E8D6A8", "palm_green": "#4E8C3A" },
+    "namek": { "sky_green": "#7FD1B0", "ground_blue": "#4E9BB8", "water_green": "#2FA98A", "sky_dusk": "#C98FB0" },
+    "beerus_planet": { "sky_violet": "#3C2C5A", "ground_rose": "#B4708A", "stars": "#F2EFE6" },
+    "tournament_of_power": { "sky_void": "#101018", "arena_white": "#D8D8D0", "arena_shadow": "#8E8E86", "ring_gold": "#C9A227" }
+  }
+}

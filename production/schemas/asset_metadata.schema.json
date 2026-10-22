@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kriarion.local/schemas/asset_metadata.schema.json",
+  "title": "Asset Metadata",
+  "description": "Contrato de metadados de um asset do pacote Dragon Ball AQW-style.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["asset_id", "version", "status", "category", "subcategory", "ownership", "standards", "scale", "provenance"],
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "pattern": "^DB_[A-Z]{3,8}_[A-Z]{2,12}_[A-Z0-9_]+$"
+    },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "status": {
+      "enum": ["PLANNED", "GENERATED", "PROCESSING", "QA_PENDING", "APPROVED", "REWORK_REQUIRED", "BLOCKED", "DEPRECATED"]
+    },
+    "category": {
+      "enum": ["character", "equipment", "enemy", "pet", "skill", "vfx", "environment", "ui", "icon", "rig", "animation"]
+    },
+    "subcategory": { "type": "string", "minLength": 2, "maxLength": 20 },
+    "character": { "type": ["string", "null"] },
+    "continuity": { "enum": ["db", "dbz", "dbs", "gt", "movie", "original", null] },
+    "form": { "type": ["string", "null"] },
+    "ownership": { "enum": ["canonical_ip", "original_design", "pipeline_artifact"] },
+    "restrictions": {
+      "type": "array",
+      "items": { "enum": ["non_commercial_study_only", "no_redistribution", "commercial_requires_license"] }
+    },
+    "standards": {
+      "type": "object",
+      "required": ["visual_bible", "technical"],
+      "additionalProperties": { "type": "string" }
+    },
+    "scale": {
+      "type": "object",
+      "required": ["rig_unit_px_1x", "pixels_per_unit"],
+      "additionalProperties": false,
+      "properties": {
+        "rig_unit_px_1x": { "const": 1 },
+        "pixels_per_unit": { "enum": [1, 2, 4] },
+        "body_height_u": { "type": "number", "minimum": 10, "maximum": 1200 }
+      }
+    },
+    "canvas": {
+      "type": "object",
+      "required": ["width", "height", "coordinate_system"],
+      "additionalProperties": false,
+      "properties": {
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "coordinate_system": { "const": "top_left_y_down" }
+      }
+    },
+    "rig": { "type": ["string", "null"] },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "file", "layer", "pivot_px", "anchor"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "file": { "type": "string", "minLength": 3 },
+          "layer": { "type": "integer", "minimum": -10, "maximum": 30 },
+          "pivot_px": {
+            "type": "array", "minItems": 2, "maxItems": 2,
+            "items": { "type": "number", "minimum": 0 }
+          },
+          "pivot_norm": {
+            "type": "array", "minItems": 2, "maxItems": 2,
+            "items": { "type": "number", "minimum": 0, "maximum": 1 }
+          },
+          "anchor": {
+            "enum": ["root", "pelvis", "spine_low", "spine_high", "neck", "head", "head_top",
+                     "shoulder.front", "shoulder.back", "elbow.front", "elbow.back",
+                     "wrist.front", "wrist.back", "grip.front", "grip.back",
+                     "hip.front", "hip.back", "knee.front", "knee.back",
+                     "ankle.front", "ankle.back", "toe.front", "toe.back",
+                     "tail.01", "tail.02", "tail.03", "tail.04", "tail.05",
+                     "wing.front", "wing.back", "cape.01", "cape.02", "cape.03",
+                     "hair.back", "hair.front", "helm", "face"]
+          },
+          "size_px": { "type": "array", "minItems": 2, "maxItems": 2, "items": { "type": "integer" } },
+          "pivot_outside": { "type": "boolean" },
+          "origin_session": { "type": "string" }
+        }
+      }
+    },
+    "animations": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["timeline", "duration_ms", "loop"],
+        "properties": {
+          "timeline": { "type": "string" },
+          "duration_ms": { "type": "integer", "minimum": 50 },
+          "loop": { "type": "boolean" },
+          "fps": { "type": "integer", "minimum": 1, "maximum": 120 }
+        }
+      }
+    },
+    "color_masks": { "type": "array", "items": { "type": "string" } },
+    "compatibility": {
+      "type": "object",
+      "properties": {
+        "rigs": { "type": "array", "items": { "type": "string" } },
+        "genders": { "type": "array", "items": { "enum": ["m", "f", "n"] } },
+        "body_scales": { "type": "array", "items": { "type": "string" } },
+        "conflicts_with": { "type": "array", "items": { "type": "string" } },
+        "requires": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "dependencies": { "type": "array", "items": { "type": "string" } },
+    "files": { "type": "array", "items": { "type": "string" } },
+    "provenance": {
+      "type": "object",
+      "required": ["session", "method"],
+      "additionalProperties": false,
+      "properties": {
+        "session": { "type": "string", "pattern": "^DB-SESSION-[0-9]{4}$" },
+        "method": { "enum": ["generated_grid_keyed", "generated_single_keyed", "edited", "composed", "derived_script"] },
+        "canonical_reference": { "type": "string" },
+        "aqw_reference": { "type": "string" },
+        "source_files": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "qa": {
+      "type": "object",
+      "properties": {
+        "report": { "type": "string" },
+        "gates": {
+          "type": "object",
+          "properties": {
+            "G0": { "enum": ["PASS", "FAIL"] },
+            "G1": { "enum": ["PASS", "FAIL"] },
+            "G2": { "enum": ["PASS", "FAIL"] },
+            "G3": { "enum": ["PASS", "FAIL"] },
+            "G4": { "enum": ["PASS", "FAIL"] }
+          }
+        }
+      }
+    },
+    "preview": { "type": ["string", "null"] },
+    "changelog": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["version", "note"],
+        "properties": {
+          "version": { "type": "string" },
+          "date": { "type": "string" },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  }
+}

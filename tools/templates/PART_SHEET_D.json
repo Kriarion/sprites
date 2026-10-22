@@ -1,0 +1,26 @@
+{
+  "template": "PART_SHEET_D",
+  "version": "1.0.0",
+  "purpose": "Armas e acessorios grandes (2-4 objetos por folha)",
+  "canvas_px": [1024, 1024],
+  "grid": { "cols": 2, "rows": 2 },
+  "cell_px": 512,
+  "content_px": 464,
+  "gutter_px": 24,
+  "background": "#FF00FF",
+  "background_alt": "#00FF00",
+  "trim_px": 2,
+  "prompt_order": ["weapon_01", "weapon_02", "weapon_03", "weapon_04"],
+  "orientation_rule": "cabo alinhado ao eixo vertical da celula; lamina para cima; nada rotacionado",
+  "cells": [
+    { "index": 0, "part": "weapon_01", "anchor": "grip.front", "layer": 21, "pivot": [0.50, 0.82] },
+    { "index": 1, "part": "weapon_02", "anchor": "grip.front", "layer": 21, "pivot": [0.50, 0.82] },
+    { "index": 2, "part": "weapon_03", "anchor": "grip.front", "layer": 21, "pivot": [0.50, 0.82] },
+    { "index": 3, "part": "weapon_04", "anchor": "grip.front", "layer": 21, "pivot": [0.50, 0.82] }
+  ],
+  "notes": [
+    "O pivo fica no centro do cabo (onde a mao fecha), nao no centro da arma.",
+    "Armas de duas maos declaram tambem grip.back nos metadados.",
+    "Escala: arma de duas maos >= 60% da altura do corpo (120 u)."
+  ]
+}

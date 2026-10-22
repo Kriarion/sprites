@@ -1,0 +1,3 @@
+# Pipeline dependencies (local processing only, no runtime dependency for delivered assets)
+Pillow>=10.0,<14
+numpy>=1.24,<3

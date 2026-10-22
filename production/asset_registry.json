@@ -1,0 +1,20 @@
+{
+  "registry_schema_version": "1.0.0",
+  "project": "dragonball-aqw-asset-pack",
+  "notice": "Fonte da verdade de IDs, status e arquivos. Nenhum asset foi registrado: o pacote esta na FASE 0. Entradas so sao criadas pelo pipeline de promocao (docs/production_pipeline.md).",
+  "counters": {
+    "total": 0,
+    "by_status": {
+      "PLANNED": 0,
+      "GENERATED": 0,
+      "PROCESSING": 0,
+      "QA_PENDING": 0,
+      "APPROVED": 0,
+      "REWORK_REQUIRED": 0,
+      "BLOCKED": 0,
+      "DEPRECATED": 0
+    }
+  },
+  "assets": [],
+  "migrations": []
+}

@@ -1,0 +1,40 @@
+{
+  "$comment": "Manifesto público do pacote. Fonte da verdade detalhada e mutável é production/asset_registry.json. Este arquivo lista somente assets APPROVED, com hash, e é regenerado por tools/build_manifest.py.",
+  "manifest_schema_version": "1.0.0",
+  "project": "dragonball-aqw-asset-pack",
+  "pack_version": "0.1.0",
+  "generated_at": "2026-10-22T00:00:00Z",
+  "generated_by": "FASE_0_MANUAL_SEED",
+  "standards": {
+    "visual_bible": "1.0.0",
+    "technical": "1.0.0",
+    "naming": "1.0.0",
+    "rig": "1.0.0",
+    "animation": "1.0.0",
+    "ui": "1.0.0"
+  },
+  "scale": {
+    "canonical_body_height_px": 200,
+    "rig_unit": "1u = 1px @1x",
+    "export_scales": [1, 2, 4]
+  },
+  "counts": {
+    "total_approved": 0,
+    "by_category": {
+      "character": 0,
+      "equipment": 0,
+      "enemy": 0,
+      "pet": 0,
+      "skill": 0,
+      "vfx": 0,
+      "environment": 0,
+      "ui": 0,
+      "icon": 0
+    }
+  },
+  "assets": [],
+  "notes": [
+    "Nenhum asset foi produzido. O pacote está na FASE 0 (documentação e infraestrutura).",
+    "Nenhuma entrada pode ser adicionada manualmente: use o pipeline de promoção descrito em docs/production_pipeline.md."
+  ]
+}

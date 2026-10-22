@@ -1,0 +1,34 @@
+{
+  "template": "PART_SHEET_C",
+  "version": "1.0.0",
+  "purpose": "Roupa/armadura modular (ate 16 pecas por folha)",
+  "canvas_px": [1024, 1024],
+  "grid": { "cols": 4, "rows": 4 },
+  "cell_px": 256,
+  "content_px": 224,
+  "gutter_px": 16,
+  "background": "#FF00FF",
+  "background_alt": "#00FF00",
+  "trim_px": 2,
+  "prompt_order": [
+    "chest", "belt", "pauldrons", "gloves",
+    "thighs", "shins", "boots", "cape",
+    "empty", "empty", "empty", "empty",
+    "empty", "empty", "empty", "empty"
+  ],
+  "cells": [
+    { "index": 0, "part": "chest",     "anchor": "spine_low",   "layer": 11, "pivot": [0.50, 0.92] },
+    { "index": 1, "part": "belt",      "anchor": "root",        "layer": 10, "pivot": [0.50, 0.50] },
+    { "index": 2, "part": "pauldrons", "anchor": "spine_high",  "layer": 17, "pivot": [0.50, 0.75] },
+    { "index": 3, "part": "gloves",    "anchor": "wrist.front", "layer": 20, "pivot": [0.50, 0.12] },
+    { "index": 4, "part": "thighs",    "anchor": "hip.front",   "layer": 12, "pivot": [0.50, 0.06] },
+    { "index": 5, "part": "shins",     "anchor": "knee.front",  "layer": 13, "pivot": [0.50, 0.06] },
+    { "index": 6, "part": "boots",     "anchor": "ankle.front", "layer": 14, "pivot": [0.45, 0.18] },
+    { "index": 7, "part": "cape",      "anchor": "cape.01",     "layer": 1,  "pivot": [0.50, 0.04], "shaded": true }
+  ],
+  "notes": [
+    "Cada peca deve replicar o pivo da peca-base correspondente (equipment_standard §2).",
+    "Pecas que cobrem os dois lados (pares) podem vir em uma celula unica espelhada; declarar em compatibility.",
+    "Se a folha tiver mais de 8 pecas uteis, dividir em C1/C2 em vez de reduzir tamanho."
+  ]
+}
