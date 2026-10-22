@@ -12,10 +12,10 @@
         0.5,
         0.15
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        183,
-        124
+        366,
+        268
       ],
       "offscreen": false
     },
@@ -31,10 +31,10 @@
         0.5,
         0.06
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        141,
-        168
+        306,
+        356
       ],
       "offscreen": false
     },
@@ -50,10 +50,10 @@
         0.5,
         0.06
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        140,
-        232
+        304,
+        485
       ],
       "offscreen": false
     },
@@ -62,17 +62,17 @@
       "anchor": "wrist.back",
       "layer": 6,
       "pivot_px": [
-        33.0,
+        8.5,
         3.4
       ],
       "pivot_norm": [
         0.5,
         0.1
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        113,
-        293
+        298,
+        605
       ],
       "offscreen": false
     },
@@ -88,10 +88,10 @@
         0.5,
         0.05
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        174,
-        280
+        354,
+        579
       ],
       "offscreen": false
     },
@@ -107,10 +107,10 @@
         0.5,
         0.05
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        173,
-        368
+        364,
+        756
       ],
       "offscreen": false
     },
@@ -126,10 +126,10 @@
         0.42,
         0.22
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        168,
-        450
+        344,
+        920
       ],
       "offscreen": false
     },
@@ -139,16 +139,16 @@
       "layer": 10,
       "pivot_px": [
         25.0,
-        4.8
+        12.0
       ],
       "pivot_norm": [
         0.5,
-        0.12
+        0.3
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        195,
-        275
+        360,
+        556
       ],
       "offscreen": false
     },
@@ -158,16 +158,16 @@
       "layer": 11,
       "pivot_px": [
         49.5,
-        91.2
+        75.8
       ],
       "pivot_norm": [
         0.5,
-        0.95
+        0.79
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        170,
-        153
+        348,
+        356
       ],
       "offscreen": false
     },
@@ -183,10 +183,10 @@
         0.5,
         0.05
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        224,
-        276
+        450,
+        571
       ],
       "offscreen": false
     },
@@ -202,10 +202,10 @@
         0.5,
         0.05
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        228,
-        364
+        460,
+        748
       ],
       "offscreen": false
     },
@@ -221,10 +221,10 @@
         0.5,
         0.1
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        272,
-        289
+        526,
+        597
       ],
       "offscreen": false
     },
@@ -240,10 +240,10 @@
         0.5,
         0.95
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        194,
-        91
+        382,
+        203
       ],
       "offscreen": false
     },
@@ -259,10 +259,10 @@
         0.5,
         0.5
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        192,
-        104
+        382,
+        228
       ],
       "offscreen": false
     },
@@ -278,10 +278,10 @@
         0.5,
         0.92
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        199,
-        91
+        374,
+        202
       ],
       "offscreen": false
     },
@@ -297,10 +297,10 @@
         0.5,
         0.06
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        262,
-        164
+        510,
+        348
       ],
       "offscreen": false
     },
@@ -316,10 +316,10 @@
         0.5,
         0.06
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        269,
-        228
+        524,
+        477
       ],
       "offscreen": false
     },
@@ -335,10 +335,10 @@
         0.42,
         0.22
       ],
-      "normalized_scale": 1.0,
+      "normalized_scale": 2.0,
       "placed_at": [
-        228,
-        446
+        440,
+        912
       ],
       "offscreen": false
     }

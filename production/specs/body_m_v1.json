@@ -1,5 +1,5 @@
 {
-  "spec_version": "1.0.0",
+  "spec_version": "1.3.0",
   "spec_id": "BODY_M_V1",
   "session": "DB-SESSION-0002",
   "archetype": "human_male_standard",
@@ -12,7 +12,9 @@
     "O indice e atribuido por tools/decompose.py em ordem de leitura (linha, coluna).",
     "rotate_deg corrige pecas que o gerador desenhou horizontais; o pivo e recalculado depois.",
     "shaded=true marca peca da camada traseira (half-shadow, invariante C5).",
-    "rev 1.1.0: mao e pe de g3_limbs4 estavam trocados (verificado em contact sheet); bbox de merge passa a ser a uniao dos componentes."
+    "rev 1.1.0: mao e pe de g3_limbs4 estavam trocados (verificado em contact sheet); bbox de merge passa a ser a uniao dos componentes.",
+    "rev 1.2.0: hand_back desenhada na horizontal (66x34, aspecto 1.94) -> rotate_deg 270 (dedos para baixo, punho para cima). Medido por strip de rotacao em production/qa_reports/logs/rot_hand_back.png.",
+    "rev 1.3.0: offset_u (u) por peca para emenda ombro-corpo; DEPTH_OFFSET back -6 -> -2 (deslocava o braco traseiro para fora do torso). Valor derivado da medicao de bbox, nao de ajuste visual."
   ],
   "sheets": [
     {
@@ -34,13 +36,21 @@
           "index": 2,
           "part": "upperarm_front",
           "anchor": "shoulder.front",
-          "layer": 18
+          "layer": 18,
+          "offset_u": [
+            -4,
+            0
+          ]
         },
         {
           "index": 3,
           "part": "forearm_front",
           "anchor": "elbow.front",
-          "layer": 19
+          "layer": 19,
+          "offset_u": [
+            -4,
+            0
+          ]
         }
       ]
     },
@@ -63,7 +73,11 @@
           "index": 2,
           "part": "hand_front",
           "anchor": "wrist.front",
-          "layer": 14
+          "layer": 14,
+          "offset_u": [
+            -4,
+            0
+          ]
         },
         {
           "index": 3,
@@ -115,7 +129,11 @@
           "part": "upperarm_back",
           "anchor": "shoulder.back",
           "layer": 4,
-          "shaded": true
+          "shaded": true,
+          "offset_u": [
+            3,
+            0
+          ]
         },
         {
           "index": 1,
@@ -123,7 +141,11 @@
           "anchor": "elbow.back",
           "layer": 5,
           "shaded": true,
-          "rotate_deg": 90
+          "rotate_deg": 90,
+          "offset_u": [
+            3,
+            0
+          ]
         },
         {
           "index": 2,
@@ -150,7 +172,12 @@
           "part": "hand_back",
           "anchor": "wrist.back",
           "layer": 6,
-          "shaded": true
+          "shaded": true,
+          "rotate_deg": 270,
+          "offset_u": [
+            3,
+            0
+          ]
         },
         {
           "index": 1,

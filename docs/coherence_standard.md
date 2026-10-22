@@ -48,6 +48,16 @@ Alvo: **1,6–2,8 px em 1x** num corpo de 200 px.
 > descreve o traço original como *hairline* (≈1,5–2 px em 1x), a faixa foi corrigida **pela medição**, não pelo
 > gosto. Histórico: 0,009–0,013 (v1.0) → 0,008–0,014 (v1.1).
 
+> **Medição 2 (`DB-SESSION-0002`, corpo base):** com a fórmula área÷perímetro a mediana das 18 peças deu
+> **0,0046**, e a checagem independente por transformada de distância (espessura = 2 × distância ao contorno)
+> deu **1,12 px em 1x** (0,56% da altura) nas peças frontais. As duas fórmulas **não** são a mesma grandeza:
+> área÷perímetro estima ~metade da espessura geométrica em linhas finas. Conclusão: **C3 continua FAIL** e o
+> número que vale é o da transformada de distância (1,12 px), não a razão normalizada.
+> Correção tentada e descartada: dilatar 1 px a máscara escura engrossa também as linhas internas
+> (abdômen, orelha) e serrilha o traço — evidência em `production/qa_reports/logs/thicken_compare.png`.
+> Decisão pendente: `PENDING-004` em `production/continuity_state.json` (A: mestre com 3–4 px ·
+> B: máscara de borda · C: revisar a faixa).
+
 ### C4 — Paleta
 Cinco pontos canônicos são amostrados por k-means leve no interior da peça (pele, cabelo, tecido, metal,
 energia) e convertidos para HSV. Comparação com `references/palettes/core_palettes.json`.

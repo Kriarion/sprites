@@ -35,6 +35,10 @@ ANCHORS = {
 }
 BODY_H = 200
 
+# deslocamento de profundidade: pecas traseiras sao levemente deslocadas (leitura 3/4 + half-shadow).
+# -6 u empurrava braco/perna traseiros para fora da silhueta do torso; -2 mantem a leitura 3/4.
+DEPTH_OFFSET_U = {"back": (-2, -2)}
+
 # Dimensoes canonicas por TIPO de peca, em u (technical_specification.md 2.2).
 # Usadas para normalizar pecas geradas em escalas arbitrarias (cada celula e desenhada
 # "preenchendo" seu espaco, entao a escala relativa entre pecas NAO e confiavel).
@@ -55,7 +59,7 @@ PART_DIMS_U = {
 
 
 def compose(parts_doc: dict, directory: Path, scale: float, body_h: int = BODY_H,
-            normalize: bool = True):
+            normalize: bool = True, preserve_aspect: bool = False):
     parts = [p for p in parts_doc["parts"] if p.get("anchor") in ANCHORS]
     canvas_h = int(body_h * scale * 1.25)
     canvas_w = int(body_h * scale * 1.1)
@@ -65,9 +69,6 @@ def compose(parts_doc: dict, directory: Path, scale: float, body_h: int = BODY_H
     def anchor_px(anchor: str):
         ax, ay = ANCHORS[anchor]
         return canvas_w / 2 + ax * scale, canvas_h - 20 - ay * scale
-
-    # deslocamento de profundidade: pecas traseiras sao levemente deslocadas (leitura 3/4 + half-shadow)
-    DEPTH_OFFSET_U = {"back": (-6, -2)}
 
     for p in sorted(parts, key=lambda q: (q.get("layer") or 0)):
         pname0 = p.get("part") or p.get("id")
@@ -82,10 +83,21 @@ def compose(parts_doc: dict, directory: Path, scale: float, body_h: int = BODY_H
         pname = p.get("part") or p.get("id")
         if normalize and pname in PART_DIMS_U:
             tw_u, th_u = PART_DIMS_U[pname]
-            target_h = int(round(th_u * scale))
-            k = target_h / piece.height
-            piece = piece.resize((max(1, int(piece.width * k)), max(1, target_h)),
-                                 Image.LANCZOS)
+            if preserve_aspect:
+                # modo antigo: normaliza so a altura; a largura fica refem do desenho
+                target_h = int(round(th_u * scale))
+                k = target_h / piece.height
+                piece = piece.resize((max(1, int(piece.width * k)), max(1, target_h)),
+                                     Image.LANCZOS)
+            else:
+                # SILHUETA CANONICA (padrao): a peca preenche a caixa canonica do seu tipo.
+                # Normalizar so a altura deixava a largura refem do desenho (pelve 25/40 u,
+                # pe 17/26 u, cabelo 21/33 u) e a silhueta nao conversava com o rig.
+                # A distorcao de aspecto NAO e escondida: vai para o relatorio (aspect_drift).
+                target_w = max(1, int(round(tw_u * scale)))
+                target_h = max(1, int(round(th_u * scale)))
+                k = target_h / piece.height
+                piece = piece.resize((target_w, target_h), Image.LANCZOS)
         # pivo recalculado para o tamanho FINAL (nunca herdado do tamanho original)
         if p.get("pivot_norm"):
             px = p["pivot_norm"][0] * piece.width
@@ -96,6 +108,10 @@ def compose(parts_doc: dict, directory: Path, scale: float, body_h: int = BODY_H
         if str(p["anchor"]).endswith(".back"):
             dx, dy = DEPTH_OFFSET_U["back"]
             ax, ay = ax + dx * scale, ay - dy * scale
+        # ajuste fino explicito do spec (u; +x direita, +y sobe). NAO substitui o pivo:
+        # o pivo continua sendo o ponto de articulacao, o offset resolve a emenda entre pecas.
+        ox, oy = p.get("offset_u") or (0, 0)
+        ax, ay = ax + ox * scale, ay - oy * scale
         left, top = int(round(ax - px)), int(round(ay - py))
         img.alpha_composite(piece, dest=(max(left, 0), max(top, 0)))
         report.append({
@@ -136,12 +152,15 @@ def main() -> int:
     ap.add_argument("--overlay", action="store_true")
     ap.add_argument("--no-normalize", action="store_true",
                     help="nao escala pecas para a dimensao canonica do tipo")
+    ap.add_argument("--preserve-aspect", action="store_true",
+                    help="normaliza so pela altura e preserva o aspecto do desenho (modo antigo)")
     ap.add_argument("--report", default=None)
     a = ap.parse_args()
 
     doc = json.loads(Path(a.parts_json).read_text())
     directory = Path(a.parts_json).parent
-    img, rep = compose(doc, directory, a.scale, normalize=not a.no_normalize)
+    img, rep = compose(doc, directory, a.scale, normalize=not a.no_normalize,
+                       preserve_aspect=a.preserve_aspect)
     if a.overlay:
         img = overlay(img, a.scale)
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)

@@ -177,3 +177,22 @@ Duas trocas de identidade (`mão↔pé`, `cabelo↔face`) passaram despercebidas
 na **folha de contato** (`production/qa_reports/logs/contact_sheet_body_m_v1.png`).
 Índice de componente **não** é identidade semântica: a conferência visual por folha de contato passa a ser
 etapa obrigatória do processamento (`BL-016`).
+
+## 13. Contorno: o número que importa
+
+| Medida | Valor | Método |
+|---|---|---|
+| Espessura mediana (peças frontais) | **2,24 px @ 2 px/u** | transformada de distância |
+| Equivalente em 1x | **1,12 px (0,56% da altura)** | ÷2 |
+| Padrão (`coherence_standard` C3) | 1,6–2,8 px (0,8–1,4%) | — |
+| Mestre (folha 1024 px) | 4,53 px | mesma métrica |
+
+O gerador desenha uma linha de ~4,5 px no mestre de 1024; após recorte, normalização e downscale para
+2 px/u, sobram 2,24 px — e em 1x isso vira 1,12 px, **abaixo do piso**. Pedir "3–4 px no mestre" é o caminho A;
+o caminho B (dilatar) já foi testado e reprovado por engrossar linha interna.
+
+## 14. O que a montagem ensinou sobre juntas
+
+Encostar bbox não é unir peça. Com cotovelo e punho em **0,1 u de sobreposição**, o vão continua visível
+porque as duas peças afinam nas pontas (taper). A correção é de **arte**: cada segmento precisa de um
+**cap de sobreposição de 2–3 u** na ponta proximal (o mesmo truque de paper-doll clássico).

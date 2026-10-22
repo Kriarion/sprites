@@ -123,6 +123,17 @@ Cenário em camadas usa largura de 1536 px (1,2×) para permitir parallax horizo
 
 ### 4.1 Regras
 
+0. **Política de silhueta canônica (rev 1.2.0).** Toda peça é redimensionada para preencher **a caixa
+   canônica do seu tipo** (`PART_DIMS_U`), não apenas a altura. Normalizar só a altura deixava a largura
+   refém do desenho (pelve 25/40 u, pé 17/26 u, cabelo 21/33 u) e a silhueta não conversava com o rig.
+   A distorção de aspecto resultante **não é escondida**: vai para `aspect_drift` em
+   `production/qa_reports/logs/geometry_audit_body_m_v1.json`. Peças com drift ≥20% são candidatas a
+   regeneração (arte com proporção errada), não a reajuste no código.
+0b. **`offset_u` (u; +x direita, +y sobe)** no spec corrige a **emenda** entre peças sem mexer no pivô.
+   O pivô continua sendo o ponto de articulação; o offset é dado, versionado e auditável.
+0c. **`tools/audit_geometry.py`** reconstrói o retângulo de cada peça com a mesma regra do `compose.py` e
+   reporta sobreposição/folga por junta (+ = sobreposição) e drift de aspecto, em unidades do rig.
+
 1. Todo pivô é registrado em **px** (`pivot_px`, relativo ao top-left do PNG) **e** normalizado
    (`pivot_norm` = `pivot_px / [w,h]`), com **âncora nomeada**.
 2. O pivô é escolhido para que a **rotação não abra a articulação**: ele fica no centro geométrico da

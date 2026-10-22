@@ -231,7 +231,7 @@
     },
     {
       "asset_id": "DB_CHAR_BASE_HUMAN_M",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "status": "QA_PENDING",
       "category": "character",
       "subcategory": "base",
@@ -265,7 +265,13 @@
         "score": 83.3,
         "failed": [
           "C3_outline_weight"
-        ]
+        ],
+        "measured": {
+          "C1_body_height_u": 200.2,
+          "C2_heads": 5.88,
+          "C5_back_front": 0.52,
+          "C3_ratio": 0.0046
+        }
       },
       "session": "DB-SESSION-0002",
       "qa": {
@@ -279,17 +285,20 @@
         }
       },
       "known_defects": [
-        "D1 folga punho",
-        "D2 decal olhos esmagado",
-        "D3 cabelo cobre face",
-        "D4 contorno ~1px em 1x"
+        "D1 folga punho (0,1 u de sobreposicao; taper da arte)",
+        "D2 decal de olhos esmagado",
+        "D3 cabelo frontal cobre a face",
+        "D4 contorno 1,12 px @1x (C3 reprovado)",
+        "D6 juntas sem cap de sobreposicao",
+        "D10 cabelo traseiro cobre o pescoco"
       ],
       "provenance": {
         "session": "DB-SESSION-0002",
         "method": "generated_single_keyed",
         "canonical_reference": "nenhuma (corpo base neutro)",
         "aqw_reference": "ordem de camadas paper-doll, half-shadow"
-      }
+      },
+      "geometry_audit": "production/qa_reports/logs/geometry_audit_body_m_v1.json"
     },
     {
       "asset_id": "DB_RIG_HUMAN_M_001",
@@ -321,7 +330,8 @@
         }
       },
       "known_defects": [
-        "teste de rotacao +-35 em 8 angulos nao executado"
+        "teste de rotacao +-35 em 8 angulos nao executado",
+        "ancora shoulder em +-28 u colide com torso de 46 u (revisar para +-22 u)"
       ]
     }
   ],

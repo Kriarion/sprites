@@ -1,0 +1,460 @@
+{
+  "unit": "u (1 u = 1/200 da altura)",
+  "sign": "+ = sobreposicao, - = folga",
+  "joints": [
+    {
+      "pair": "torso->pelvis",
+      "label": "waist",
+      "x_overlap_u": 25.0,
+      "y_overlap_u": -1.9
+    },
+    {
+      "pair": "pelvis->thigh_front",
+      "label": "hip F",
+      "x_overlap_u": 10.7,
+      "y_overlap_u": 16.2
+    },
+    {
+      "pair": "pelvis->thigh_back",
+      "label": "hip B",
+      "x_overlap_u": 5.5,
+      "y_overlap_u": 14.2
+    },
+    {
+      "pair": "upperarm_front->forearm_front",
+      "label": "elbow F",
+      "x_overlap_u": 10.3,
+      "y_overlap_u": -0.1
+    },
+    {
+      "pair": "forearm_front->hand_front",
+      "label": "wrist F",
+      "x_overlap_u": 9.3,
+      "y_overlap_u": -0.1
+    },
+    {
+      "pair": "upperarm_back->forearm_back",
+      "label": "elbow B",
+      "x_overlap_u": 7.5,
+      "y_overlap_u": -0.1
+    },
+    {
+      "pair": "forearm_back->hand_back",
+      "label": "wrist B",
+      "x_overlap_u": 7.2,
+      "y_overlap_u": -0.1
+    },
+    {
+      "pair": "thigh_front->shin_front",
+      "label": "knee F",
+      "x_overlap_u": 14.4,
+      "y_overlap_u": -0.1
+    },
+    {
+      "pair": "shin_front->foot_front",
+      "label": "ankle F",
+      "x_overlap_u": 14.3,
+      "y_overlap_u": 1.0
+    },
+    {
+      "pair": "thigh_back->shin_back",
+      "label": "knee B",
+      "x_overlap_u": 12.0,
+      "y_overlap_u": -0.1
+    },
+    {
+      "pair": "shin_back->foot_back",
+      "label": "ankle B",
+      "x_overlap_u": 13.0,
+      "y_overlap_u": 1.0
+    },
+    {
+      "pair": "head->torso",
+      "label": "neck",
+      "x_overlap_u": 26.4,
+      "y_overlap_u": -4.4
+    },
+    {
+      "pair": "torso->upperarm_front",
+      "label": "shoulder F",
+      "x_overlap_u": 7.6,
+      "y_overlap_u": 30.0
+    },
+    {
+      "pair": "torso->upperarm_back",
+      "label": "shoulder B",
+      "x_overlap_u": 3.3,
+      "y_overlap_u": 32.0
+    },
+    {
+      "pair": "head->face_eyes",
+      "label": "eyes",
+      "x_overlap_u": 26.4,
+      "y_overlap_u": 12.0
+    }
+  ],
+  "aspect_drift": [
+    {
+      "part": "pelvis",
+      "art_aspect": 1.25,
+      "canon_aspect": 2.0,
+      "error_pct": -37.5,
+      "placed_w_u": 25.0,
+      "canon_w_u": 40
+    },
+    {
+      "part": "hair_front",
+      "art_aspect": 1.05,
+      "canon_aspect": 1.65,
+      "error_pct": -36.4,
+      "placed_w_u": 21.0,
+      "canon_w_u": 33
+    },
+    {
+      "part": "foot_front",
+      "art_aspect": 1.214,
+      "canon_aspect": 1.857,
+      "error_pct": -34.6,
+      "placed_w_u": 17.0,
+      "canon_w_u": 26
+    },
+    {
+      "part": "thigh_back",
+      "art_aspect": 0.273,
+      "canon_aspect": 0.386,
+      "error_pct": -29.3,
+      "placed_w_u": 12.0,
+      "canon_w_u": 17
+    },
+    {
+      "part": "hair_back",
+      "art_aspect": 0.962,
+      "canon_aspect": 1.269,
+      "error_pct": -24.2,
+      "placed_w_u": 25.0,
+      "canon_w_u": 33
+    },
+    {
+      "part": "hand_back",
+      "art_aspect": 0.5,
+      "canon_aspect": 0.647,
+      "error_pct": -22.7,
+      "placed_w_u": 8.5,
+      "canon_w_u": 11
+    },
+    {
+      "part": "shin_front",
+      "art_aspect": 0.345,
+      "canon_aspect": 0.286,
+      "error_pct": 20.6,
+      "placed_w_u": 14.5,
+      "canon_w_u": 12
+    },
+    {
+      "part": "forearm_back",
+      "art_aspect": 0.267,
+      "canon_aspect": 0.333,
+      "error_pct": -19.8,
+      "placed_w_u": 8.0,
+      "canon_w_u": 10
+    },
+    {
+      "part": "foot_back",
+      "art_aspect": 1.5,
+      "canon_aspect": 1.857,
+      "error_pct": -19.2,
+      "placed_w_u": 21.0,
+      "canon_w_u": 26
+    },
+    {
+      "part": "upperarm_back",
+      "art_aspect": 0.344,
+      "canon_aspect": 0.406,
+      "error_pct": -15.3,
+      "placed_w_u": 11.0,
+      "canon_w_u": 13
+    },
+    {
+      "part": "hand_front",
+      "art_aspect": 0.559,
+      "canon_aspect": 0.647,
+      "error_pct": -13.6,
+      "placed_w_u": 9.5,
+      "canon_w_u": 11
+    },
+    {
+      "part": "forearm_front",
+      "art_aspect": 0.367,
+      "canon_aspect": 0.333,
+      "error_pct": 10.2,
+      "placed_w_u": 11.0,
+      "canon_w_u": 10
+    },
+    {
+      "part": "thigh_front",
+      "art_aspect": 0.42,
+      "canon_aspect": 0.386,
+      "error_pct": 8.8,
+      "placed_w_u": 18.5,
+      "canon_w_u": 17
+    },
+    {
+      "part": "head",
+      "art_aspect": 0.779,
+      "canon_aspect": 0.853,
+      "error_pct": -8.7,
+      "placed_w_u": 26.5,
+      "canon_w_u": 29
+    },
+    {
+      "part": "shin_back",
+      "art_aspect": 0.31,
+      "canon_aspect": 0.286,
+      "error_pct": 8.4,
+      "placed_w_u": 13.0,
+      "canon_w_u": 12
+    },
+    {
+      "part": "torso",
+      "art_aspect": 1.031,
+      "canon_aspect": 0.958,
+      "error_pct": 7.6,
+      "placed_w_u": 49.5,
+      "canon_w_u": 46
+    },
+    {
+      "part": "upperarm_front",
+      "art_aspect": 0.422,
+      "canon_aspect": 0.406,
+      "error_pct": 3.9,
+      "placed_w_u": 13.5,
+      "canon_w_u": 13
+    },
+    {
+      "part": "face_eyes",
+      "art_aspect": 2.375,
+      "canon_aspect": 2.417,
+      "error_pct": -1.7,
+      "placed_w_u": 28.5,
+      "canon_w_u": 29
+    }
+  ],
+  "rects": {
+    "hair_back": {
+      "left": -14.5,
+      "right": 10.5,
+      "top": 177.9,
+      "bottom": 151.9,
+      "w": 25.0,
+      "h": 26,
+      "anchor": "hair.back",
+      "layer": 2,
+      "art_aspect": 0.962,
+      "canon_aspect": 1.269
+    },
+    "upperarm_back": {
+      "left": -32.5,
+      "right": -21.5,
+      "top": 155.9,
+      "bottom": 123.9,
+      "w": 11.0,
+      "h": 32,
+      "anchor": "shoulder.back",
+      "layer": 4,
+      "art_aspect": 0.344,
+      "canon_aspect": 0.406
+    },
+    "forearm_back": {
+      "left": -33.0,
+      "right": -25.0,
+      "top": 123.8,
+      "bottom": 93.8,
+      "w": 8.0,
+      "h": 30,
+      "anchor": "elbow.back",
+      "layer": 5,
+      "art_aspect": 0.267,
+      "canon_aspect": 0.333
+    },
+    "hand_back": {
+      "left": -34.2,
+      "right": -25.8,
+      "top": 93.7,
+      "bottom": 76.7,
+      "w": 8.5,
+      "h": 17,
+      "anchor": "wrist.back",
+      "layer": 6,
+      "art_aspect": 0.5,
+      "canon_aspect": 0.647
+    },
+    "thigh_back": {
+      "left": -19.0,
+      "right": -7.0,
+      "top": 100.2,
+      "bottom": 56.2,
+      "w": 12.0,
+      "h": 44,
+      "anchor": "hip.back",
+      "layer": 7,
+      "art_aspect": 0.273,
+      "canon_aspect": 0.386
+    },
+    "shin_back": {
+      "left": -19.5,
+      "right": -6.5,
+      "top": 56.1,
+      "bottom": 14.1,
+      "w": 13.0,
+      "h": 42,
+      "anchor": "knee.back",
+      "layer": 8,
+      "art_aspect": 0.31,
+      "canon_aspect": 0.286
+    },
+    "foot_back": {
+      "left": -21.8,
+      "right": -0.8,
+      "top": 15.1,
+      "bottom": 1.1,
+      "w": 21.0,
+      "h": 14,
+      "anchor": "ankle.back",
+      "layer": 9,
+      "art_aspect": 1.5,
+      "canon_aspect": 1.857
+    },
+    "pelvis": {
+      "left": -12.5,
+      "right": 12.5,
+      "top": 106.0,
+      "bottom": 86.0,
+      "w": 25.0,
+      "h": 20,
+      "anchor": "pelvis",
+      "layer": 10,
+      "art_aspect": 1.25,
+      "canon_aspect": 2.0
+    },
+    "torso": {
+      "left": -24.8,
+      "right": 24.8,
+      "top": 155.9,
+      "bottom": 107.9,
+      "w": 49.5,
+      "h": 48,
+      "anchor": "spine_low",
+      "layer": 11,
+      "art_aspect": 1.031,
+      "canon_aspect": 0.958
+    },
+    "thigh_front": {
+      "left": 1.8,
+      "right": 20.2,
+      "top": 102.2,
+      "bottom": 58.2,
+      "w": 18.5,
+      "h": 44,
+      "anchor": "hip.front",
+      "layer": 12,
+      "art_aspect": 0.42,
+      "canon_aspect": 0.386
+    },
+    "shin_front": {
+      "left": 3.8,
+      "right": 18.2,
+      "top": 58.1,
+      "bottom": 16.1,
+      "w": 14.5,
+      "h": 42,
+      "anchor": "knee.front",
+      "layer": 13,
+      "art_aspect": 0.345,
+      "canon_aspect": 0.286
+    },
+    "hand_front": {
+      "left": 22.2,
+      "right": 31.8,
+      "top": 95.7,
+      "bottom": 78.7,
+      "w": 9.5,
+      "h": 17,
+      "anchor": "wrist.front",
+      "layer": 14,
+      "art_aspect": 0.559,
+      "canon_aspect": 0.647
+    },
+    "head": {
+      "left": -13.2,
+      "right": 13.2,
+      "top": 194.3,
+      "bottom": 160.3,
+      "w": 26.5,
+      "h": 34,
+      "anchor": "neck",
+      "layer": 15,
+      "art_aspect": 0.779,
+      "canon_aspect": 0.853
+    },
+    "face_eyes": {
+      "left": -14.2,
+      "right": 14.2,
+      "top": 188.0,
+      "bottom": 176.0,
+      "w": 28.5,
+      "h": 12,
+      "anchor": "face",
+      "layer": 15,
+      "art_aspect": 2.375,
+      "canon_aspect": 2.417
+    },
+    "hair_front": {
+      "left": -10.5,
+      "right": 10.5,
+      "top": 194.4,
+      "bottom": 174.4,
+      "w": 21.0,
+      "h": 20,
+      "anchor": "hair.front",
+      "layer": 16,
+      "art_aspect": 1.05,
+      "canon_aspect": 1.65
+    },
+    "upperarm_front": {
+      "left": 17.2,
+      "right": 30.8,
+      "top": 157.9,
+      "bottom": 125.9,
+      "w": 13.5,
+      "h": 32,
+      "anchor": "shoulder.front",
+      "layer": 18,
+      "art_aspect": 0.422,
+      "canon_aspect": 0.406
+    },
+    "forearm_front": {
+      "left": 20.5,
+      "right": 31.5,
+      "top": 125.8,
+      "bottom": 95.8,
+      "w": 11.0,
+      "h": 30,
+      "anchor": "elbow.front",
+      "layer": 19,
+      "art_aspect": 0.367,
+      "canon_aspect": 0.333
+    },
+    "foot_front": {
+      "left": 3.9,
+      "right": 20.9,
+      "top": 17.1,
+      "bottom": 3.1,
+      "w": 17.0,
+      "h": 14,
+      "anchor": "ankle.front",
+      "layer": 20,
+      "art_aspect": 1.214,
+      "canon_aspect": 1.857
+    }
+  }
+}

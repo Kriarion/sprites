@@ -13,7 +13,7 @@
     "rig": "1.0.0",
     "animation": "1.0.0",
     "ui": "1.0.0",
-    "pack": "0.3.0"
+    "pack": "0.3.1"
   },
   "gen_budget": {
     "max_per_session": 10,
@@ -87,21 +87,43 @@
       "title": "2 trocas de identidade indice->peca",
       "detail": "Mao/pe (g3) e cabelo/face (g4) foram detectadas pela folha de contato e corrigidas no spec. Contact sheet passa a ser obrigatoria por lote.",
       "next_action": "incluir contact sheet no pipeline (feito manualmente nesta sessao)"
+    },
+    {
+      "id": "ISSUE-012",
+      "severity": "medium",
+      "title": "Juntas com taper (D6)",
+      "detail": "cotovelo/punho/joelho encostam em 0,1 u de sobreposicao; o vao visivel vem da arte, nao do posicionamento.",
+      "next_action": "gerar segmentos com cap de sobreposicao de 2-3 u na ponta proximal (DB-SESSION-0003 G4)"
+    },
+    {
+      "id": "ISSUE-013",
+      "severity": "medium",
+      "title": "Ancora de ombro +-28 u vs torso de 46 u",
+      "detail": "com torso de 46 u o ombro anatomico fica em +-22 u; +-28 u e a largura EXTERNA do deltoide. Rig superestima a junta.",
+      "next_action": "revisar ANCHORS/rig para +-22 u e revalidar C2/C6"
+    },
+    {
+      "id": "ISSUE-014",
+      "severity": "low",
+      "title": "Cabelo traseiro cobre o pescoco (D10)",
+      "detail": "hair_back desce 24 u abaixo do topo do cranio, criando faixa escura sob o queixo.",
+      "next_action": "art: cabelo traseiro com recorte de pescoco"
     }
   ],
   "next_priorities": [
-    "1. DB-SESSION-0003: corrigir D1-D4 + teste de rotacao (4 novas / 4 reserva)",
-    "2. Fechar M1 com assembly_report.json (PASS por junta)",
-    "3. Implementar tools/atlas.py e tools/build_manifest.py",
-    "4. W3: vertical slice Goku sobre corpo base aprovado",
-    "5. Automatizar contact sheet no pipeline"
+    "1. Decidir PENDING-004 (contorno) antes de gerar mais pecas",
+    "2. DB-SESSION-0003: D4 (contorno), D2/D3/D10 (rosto/cabelo), D1/D6 (punho com cap) - 4 novas / 4 reserva",
+    "3. Revisar ancora de ombro (+-28 -> +-22 u) e revalidar C2/C6",
+    "4. Teste de rotacao +-35 em 8 angulos nas 12 juntas -> assembly_report.json (fecha M1)",
+    "5. Automatizar contact sheet (BL-016) e integrar audit_geometry no validate.py"
   ],
   "decisions_pending_human": [
     {
       "id": "PENDING-004",
-      "title": "Como corrigir o contorno fino (C3)?",
-      "detail": "Opcao A: pedir 3-4 px no prompt (custa geracoes, resultado incerto). Opcao B: pos-processar com dilatacao de 1 px na linha escura (deterministico, sem custo de geracao, muda levemente o traco). Opcao C: aceitar 1 px e revisar o padrao para 0,8-1,0%.",
-      "impact": "afeta TODAS as pecas do pacote; decide o 'peso visual' do jogo"
+      "title": "Como resolver o contorno fino (C3)?",
+      "detail": "Medido: 1,12 px @1x (0,56% da altura); padrao pede 1,6-2,8 px (0,8-1,4%). Opcao A: pedir 'contorno 3-4 px no mestre' e testar com 2 geracoes. Opcao B: pos-processar so o contorno (dilatacao com mascara de borda) - a versao ingenua foi testada e reprovada. Opcao C: revisar o padrao C3 para 0,5-0,7%, aceitando o traco deste gerador.",
+      "recommendation": "A, com C como plano B se o gerador nao obedecer em 2 tentativas",
+      "impact": "afeta TODAS as pecas do pacote; define o peso visual do jogo"
     }
   ],
   "last_updated": "2026-10-22",

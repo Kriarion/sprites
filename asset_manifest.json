@@ -2,7 +2,7 @@
   "$comment": "Manifesto p\u00fablico do pacote. Fonte da verdade detalhada e mut\u00e1vel \u00e9 production/asset_registry.json. Este arquivo lista somente assets APPROVED, com hash, e \u00e9 regenerado por tools/build_manifest.py.",
   "manifest_schema_version": "1.0.0",
   "project": "dragonball-aqw-asset-pack",
-  "pack_version": "0.3.0",
+  "pack_version": "0.3.1",
   "generated_at": "2026-10-22T14:04:22Z",
   "generated_by": "FASE_2_SESSION_0002",
   "standards": {
@@ -86,8 +86,8 @@
     }
   ],
   "notes": [
-    "FASE 2 em andamento. 5 referencias de estilo APPROVED; corpo base e rig montados mas NAO aprovados.",
-    "Corpo base: 18 pecas montaveis por dados, coerencia 83,3% (C3 reprovado: contorno fino).",
+    "FASE 2 em andamento. 4 referencias de estilo APPROVED; corpo base e rig montados mas NAO aprovados.",
+    "Corpo base: 18 pecas, silhueta canonica, coerencia 83,3% (C3 reprovado: contorno 1,12 px @1x).",
     "Nenhum asset canonico de Dragon Ball. Nenhuma animacao. Nenhuma mascara de cor."
   ],
   "in_progress": [

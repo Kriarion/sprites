@@ -17,14 +17,14 @@ kit de UI e documentação de integração — utilizável em Godot, Unity, Game
 | Item | Estado |
 |---|---|
 | Fase | **FASE 2 — Corpos e rigs em andamento** |
-| Versão do pacote | `0.3.0` |
+| Versão do pacote | `0.3.1` |
 | Assets registrados | `9` — 5 referências `APPROVED`, 1 `REWORK_REQUIRED`, 3 `QA_PENDING` |
 | Sessões de produção executadas | `2` (`DB-SESSION-0001`, `0002`) |
 | Gerações de imagem consumidas | `15` no total (10 + 5), ledger conciliado |
 | Padrão visual | `art_style_guide` **1.2.0** — proporção estabilizada em **5,9 cabeças** (ADR-0007) |
 | Assets canônicos de jogo | `0` |
 | Rig | `DB_RIG_HUMAN_M_001` (27 bones) — **não testado em rotação** |
-| Corpo base | `DB_CHAR_BASE_HUMAN_M` — 18 peças montáveis, **não aprovado** (coerência 83,3%) |
+| Corpo base | `DB_CHAR_BASE_HUMAN_M` — 18 peças montáveis, silhueta canônica, **não aprovado** (coerência 83,3%, C3) |
 | Animação / máscara de cor | **nenhuma** |
 
 O estilo está **provado** (5 pranchas aprovadas) e o corpo humano base **monta por dados** (18 peças, 5,88 cabeças).

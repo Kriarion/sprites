@@ -32,11 +32,21 @@ QUALITY ISSUES:
 - D1 folga antebraco->mao (pivo de tipo nao medido na peca)
 - D2 face_eyes esmagado: normalizacao por altura em decal largo
 - D3 hair_front cobre a face
-- D4 contorno ~1 px em 1x (C3) - sistemico
+- D4 contorno ~1,1 px em 1x (C3) - sistemico; dilatacao 1 px testada e DESCARTADA (engrossa linha interna)
+- D6 juntas com taper (cotovelo/punho/joelho encostam em 0,1 u; falta cap de sobreposicao 2-3 u na arte)
+- D7 largura refem do desenho (resolvido por silhueta canonica; drift residual medido em 6 pecas)
+- D8 braco traseiro fora do torso (resolvido) | D9 hand_back horizontal (resolvido) | D10 cabelo traseiro cobre o pescoco
 - 2 trocas de identidade indice->peca detectadas por contact sheet e corrigidas no spec
 
-CORRECTIONS PERFORMED: nenhuma geracao de correcao; defeitos corrigiveis por codigo/spec foram corrigidos
-  (bbox de merge dos olhos, troca mao/pe, variant de poses, offset de profundidade, dims canonicas)
+CORRECTIONS PERFORMED: nenhuma geracao de correcao (0 de 4 reservadas usadas).
+  Corrigido por spec/codigo, com medicao antes e depois:
+  - hand_back desenhada na horizontal -> rotate_deg 270 (escolhido por strip de rotacao)
+  - cintura aberta 13,2 u -> pivo de torso/pelvis recalculado (0,95->0,79 e 0,12->0,30) => folga 1,9 u
+  - braco traseiro fora do torso -> DEPTH_OFFSET -6 -> -2 u + offset_u por peca => sobreposicao 3,3 u
+  - larguras erradas -> politica de SILHUETA CANONICA no compose.py (peca preenche a caixa do tipo)
+  - altura do corpo 193,5 u -> 200,2 u
+  - bbox de merge dos olhos, troca mao/pe em g3, variantes de pose, dims canonicas
+  - novo tools/audit_geometry.py: 15 juntas + 20 aspectos medidos (JSON)
 
 PIPELINE CHANGES:
 - tools/pack_parts.py (novo): folhas -> pecas nomeadas via spec, merge, rotacao, normalizacao, pivo por tipo
@@ -44,6 +54,11 @@ PIPELINE CHANGES:
 - tools/coherence.py (novo): 6 invariantes; C2 por rig; C4 por grupo de paleta; C5/C6 implementados
 - tools/measure.py e key.py: metricas corrigidas por evidencia
 - docs/coherence_standard.md: faixa C3 revisada por medicao (0,009-0,013 -> 0,008-0,014)
+
+MEASUREMENTS (antes -> depois, mesma sessao):
+  altura do corpo 193,5 u -> 200,2 u | folga de cintura 13,2 u -> 1,9 u | ombro traseiro folga 3,7 u -> sobreposicao 3,3 u
+  half-shadow back/front 0,69 -> 0,52 | C3 0,00488 -> 0,00461 (segue reprovado: ~1,12 px @1x)
+  contorno medido por EDT: mediana 2,24 px @2 px/u = 1,12 px @1x = 0,56% da altura (padrao pede 0,8-1,4%)
 
 CURRENT PROJECT STATUS: F2 parcialmente cumprida. Corpo base montavel por dados, rig JSON valido no schema,
   coerencia 83,3% (5/6). Nenhum asset APPROVED. M1 nao fechado (falta corrigir D1-D4 e teste de rotacao).

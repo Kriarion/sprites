@@ -27,7 +27,7 @@ RAW = ROOT / "production/raw"
 
 # pivo canonico por TIPO de peca, em fracao da bbox final (proximal = topo na orientacao vertical)
 PIVOT_BY_TYPE = {
-    "torso": (0.50, 0.95), "pelvis": (0.50, 0.12),
+    "torso": (0.50, 0.79), "pelvis": (0.50, 0.30),
     "head": (0.50, 0.95), "hair_front": (0.50, 0.92), "hair_back": (0.50, 0.15),
     "face_eyes": (0.50, 0.50),
     "upperarm_front": (0.50, 0.06), "upperarm_back": (0.50, 0.06),
@@ -144,6 +144,7 @@ def main() -> int:
                 "rotated_deg": rot, "normalized_scale": k,
                 "size_px": [piece.width, piece.height],
                 "pivot_px": pivot_px, "pivot_norm": [pv[0], pv[1]],
+                "offset_u": entry.get("offset_u", [0, 0]),
             })
             log.append({"sheet": sheet["sheet"], "part": entry["part"],
                         "bbox_src": list(main_c["bbox"]), "out": fname})

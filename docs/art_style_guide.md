@@ -47,6 +47,11 @@ A espessura é **proporcional à altura do corpo (200 u)**, não ao tamanho da i
 
 Regra prática: **contorno externo ≈ 1% da altura do corpo**. Nunca inferior a 1 px em 1x (senão some).
 
+> **Instrução para geração (medida na `DB-SESSION-0002`):** o gerador entrega ~1,12 px em 1x (0,56%),
+> abaixo do piso de 0,8%. Em todo prompt de folha de peças, pedir explicitamente
+> **"outline 3–4 px on a 1024 px canvas, consistent thickness on every part"** — a espessura no mestre
+> precisa ser ~3× o alvo final para sobreviver ao downscale (a redução consome ~15% da linha).
+
 ### 3.2 Cor do contorno
 
 - Personagem/equipamento: `#100D14` (preto levemente violeta), **não** preto puro `#000000`, para não

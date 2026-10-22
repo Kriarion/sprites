@@ -19,8 +19,8 @@
   "invariants": {
     "C1_scale": {
       "pass": true,
-      "body_height_u": 193.5,
-      "ppu": 2,
+      "body_height_u": 200.2,
+      "ppu": 4,
       "tolerance": "200 u \u00b15%"
     },
     "C2_proportion": {
@@ -34,7 +34,7 @@
     },
     "C3_outline_weight": {
       "pass": false,
-      "median_ratio": 0.00488,
+      "median_ratio": 0.0023,
       "tolerance": "0.008\u20130.014",
       "samples": 19
     },
@@ -49,7 +49,7 @@
     },
     "C5_half_shadow": {
       "pass": true,
-      "ratio": 0.52,
+      "ratio": 0.522,
       "tolerance": "<= 0.8",
       "back_samples": 7,
       "front_samples": 11
@@ -72,7 +72,7 @@
     {
       "file": "face_eyes.png",
       "heads_tall": 24.0,
-      "outline_ratio": 0.00755,
+      "outline_ratio": 0.00378,
       "dominant_hsv": [
         [
           307.4,
@@ -100,7 +100,7 @@
     {
       "file": "foot_back.png",
       "heads_tall": 4.67,
-      "outline_ratio": 0.00559,
+      "outline_ratio": 0.0028,
       "dominant_hsv": [
         [
           158.7,
@@ -128,7 +128,7 @@
     {
       "file": "foot_front.png",
       "heads_tall": 9.33,
-      "outline_ratio": 0.00175,
+      "outline_ratio": 0.00088,
       "dominant_hsv": [
         [
           37.5,
@@ -156,7 +156,7 @@
     {
       "file": "forearm_back.png",
       "heads_tall": 15.0,
-      "outline_ratio": 0.00506,
+      "outline_ratio": 0.00253,
       "dominant_hsv": [
         [
           136.4,
@@ -184,7 +184,7 @@
     {
       "file": "forearm_fist.png",
       "heads_tall": 15.0,
-      "outline_ratio": 0.00339,
+      "outline_ratio": 0.00169,
       "dominant_hsv": [
         [
           292.6,
@@ -212,7 +212,7 @@
     {
       "file": "forearm_front.png",
       "heads_tall": 15.0,
-      "outline_ratio": 0.00459,
+      "outline_ratio": 0.00229,
       "dominant_hsv": [
         [
           300.7,
@@ -240,7 +240,7 @@
     {
       "file": "hair_back.png",
       "heads_tall": 13.0,
-      "outline_ratio": 0.02725,
+      "outline_ratio": 0.01362,
       "dominant_hsv": [
         [
           301.4,
@@ -268,7 +268,7 @@
     {
       "file": "hair_front.png",
       "heads_tall": 13.33,
-      "outline_ratio": 0.01677,
+      "outline_ratio": 0.00839,
       "dominant_hsv": [
         [
           89.1,
@@ -295,31 +295,31 @@
     },
     {
       "file": "hand_back.png",
-      "heads_tall": 17.0,
-      "outline_ratio": 0.00606,
+      "heads_tall": 8.5,
+      "outline_ratio": 0.00172,
       "dominant_hsv": [
         [
-          154.1,
-          0.269,
-          0.2
+          157.6,
+          0.199,
+          0.395
         ],
         [
-          158.9,
-          0.203,
-          0.329
+          210.8,
+          0.14,
+          0.125
         ],
         [
-          282.8,
-          0.318,
-          0.072
+          158.0,
+          0.223,
+          0.228
         ],
         [
-          156.1,
-          0.186,
-          0.463
+          159.1,
+          0.202,
+          0.326
         ]
       ],
-      "mean_lum": 67.8
+      "mean_lum": 69.9
     },
     {
       "file": "hand_front.png",
@@ -352,7 +352,7 @@
     {
       "file": "hand_grip.png",
       "heads_tall": 17.0,
-      "outline_ratio": 0.00488,
+      "outline_ratio": 0.00244,
       "dominant_hsv": [
         [
           285.2,
@@ -380,7 +380,7 @@
     {
       "file": "head.png",
       "heads_tall": 13.6,
-      "outline_ratio": 0.0046,
+      "outline_ratio": 0.0023,
       "dominant_hsv": [
         [
           302.2,
@@ -408,7 +408,7 @@
     {
       "file": "pelvis.png",
       "heads_tall": 13.33,
-      "outline_ratio": 0.00326,
+      "outline_ratio": 0.00163,
       "dominant_hsv": [
         [
           299.0,
@@ -436,7 +436,7 @@
     {
       "file": "shin_back.png",
       "heads_tall": 14.0,
-      "outline_ratio": 0.00943,
+      "outline_ratio": 0.00471,
       "dominant_hsv": [
         [
           136.9,
@@ -464,7 +464,7 @@
     {
       "file": "shin_front.png",
       "heads_tall": 14.0,
-      "outline_ratio": 0.00277,
+      "outline_ratio": 0.00139,
       "dominant_hsv": [
         [
           74.0,
@@ -492,7 +492,7 @@
     {
       "file": "thigh_back.png",
       "heads_tall": 12.57,
-      "outline_ratio": 0.00656,
+      "outline_ratio": 0.00328,
       "dominant_hsv": [
         [
           131.6,
@@ -520,7 +520,7 @@
     {
       "file": "thigh_front.png",
       "heads_tall": 12.57,
-      "outline_ratio": 0.00305,
+      "outline_ratio": 0.00152,
       "dominant_hsv": [
         [
           64.3,
@@ -548,7 +548,7 @@
     {
       "file": "torso.png",
       "heads_tall": 13.71,
-      "outline_ratio": 0.00461,
+      "outline_ratio": 0.0023,
       "dominant_hsv": [
         [
           300.1,
@@ -576,7 +576,7 @@
     {
       "file": "upperarm_back.png",
       "heads_tall": 12.8,
-      "outline_ratio": 0.00753,
+      "outline_ratio": 0.00377,
       "dominant_hsv": [
         [
           289.0,
@@ -604,7 +604,7 @@
     {
       "file": "upperarm_front.png",
       "heads_tall": 12.8,
-      "outline_ratio": 0.00444,
+      "outline_ratio": 0.00222,
       "dominant_hsv": [
         [
           27.2,

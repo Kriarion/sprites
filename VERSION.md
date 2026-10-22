@@ -7,7 +7,7 @@ O projeto versiona **o pacote** e **os padrões** de forma independente. Um asse
 
 | Componente | Versão atual | Arquivo de referência | Regra de mudança |
 |---|---|---|---|
-| Pack (conteúdo) | `0.3.0` | `asset_manifest.json` | SemVer — ver §2 |
+| Pack (conteúdo) | `0.3.1` | `asset_manifest.json` | SemVer — ver §2 |
 | Visual Bible | `1.2.0` | `docs/art_style_guide.md` | MINOR = novo padrão documentado; MAJOR = mudança que invalida assets existentes |
 | Technical Standard | `1.1.0` | `docs/technical_specification.md` | MAJOR = quebra compatibilidade de coordenadas/pivôs/atlas |
 | Naming Standard | `1.0.0` | `docs/naming_conventions.md` | MAJOR = renomeação em massa (exige plano de migração) |
@@ -60,5 +60,6 @@ Todo incremento registra entrada no histórico do asset (`changelog` no registro
 | Data | Versão | Mudança |
 |---|---|---|
 | 2026-10-22 | `0.1.0` | Fase 0: leitura dos guides, auditoria de ferramentas, planejamento, roadmap, Visual Bible em prosa, especificações técnicas, ADRs 0001–0005, registros de produção inicializados. Nenhum asset gerado. |
+| 2026-10-22 | `0.3.1` | **DB-SESSION-0002 / correção sem geração:** silhueta canônica (peça preenche a caixa do tipo), `offset_u` de emenda, `audit_geometry.py`, `hand_back` girada, pivôs de torso/pelve. Altura 193,5→200,2 u; folga de cintura 13,2→1,9 u; half-shadow 0,69→0,52. C3 segue reprovado (1,12 px @1x). |
 | 2026-10-22 | `0.3.0` | **DB-SESSION-0002** (5 gerações): corpo base masculino com 18 peças montáveis + rig `DB_RIG_HUMAN_M_001` (27 bones). **ADR-0007**: proporção estabilizada em 5,9 cabeças + `docs/coherence_standard.md` com 6 invariantes auditáveis e `tools/coherence.py`. Coerência 83,3% (C3 reprovado: contorno fino). Nenhum asset aprovado. |
 | 2026-10-22 | `0.2.0` | **DB-SESSION-0001** (10 gerações): Visual Bible **1.1.0** calibrada em imagem; 5 pranchas de referência aprovadas; `tools/` implementado (key, decompose, compose, validate, measure, cellstats); decomposição validada (9/9 objetos); grid refutada → **ADR-0006**; 1 conjunto de teste `QA_PENDING` com G3 reprovado. **Nenhum asset canônico de jogo.** |
