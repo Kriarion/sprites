@@ -1,20 +1,234 @@
 {
   "registry_schema_version": "1.0.0",
   "project": "dragonball-aqw-asset-pack",
-  "notice": "Fonte da verdade de IDs, status e arquivos. Nenhum asset foi registrado: o pacote esta na FASE 0. Entradas so sao criadas pelo pipeline de promocao (docs/production_pipeline.md).",
+  "notice": "Fonte da verdade de IDs, status e arquivos. Assets de referencia de estilo aprovados na DB-SESSION-0001; nenhum asset canonico de jogo produzido.",
   "counters": {
-    "total": 0,
+    "total": 7,
     "by_status": {
       "PLANNED": 0,
       "GENERATED": 0,
       "PROCESSING": 0,
-      "QA_PENDING": 0,
-      "APPROVED": 0,
-      "REWORK_REQUIRED": 0,
+      "QA_PENDING": 1,
+      "APPROVED": 5,
+      "REWORK_REQUIRED": 1,
       "BLOCKED": 0,
       "DEPRECATED": 0
     }
   },
-  "assets": [],
+  "assets": [
+    {
+      "asset_id": "DB_REF_STYLE_DUMMY_V1",
+      "version": "1.0.0",
+      "status": "APPROVED",
+      "category": "reference",
+      "subcategory": "reference",
+      "ownership": "pipeline_artifact",
+      "restrictions": [
+        "non_commercial_study_only"
+      ],
+      "standards": {
+        "visual_bible": "1.1.0",
+        "technical": "1.0.0"
+      },
+      "description": "Dummy neutro M/F frente e perfil; calibra\u00e7\u00e3o de linha e sombreamento",
+      "files": [
+        "references/visual_bible/style_dummy_mf.png"
+      ],
+      "sha256_16": "605263e6a2b3dc50",
+      "session": "DB-SESSION-0001",
+      "qa": {
+        "report": "production/qa_reports/db_session_0001_20261022.md"
+      },
+      "provenance": {
+        "session": "DB-SESSION-0001",
+        "method": "generated_single_keyed",
+        "aqw_reference": "cel-shading chapado, half-shadow, contorno uniforme"
+      }
+    },
+    {
+      "asset_id": "DB_REF_STYLE_DUMMY_V2",
+      "version": "1.0.0",
+      "status": "REWORK_REQUIRED",
+      "category": "reference",
+      "subcategory": "reference",
+      "ownership": "pipeline_artifact",
+      "restrictions": [
+        "non_commercial_study_only"
+      ],
+      "standards": {
+        "visual_bible": "1.1.0",
+        "technical": "1.0.0"
+      },
+      "description": "Supercorre\u00e7\u00e3o de propor\u00e7\u00e3o (4,1 cabe\u00e7as); mantido como evid\u00eancia",
+      "files": [
+        "references/visual_bible/calibration_dummy_v2.png"
+      ],
+      "sha256_16": "605263e6a2b3dc50",
+      "session": "DB-SESSION-0001",
+      "qa": {
+        "report": "production/qa_reports/db_session_0001_20261022.md"
+      },
+      "provenance": {
+        "session": "DB-SESSION-0001",
+        "method": "generated_single_keyed",
+        "aqw_reference": "cel-shading chapado, half-shadow, contorno uniforme"
+      }
+    },
+    {
+      "asset_id": "DB_REF_MATERIALS_V1",
+      "version": "1.0.0",
+      "status": "APPROVED",
+      "category": "reference",
+      "subcategory": "reference",
+      "ownership": "pipeline_artifact",
+      "restrictions": [
+        "non_commercial_study_only"
+      ],
+      "standards": {
+        "visual_bible": "1.1.0",
+        "technical": "1.0.0"
+      },
+      "description": "4 materiais x 2 vers\u00f5es (lit/half-shadow)",
+      "files": [
+        "references/visual_bible/shading_three_tone.png"
+      ],
+      "sha256_16": "9d93c98ee8c6961c",
+      "session": "DB-SESSION-0001",
+      "qa": {
+        "report": "production/qa_reports/db_session_0001_20261022.md"
+      },
+      "provenance": {
+        "session": "DB-SESSION-0001",
+        "method": "generated_single_keyed",
+        "aqw_reference": "cel-shading chapado, half-shadow, contorno uniforme"
+      }
+    },
+    {
+      "asset_id": "DB_REF_WEAPONS_V1",
+      "version": "1.0.0",
+      "status": "APPROVED",
+      "category": "reference",
+      "subcategory": "reference",
+      "ownership": "pipeline_artifact",
+      "restrictions": [
+        "non_commercial_study_only"
+      ],
+      "standards": {
+        "visual_bible": "1.1.0",
+        "technical": "1.0.0"
+      },
+      "description": "4 armas oversized, cabo em eixo vertical",
+      "files": [
+        "references/visual_bible/weapons_oversized.png"
+      ],
+      "sha256_16": "02cc26a7c744def7",
+      "session": "DB-SESSION-0001",
+      "qa": {
+        "report": "production/qa_reports/db_session_0001_20261022.md"
+      },
+      "provenance": {
+        "session": "DB-SESSION-0001",
+        "method": "generated_single_keyed",
+        "aqw_reference": "cel-shading chapado, half-shadow, contorno uniforme"
+      }
+    },
+    {
+      "asset_id": "DB_REF_HEADS_V1",
+      "version": "1.0.0",
+      "status": "APPROVED",
+      "category": "reference",
+      "subcategory": "reference",
+      "ownership": "pipeline_artifact",
+      "restrictions": [
+        "non_commercial_study_only"
+      ],
+      "standards": {
+        "visual_bible": "1.1.0",
+        "technical": "1.0.0"
+      },
+      "description": "4 cabe\u00e7as: M, F, infantil, musculosa",
+      "files": [
+        "references/visual_bible/heads_four_archetypes.png"
+      ],
+      "sha256_16": "0fd1c2d1a4fd89cf",
+      "session": "DB-SESSION-0001",
+      "qa": {
+        "report": "production/qa_reports/db_session_0001_20261022.md"
+      },
+      "provenance": {
+        "session": "DB-SESSION-0001",
+        "method": "generated_single_keyed",
+        "aqw_reference": "cel-shading chapado, half-shadow, contorno uniforme"
+      }
+    },
+    {
+      "asset_id": "DB_REF_UI_PROBE_V1",
+      "version": "1.0.0",
+      "status": "APPROVED",
+      "category": "reference",
+      "subcategory": "reference",
+      "ownership": "pipeline_artifact",
+      "restrictions": [
+        "non_commercial_study_only"
+      ],
+      "standards": {
+        "visual_bible": "1.1.0",
+        "technical": "1.0.0"
+      },
+      "description": "Painel, HP, Ki, slot e 6 bot\u00f5es; sem texto",
+      "files": [
+        "references/visual_bible/ui_probe_kit.png"
+      ],
+      "sha256_16": "ea3f31ee050ad3d3",
+      "session": "DB-SESSION-0001",
+      "qa": {
+        "report": "production/qa_reports/db_session_0001_20261022.md"
+      },
+      "provenance": {
+        "session": "DB-SESSION-0001",
+        "method": "generated_single_keyed",
+        "aqw_reference": "cel-shading chapado, half-shadow, contorno uniforme"
+      }
+    },
+    {
+      "asset_id": "DB_EQUIP_ARMOR_TESTPLATE_M",
+      "version": "0.1.0",
+      "status": "QA_PENDING",
+      "category": "equipment",
+      "subcategory": "armor",
+      "ownership": "original_design",
+      "restrictions": [
+        "non_commercial_study_only"
+      ],
+      "standards": {
+        "visual_bible": "1.1.0",
+        "technical": "1.0.0"
+      },
+      "description": "Conjunto de TESTE do pipeline de decomposicao. Nao canonico. 9 de 21 pecas.",
+      "files": [
+        "exports/metadata/db_equip_armor_testplate_m.asset.json",
+        "exports/previews/assembly_armor_test.png"
+      ],
+      "parts_count": 9,
+      "session": "DB-SESSION-0001",
+      "qa": {
+        "report": "production/qa_reports/db_session_0001_20261022.md",
+        "gates": {
+          "G0": "PASS",
+          "G1": "PASS",
+          "G2": "PASS",
+          "G3": "FAIL",
+          "G4": "PASS"
+        }
+      },
+      "known_defect": "G3 FAIL: conjunto incompleto (9/21), ordem de camadas nao verificavel, pivos sem teste de rotacao",
+      "provenance": {
+        "session": "DB-SESSION-0001",
+        "method": "generated_single_keyed",
+        "canonical_reference": "nenhuma (design original de teste)",
+        "aqw_reference": "ordem de camadas paper-doll"
+      }
+    }
+  ],
   "migrations": []
 }

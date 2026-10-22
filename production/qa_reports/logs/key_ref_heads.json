@@ -1,0 +1,28 @@
+{
+  "input": "production/raw/DB-SESSION-0001/g6_head_sheet.png",
+  "output": "exports/individual_png/ref/ref_heads.png",
+  "input_mode": "RGB",
+  "size_in": [
+    1024,
+    1024
+  ],
+  "size_out": [
+    1024,
+    1024
+  ],
+  "key_color": [
+    252,
+    4,
+    251
+  ],
+  "alpha_coverage": 0.4536,
+  "key_halo_ratio": 0.0,
+  "speckles_removed": 0,
+  "trim_box": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "alpha_real": true
+}

@@ -1,0 +1,229 @@
+{
+  "asset_id": "DB_EQUIP_ARMOR_TESTPLATE_M",
+  "version": "0.1.0",
+  "status": "QA_PENDING",
+  "category": "equipment",
+  "subcategory": "armor",
+  "continuity": "original",
+  "form": null,
+  "character": null,
+  "ownership": "original_design",
+  "restrictions": [
+    "non_commercial_study_only"
+  ],
+  "standards": {
+    "visual_bible": "1.0.0",
+    "technical": "1.0.0"
+  },
+  "scale": {
+    "rig_unit_px_1x": 1,
+    "pixels_per_unit": 1,
+    "body_height_u": 200
+  },
+  "canvas": {
+    "width": 784,
+    "height": 736,
+    "coordinate_system": "top_left_y_down"
+  },
+  "rig": null,
+  "parts": [
+    {
+      "id": "chest",
+      "file": "exports/individual_png/parts_armor_test/chest.png",
+      "layer": 11,
+      "anchor": "spine_low",
+      "pivot_px": [
+        98.5,
+        212.5
+      ],
+      "pivot_norm": [
+        0.5,
+        0.92
+      ],
+      "size_px": [
+        197,
+        231
+      ],
+      "pivot_source": "template_by_type"
+    },
+    {
+      "id": "pelvis_belt",
+      "file": "exports/individual_png/parts_armor_test/pelvis_belt.png",
+      "layer": 10,
+      "anchor": "pelvis",
+      "pivot_px": [
+        114.0,
+        36.6
+      ],
+      "pivot_norm": [
+        0.5,
+        0.2
+      ],
+      "size_px": [
+        228,
+        183
+      ],
+      "pivot_source": "template_by_type"
+    },
+    {
+      "id": "pauldron_single",
+      "file": "exports/individual_png/parts_armor_test/pauldron_single.png",
+      "layer": 17,
+      "anchor": "shoulder.front",
+      "pivot_px": [
+        101.0,
+        153.6
+      ],
+      "pivot_norm": [
+        0.5,
+        0.8
+      ],
+      "size_px": [
+        202,
+        192
+      ],
+      "pivot_source": "template_by_type"
+    },
+    {
+      "id": "thigh_guard",
+      "file": "exports/individual_png/parts_armor_test/thigh_guard.png",
+      "layer": 12,
+      "anchor": "hip.front",
+      "pivot_px": [
+        74.0,
+        17.4
+      ],
+      "pivot_norm": [
+        0.5,
+        0.08
+      ],
+      "size_px": [
+        148,
+        217
+      ],
+      "pivot_source": "template_by_type"
+    },
+    {
+      "id": "shin_greave",
+      "file": "exports/individual_png/parts_armor_test/shin_greave.png",
+      "layer": 13,
+      "anchor": "knee.front",
+      "pivot_px": [
+        62.0,
+        18.2
+      ],
+      "pivot_norm": [
+        0.5,
+        0.08
+      ],
+      "size_px": [
+        124,
+        228
+      ],
+      "pivot_source": "template_by_type"
+    },
+    {
+      "id": "forearm_bracer",
+      "file": "exports/individual_png/parts_armor_test/forearm_bracer.png",
+      "layer": 19,
+      "anchor": "elbow.front",
+      "pivot_px": [
+        64.0,
+        20.5
+      ],
+      "pivot_norm": [
+        0.5,
+        0.1
+      ],
+      "size_px": [
+        128,
+        205
+      ],
+      "pivot_source": "template_by_type"
+    },
+    {
+      "id": "boot_single",
+      "file": "exports/individual_png/parts_armor_test/boot_single.png",
+      "layer": 14,
+      "anchor": "ankle.front",
+      "pivot_px": [
+        86.9,
+        45.5
+      ],
+      "pivot_norm": [
+        0.45,
+        0.22
+      ],
+      "size_px": [
+        193,
+        207
+      ],
+      "pivot_source": "template_by_type"
+    },
+    {
+      "id": "hand_open",
+      "file": "exports/individual_png/parts_armor_test/hand_open.png",
+      "layer": 20,
+      "anchor": "wrist.front",
+      "pivot_px": [
+        108.5,
+        28.8
+      ],
+      "pivot_norm": [
+        0.45,
+        0.15
+      ],
+      "size_px": [
+        241,
+        192
+      ],
+      "pivot_source": "template_by_type"
+    },
+    {
+      "id": "glove_single",
+      "file": "exports/individual_png/parts_armor_test/glove_single.png",
+      "layer": 20,
+      "anchor": "wrist.front",
+      "pivot_px": [
+        98.5,
+        21.4
+      ],
+      "pivot_norm": [
+        0.45,
+        0.15
+      ],
+      "size_px": [
+        219,
+        143
+      ],
+      "pivot_source": "template_by_type"
+    }
+  ],
+  "provenance": {
+    "session": "DB-SESSION-0001",
+    "method": "generated_single_keyed",
+    "canonical_reference": "nenhuma (design original de teste de pipeline; nao e canonico)",
+    "aqw_reference": "ordem de camadas paper-doll; half-shadow em membros traseiros"
+  },
+  "qa": {
+    "gates": {
+      "G0": "PASS",
+      "G1": "PASS",
+      "G2": "PASS",
+      "G3": "FAIL",
+      "G4": "PASS"
+    }
+  },
+  "changelog": [
+    {
+      "version": "0.1.0",
+      "date": "2026-10-22",
+      "note": "primeiro asset de teste do pipeline; nao canonico"
+    }
+  ],
+  "notes": [
+    "Asset de TESTE do pipeline de decomposicao. Nao e canonico e nao representa um conjunto jogavel.",
+    "G3 FAIL: faltam pecas (bracos superiores, maos traseiras, cabeca) para montagem completa; pivos derivados por tipo, nao validados em rotacao.",
+    "Correcao pos-montagem: pelvis ancora em 'pelvis' (root = origem do chao) e pauldron unico ancora em 'shoulder.front' (spine_high e para pares)."
+  ]
+}

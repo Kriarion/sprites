@@ -1,0 +1,265 @@
+{
+  "sheet": "exports/individual_png/ref/parts_armor_test.png",
+  "template": null,
+  "mode_used": "components",
+  "parts_found": 9,
+  "parts_cell_fit": 0,
+  "issues": [],
+  "parts": [
+    {
+      "part": "chest",
+      "file": "chest",
+      "cell": null,
+      "layer": null,
+      "anchor": null,
+      "size_px": [
+        197,
+        231
+      ],
+      "bbox": [
+        324,
+        11,
+        521,
+        242
+      ],
+      "area_px": 36777,
+      "cell_fit": null,
+      "pivot_px": [
+        98.5,
+        115.5
+      ],
+      "pivot_norm": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "part": "pelvis_belt",
+      "file": "pelvis_belt",
+      "cell": null,
+      "layer": null,
+      "anchor": null,
+      "size_px": [
+        228,
+        183
+      ],
+      "bbox": [
+        590,
+        36,
+        818,
+        219
+      ],
+      "area_px": 29414,
+      "cell_fit": null,
+      "pivot_px": [
+        114.0,
+        91.5
+      ],
+      "pivot_norm": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "part": "pauldron_single",
+      "file": "pauldron_single",
+      "cell": null,
+      "layer": null,
+      "anchor": null,
+      "size_px": [
+        202,
+        192
+      ],
+      "bbox": [
+        884,
+        30,
+        1086,
+        222
+      ],
+      "area_px": 26560,
+      "cell_fit": null,
+      "pivot_px": [
+        101.0,
+        96.0
+      ],
+      "pivot_norm": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "part": "thigh_guard",
+      "file": "thigh_guard",
+      "cell": null,
+      "layer": null,
+      "anchor": null,
+      "size_px": [
+        148,
+        217
+      ],
+      "bbox": [
+        348,
+        275,
+        496,
+        492
+      ],
+      "area_px": 23693,
+      "cell_fit": null,
+      "pivot_px": [
+        74.0,
+        108.5
+      ],
+      "pivot_norm": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "part": "shin_greave",
+      "file": "shin_greave",
+      "cell": null,
+      "layer": null,
+      "anchor": null,
+      "size_px": [
+        124,
+        228
+      ],
+      "bbox": [
+        642,
+        270,
+        766,
+        498
+      ],
+      "area_px": 18900,
+      "cell_fit": null,
+      "pivot_px": [
+        62.0,
+        114.0
+      ],
+      "pivot_norm": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "part": "forearm_bracer",
+      "file": "forearm_bracer",
+      "cell": null,
+      "layer": null,
+      "anchor": null,
+      "size_px": [
+        128,
+        205
+      ],
+      "bbox": [
+        924,
+        281,
+        1052,
+        486
+      ],
+      "area_px": 19392,
+      "cell_fit": null,
+      "pivot_px": [
+        64.0,
+        102.5
+      ],
+      "pivot_norm": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "part": "boot_single",
+      "file": "boot_single",
+      "cell": null,
+      "layer": null,
+      "anchor": null,
+      "size_px": [
+        193,
+        207
+      ],
+      "bbox": [
+        317,
+        540,
+        510,
+        747
+      ],
+      "area_px": 24232,
+      "cell_fit": null,
+      "pivot_px": [
+        96.5,
+        103.5
+      ],
+      "pivot_norm": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "part": "hand_open",
+      "file": "hand_open",
+      "cell": null,
+      "layer": null,
+      "anchor": null,
+      "size_px": [
+        241,
+        192
+      ],
+      "bbox": [
+        583,
+        535,
+        824,
+        727
+      ],
+      "area_px": 22049,
+      "cell_fit": null,
+      "pivot_px": [
+        120.5,
+        96.0
+      ],
+      "pivot_norm": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "part": "glove_single",
+      "file": "glove_single",
+      "cell": null,
+      "layer": null,
+      "anchor": null,
+      "size_px": [
+        219,
+        143
+      ],
+      "bbox": [
+        889,
+        564,
+        1108,
+        707
+      ],
+      "area_px": 22893,
+      "cell_fit": null,
+      "pivot_px": [
+        109.5,
+        71.5
+      ],
+      "pivot_norm": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "naming": {
+    "component_00.png": "chest",
+    "component_01.png": "pelvis_belt",
+    "component_02.png": "pauldron_single",
+    "component_03.png": "thigh_guard",
+    "component_04.png": "shin_greave",
+    "component_05.png": "forearm_bracer",
+    "component_06.png": "boot_single",
+    "component_07.png": "hand_open",
+    "component_08.png": "glove_single"
+  },
+  "note": "Nomes atribuidos na ordem de leitura da grade 3x3 validada na imagem g8 (chest, pelvis_belt, pauldron, thigh, shin, bracer, boot, hand, glove). Validacao semantica ainda pendente no gate G1."
+}

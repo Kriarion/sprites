@@ -7,8 +7,8 @@ O projeto versiona **o pacote** e **os padrões** de forma independente. Um asse
 
 | Componente | Versão atual | Arquivo de referência | Regra de mudança |
 |---|---|---|---|
-| Pack (conteúdo) | `0.1.0` | `asset_manifest.json` | SemVer — ver §2 |
-| Visual Bible | `1.0.0` | `docs/art_style_guide.md` | MINOR = novo padrão documentado; MAJOR = mudança que invalida assets existentes |
+| Pack (conteúdo) | `0.2.0` | `asset_manifest.json` | SemVer — ver §2 |
+| Visual Bible | `1.1.0` | `docs/art_style_guide.md` | MINOR = novo padrão documentado; MAJOR = mudança que invalida assets existentes |
 | Technical Standard | `1.0.0` | `docs/technical_specification.md` | MAJOR = quebra compatibilidade de coordenadas/pivôs/atlas |
 | Naming Standard | `1.0.0` | `docs/naming_conventions.md` | MAJOR = renomeação em massa (exige plano de migração) |
 | Rig Standard | `1.0.0` | `docs/anatomy_and_rigging.md` | MAJOR = mudança na hierarquia/âncoras |
@@ -35,7 +35,7 @@ Cada asset carrega, em seus metadados, a versão dos padrões vigentes **no mome
 | Versão | Significado | Fase |
 |---|---|---|
 | `0.1.0` | Documentação e infraestrutura (atual) | Fase 0 |
-| `0.2.0` | Visual Bible validada em imagem + pipeline de recorte provado | Fase 1 |
+| `0.2.0` | ✅ **atingido** — Visual Bible 1.1.0 validada em imagem + decomposição por componentes provada | Fase 1 |
 | `0.3.0` | Corpos base + rigs + montagem funcional | Fase 2 |
 | `0.4.0` | Vertical slice Goku jogável (idle/run/attack/kimehameha/HUD) | Fase 3 |
 | `0.5.0` | Roster inicial (8 personagens) + transformações | Fases 4–5 |
@@ -60,3 +60,4 @@ Todo incremento registra entrada no histórico do asset (`changelog` no registro
 | Data | Versão | Mudança |
 |---|---|---|
 | 2026-10-22 | `0.1.0` | Fase 0: leitura dos guides, auditoria de ferramentas, planejamento, roadmap, Visual Bible em prosa, especificações técnicas, ADRs 0001–0005, registros de produção inicializados. Nenhum asset gerado. |
+| 2026-10-22 | `0.2.0` | **DB-SESSION-0001** (10 gerações): Visual Bible **1.1.0** calibrada em imagem; 5 pranchas de referência aprovadas; `tools/` implementado (key, decompose, compose, validate, measure, cellstats); decomposição validada (9/9 objetos); grid refutada → **ADR-0006**; 1 conjunto de teste `QA_PENDING` com G3 reprovado. **Nenhum asset canônico de jogo.** |

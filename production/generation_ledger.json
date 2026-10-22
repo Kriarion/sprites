@@ -3,17 +3,23 @@
   "project": "dragonball-aqw-asset-pack",
   "policy": {
     "max_generations_per_session": 10,
-    "target_new_generations": [6, 8],
-    "target_reserved_corrections": [2, 4],
+    "target_new_generations": [
+      6,
+      8
+    ],
+    "target_reserved_corrections": [
+      2,
+      4
+    ],
     "interactive_variant_mode_allowed": false,
     "source_of_truth": "this file",
     "rule": "total_executed must equal executed_new + executed_corrections; session must stop at 10"
   },
   "totals": {
-    "sessions_completed": 0,
-    "generations_executed": 0,
-    "assets_approved": 0,
-    "generations_per_approved_asset": null
+    "sessions_completed": 2,
+    "generations_executed": 10,
+    "assets_approved": 5,
+    "generations_per_approved_asset": 2.0
   },
   "sessions": [
     {
@@ -32,21 +38,144 @@
       "corrections": [],
       "notes": "Sessao sem geracao de imagem. Nenhum asset declarado. Documentacao e infraestrutura apenas.",
       "next_session": "DB-SESSION-0001"
+    },
+    {
+      "session_id": "DB-SESSION-0001",
+      "date": "2026-10-22",
+      "type": "REFERENCE",
+      "objective": "Calibrar estilo em imagem e provar decomposicao de pecas",
+      "planned_new": 6,
+      "reserved_corrections": 4,
+      "executed_new": 7,
+      "executed_corrections": 3,
+      "total_executed": 10,
+      "assets_created": [
+        "DB_REF_STYLE_DUMMY_V1",
+        "DB_REF_STYLE_DUMMY_V2",
+        "DB_REF_MATERIALS_V1",
+        "DB_REF_WEAPONS_V1",
+        "DB_REF_HEADS_V1",
+        "DB_REF_UI_PROBE_V1",
+        "DB_EQUIP_ARMOR_TESTPLATE_M"
+      ],
+      "assets_approved": [
+        "DB_REF_MATERIALS_V1",
+        "DB_REF_WEAPONS_V1",
+        "DB_REF_HEADS_V1",
+        "DB_REF_UI_PROBE_V1",
+        "DB_REF_STYLE_DUMMY_V1"
+      ],
+      "assets_rejected": [
+        "DB_REF_STYLE_DUMMY_V2"
+      ],
+      "corrections": [
+        "g4: grade 3x3 com pecas singulares (falhou em simetria)",
+        "g9: 'exactly 6 heads' (supercorrigiu para 4,1 cabecas)",
+        "g10: percentual por segmento (5,89 cabecas, aceitavel)"
+      ],
+      "calls": [
+        {
+          "id": "G1",
+          "file": "g1_style_dummy.png",
+          "kind": "new",
+          "planned": true
+        },
+        {
+          "id": "G2",
+          "file": "g2_shading_materials.png",
+          "kind": "new",
+          "planned": true
+        },
+        {
+          "id": "G3",
+          "file": "g3_part_sheet_a.png",
+          "kind": "new",
+          "planned": true,
+          "result": "reprovada: grade ignorada"
+        },
+        {
+          "id": "G4",
+          "file": "g4_part_sheet_a_v2.png",
+          "kind": "correction",
+          "planned": true,
+          "result": "reprovada: simetria/linha"
+        },
+        {
+          "id": "G5",
+          "file": "g5_weapon_sheet.png",
+          "kind": "new",
+          "planned": true
+        },
+        {
+          "id": "G6",
+          "file": "g6_head_sheet.png",
+          "kind": "new",
+          "planned": true
+        },
+        {
+          "id": "G7",
+          "file": "g7_ui_probe.png",
+          "kind": "new",
+          "planned": true
+        },
+        {
+          "id": "G8",
+          "file": "g8_product_sheet.png",
+          "kind": "new",
+          "planned": false,
+          "result": "aprovada: mudou a arquitetura (ADR-0006)"
+        },
+        {
+          "id": "G9",
+          "file": "g9_style_dummy_v2.png",
+          "kind": "correction",
+          "planned": true,
+          "result": "reprovada: proporcao 4,1"
+        },
+        {
+          "id": "G10",
+          "file": "g10_canonical_dummy.png",
+          "kind": "correction",
+          "planned": true,
+          "result": "aceitavel: 5,89 cabecas"
+        }
+      ],
+      "deviation": "1 geracao NOVA alem das 6 planejadas (G8), consumindo 1 da reserva. Teto de 10 respeitado.",
+      "notes": "Nenhum asset canonico. Estilo validado; decomposicao por componentes validada; rig nao validado.",
+      "next_session": "DB-SESSION-0002"
     }
   ],
   "planned_next": {
-    "session_id": "DB-SESSION-0001",
-    "type": "REFERENCE",
-    "objective": "Calibracao de estilo (dummy neutro) + spike de decomposicao de pecas em grade",
+    "session_id": "DB-SESSION-0002",
+    "type": "ANATOMY",
+    "objective": "Corpo humano completo em 21 pecas (ADR-0006) + montagem + teste de rotacao + rig JSON",
     "planned_new": 6,
     "reserved_corrections": 4,
     "calls": [
-      { "id": "G1", "asset": "DB_REF_STYLE_DUMMY", "content": "dummy neutro M/F frente e perfil" },
-      { "id": "G2", "asset": "DB_REF_SHADING_MATERIALS", "content": "estudo de 3 tons, half-shadow, 4 materiais" },
-      { "id": "G3", "asset": "DB_PART_SHEET_A_SPIKE", "content": "grade 4x4 com 12 pecas de corpo em fundo magenta" },
-      { "id": "G4", "asset": "DB_REF_HEAD_SHEET", "content": "4 cabecas neutras (M, F, infantil, musculosa)" },
-      { "id": "G5", "asset": "DB_REF_WEAPON_SHEET", "content": "4 armas oversized com cabo alinhado" },
-      { "id": "G6", "asset": "DB_REF_UI_PROBE", "content": "moldura, barras e 6 icones em grade" }
+      {
+        "id": "G1",
+        "content": "9 objetos distintos: torso, pelvis, coxa, canela, pe, braco sup, antebraco, mao, cabeca"
+      },
+      {
+        "id": "G2",
+        "content": "9 objetos distintos: versoes TRASEIRAS (half-shadow) das mesmas pecas"
+      },
+      {
+        "id": "G3",
+        "content": "cabeca + cabelo frontal/traseiro + 2 expressoes + 4 poses de mao"
+      },
+      {
+        "id": "G4",
+        "content": "dummy colorido com 6 mascaras de cor (skin, hair, eyes, cloth, metal, energy)"
+      },
+      {
+        "id": "G5",
+        "content": "3 poses do corpo completo (idle, corrida, ataque) para teste de ROM"
+      },
+      {
+        "id": "G6",
+        "content": "correcao reservada: pec\u0430 que falhar na montagem"
+      }
     ]
   }
 }

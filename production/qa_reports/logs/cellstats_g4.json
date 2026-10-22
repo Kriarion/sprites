@@ -1,0 +1,196 @@
+{
+  "file": "../production/raw/DB-SESSION-0001/g4_part_sheet_a_v2.png",
+  "image_size": [
+    1376,
+    768
+  ],
+  "grid": [
+    3,
+    3
+  ],
+  "cell_px": [
+    458,
+    256
+  ],
+  "key_color": [
+    250,
+    5,
+    244
+  ],
+  "covered_cells": 9,
+  "multi_fragment_cells": 5,
+  "gutter_violations": 7,
+  "cells": [
+    {
+      "index": 0,
+      "row": 0,
+      "col": 0,
+      "empty": false,
+      "coverage": 0.518,
+      "bbox": [
+        24,
+        13,
+        458,
+        256
+      ],
+      "size": [
+        434,
+        243
+      ],
+      "fragments": 2,
+      "touches_gutter": true
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "col": 1,
+      "empty": false,
+      "coverage": 0.457,
+      "bbox": [
+        0,
+        36,
+        458,
+        239
+      ],
+      "size": [
+        458,
+        203
+      ],
+      "fragments": 2,
+      "touches_gutter": true
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "col": 2,
+      "empty": false,
+      "coverage": 0.381,
+      "bbox": [
+        0,
+        25,
+        357,
+        254
+      ],
+      "size": [
+        357,
+        229
+      ],
+      "fragments": 2,
+      "touches_gutter": true
+    },
+    {
+      "index": 3,
+      "row": 1,
+      "col": 0,
+      "empty": false,
+      "coverage": 0.33,
+      "bbox": [
+        72,
+        0,
+        326,
+        256
+      ],
+      "size": [
+        254,
+        256
+      ],
+      "fragments": 3,
+      "touches_gutter": true
+    },
+    {
+      "index": 4,
+      "row": 1,
+      "col": 1,
+      "empty": false,
+      "coverage": 0.171,
+      "bbox": [
+        138,
+        15,
+        258,
+        256
+      ],
+      "size": [
+        120,
+        241
+      ],
+      "fragments": 1,
+      "touches_gutter": true
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "col": 2,
+      "empty": false,
+      "coverage": 0.285,
+      "bbox": [
+        78,
+        76,
+        398,
+        212
+      ],
+      "size": [
+        320,
+        136
+      ],
+      "fragments": 1,
+      "touches_gutter": false
+    },
+    {
+      "index": 6,
+      "row": 2,
+      "col": 0,
+      "empty": false,
+      "coverage": 0.268,
+      "bbox": [
+        52,
+        0,
+        354,
+        202
+      ],
+      "size": [
+        302,
+        202
+      ],
+      "fragments": 1,
+      "touches_gutter": true
+    },
+    {
+      "index": 7,
+      "row": 2,
+      "col": 1,
+      "empty": false,
+      "coverage": 0.197,
+      "bbox": [
+        138,
+        0,
+        304,
+        234
+      ],
+      "size": [
+        166,
+        234
+      ],
+      "fragments": 2,
+      "touches_gutter": true
+    },
+    {
+      "index": 8,
+      "row": 2,
+      "col": 2,
+      "empty": false,
+      "coverage": 0.409,
+      "bbox": [
+        63,
+        46,
+        422,
+        207
+      ],
+      "size": [
+        359,
+        161
+      ],
+      "fragments": 1,
+      "touches_gutter": false
+    }
+  ]
+}

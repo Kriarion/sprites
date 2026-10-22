@@ -16,15 +16,18 @@ kit de UI e documentação de integração — utilizável em Godot, Unity, Game
 
 | Item | Estado |
 |---|---|
-| Fase | **FASE 0 — Auditoria e Planejamento** (documentação) |
-| Versão do pacote | `0.1.0` (documentação e infraestrutura, sem assets) |
-| Assets registrados | `0` |
-| Sessões de produção executadas | `0` |
-| Gerações de imagem consumidas | `0` |
-| Padrão visual | Definido em prosa (`docs/art_style_guide.md`), **ainda não validado em imagem** |
+| Fase | **FASE 1 — Visual Bible em andamento** (estilo validado, rig pendente) |
+| Versão do pacote | `0.2.0` |
+| Assets registrados | `7` — 5 referências de estilo `APPROVED`, 1 `REWORK_REQUIRED`, 1 `QA_PENDING` |
+| Sessões de produção executadas | `1` (`DB-SESSION-0001`) |
+| Gerações de imagem consumidas | `10` de 10 na sessão 0001 (ledger conciliado) |
+| Padrão visual | `art_style_guide` **1.1.0**, calibrado em imagem — ver `docs/calibration_report.md` |
+| Assets canônicos de jogo | `0` |
+| Rig / animação / máscara de cor | **nenhum** |
 
-Nada foi declarado pronto. Este repositório contém, por enquanto, **planejamento, padrões e infraestrutura**.
-O primeiro asset real só existirá após a Sessão `DB-SESSION-0001`.
+O estilo está **provado** (5 pranchas aprovadas, keying com 0% de halo) e o pipeline de decomposição está
+**funcionando** (9/9 objetos isolados de uma folha). O que **não** existe ainda: corpo completo montado,
+rig validado, animação e qualquer personagem canônico. O marco M1 (vertical slice montável) não foi atingido.
 
 Leia `docs/project_plan.md` para a visão completa e `docs/roadmap.md` para a sequência de execução.
 
@@ -74,7 +77,8 @@ Os documentos derivados em `docs/` (este conjunto) **operacionalizam** essa hier
 | `docs/integration_guide.md` | Integração engine-agnostic (Godot/Unity/GameMaker/exemplos) |
 | `docs/quality_checklist.md` | Máquina de estados, checklists, testes automáticos e gates |
 | `docs/character_catalog.md` | Catálogo canônico priorizado por saga/continuidade (tiers P0–P2) |
-| `docs/decisions/` | ADRs — decisões arquiteturais registradas |
+| `docs/calibration_report.md` | **Números medidos** na Sessão 0001 (o que o gerador faz de verdade) |
+| `docs/decisions/` | ADRs — decisões arquiteturais registradas (0001–0006) |
 
 Registros de produção (máquina):
 

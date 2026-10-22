@@ -1,0 +1,84 @@
+{
+  "figures": [
+    {
+      "body_height_px": 701,
+      "head_height_px": 93,
+      "heads_tall": 7.54,
+      "shoulder_width_px": 264,
+      "hip_width_px": 266,
+      "head_height_u": 26.5,
+      "shoulder_width_u": 75.3,
+      "hip_width_u": 75.9,
+      "leg_length_u_est": 99.9,
+      "neck_y_px": 134,
+      "bbox": [
+        96,
+        33,
+        415,
+        733
+      ],
+      "px_per_u": 3.505,
+      "figure_index": 0
+    },
+    {
+      "body_height_px": 701,
+      "head_height_px": 99,
+      "heads_tall": 7.08,
+      "shoulder_width_px": 177,
+      "hip_width_px": 174,
+      "head_height_u": 28.2,
+      "shoulder_width_u": 50.5,
+      "hip_width_u": 49.6,
+      "leg_length_u_est": 99.9,
+      "neck_y_px": 135,
+      "bbox": [
+        428,
+        33,
+        635,
+        733
+      ],
+      "px_per_u": 3.505,
+      "figure_index": 1
+    },
+    {
+      "body_height_px": 701,
+      "head_height_px": 119,
+      "heads_tall": 5.89,
+      "shoulder_width_px": 127,
+      "hip_width_px": 102,
+      "head_height_u": 34.0,
+      "shoulder_width_u": 36.2,
+      "hip_width_u": 29.1,
+      "leg_length_u_est": 99.9,
+      "neck_y_px": 153,
+      "bbox": [
+        837,
+        33,
+        977,
+        733
+      ],
+      "px_per_u": 3.505,
+      "figure_index": 2
+    },
+    {
+      "body_height_px": 701,
+      "head_height_px": 119,
+      "heads_tall": 5.89,
+      "shoulder_width_px": 126,
+      "hip_width_px": 102,
+      "head_height_u": 34.0,
+      "shoulder_width_u": 35.9,
+      "hip_width_u": 29.1,
+      "leg_length_u_est": 99.9,
+      "neck_y_px": 153,
+      "bbox": [
+        1088,
+        33,
+        1225,
+        733
+      ],
+      "px_per_u": 3.505,
+      "figure_index": 3
+    }
+  ]
+}

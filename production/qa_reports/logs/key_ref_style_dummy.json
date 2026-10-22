@@ -1,0 +1,28 @@
+{
+  "input": "production/raw/DB-SESSION-0001/g1_style_dummy.png",
+  "output": "exports/individual_png/ref/ref_style_dummy.png",
+  "input_mode": "RGB",
+  "size_in": [
+    1408,
+    768
+  ],
+  "size_out": [
+    1408,
+    768
+  ],
+  "key_color": [
+    250,
+    5,
+    247
+  ],
+  "alpha_coverage": 0.4054,
+  "key_halo_ratio": 0.0206,
+  "speckles_removed": 0,
+  "trim_box": [
+    0,
+    0,
+    1408,
+    768
+  ],
+  "alpha_real": true
+}

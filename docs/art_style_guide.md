@@ -1,7 +1,9 @@
 # VISUAL BIBLE — Guia de Estilo (normativo)
 
-**Versão:** 1.0.0 (em prosa) · **Status:** `PROVISÓRIO` até validação em imagem na `DB-SESSION-0001`
-**Base:** `asset_guide1.md` §1, `asset_guide2.md` §1 e §10, `master-prompt.md` §6
+**Versão:** 1.1.0 — **calibrada em imagem** na `DB-SESSION-0001`
+**Status:** `VIGENTE` (calibração parcial: estilo validado, proporção com controle numérico)
+**Base:** `asset_guide1.md` §1, `asset_guide2.md` §1 e §10, `master-prompt.md` §6,
+evidência em `docs/calibration_report.md`
 
 > Este documento é a **lei visual** do projeto. Nenhum asset entra em produção sem poder ser descrito por
 > estas regras. Toda exceção exige ADR.
@@ -118,7 +120,28 @@ Regra: membro traseiro **nunca** tem brilho próprio; membro frontal concentra o
 
 ### 5.1 Cânone de proporção (humanoide adulto)
 
-Referência completa e medidas em `docs/technical_specification.md` §2. Resumo:
+Referência completa e medidas em `docs/technical_specification.md` §2.
+
+> **CALIBRAÇÃO 1.1.0 (medido na DB-SESSION-0001):** adjetivos **não controlam** proporção.
+> "heroic 5.5-head proportions" produziu **7,5 cabeças** (realista); "exactly 6 heads" supercorrigiu para
+> **4,1**; só **percentual explícito por segmento** funcionou — "head = 18% da altura" entregou **5,89**.
+> Portanto: **todo prompt de corpo declara percentuais medidos**, e toda ficha é verificada por
+> `tools/measure.py` antes do gate G1. Tolerância **±5%**.
+
+Percentuais obrigatórios no prompt (base = altura total do corpo):
+
+| Segmento | Percentual | Equivalente em u (200 u) |
+|---|---:|---:|
+| Cabeça (queixo → topo) | **18,2%** | 36 u |
+| Topo do ombro | 78,0% | 156 u |
+| Cintura | 60,0% | 120 u |
+| Quadril | 50,0% | 100 u |
+| Joelho | 28,0% | 56 u |
+| Tornozelo | 7,0% | 14 u |
+| Largura dos ombros | 28,0% | 56 u |
+| Largura da cabeça | 15,0% | 30 u |
+
+Resumo do cânone:
 
 - Altura total **200 u**; cabeça **36 u** → **5,5 cabeças** (heroico estilizado, não realista 7,5).
 - Cabeça **maior** que o real: destaca cabelo, capacete e expressão (exigência do guia 1).
@@ -230,6 +253,23 @@ Prompting"; aqui eles foram adaptados para **grade determinística** (ADR-0001) 
 | Fundo magenta chapado | Fundo branco, cenário, ou xadrez falso |
 | Reuso de rig aprovado | Novo rig por personagem sem necessidade anatômica |
 | Silhueta testada em preto | Detalhe que só existe em close |
+
+## 11.1. O que a calibração de 2026-10-22 confirmou
+
+| Regra | Status | Evidência |
+|---|---|---|
+| Contorno escuro uniforme e grosso | ✅ confirmado | 4 pranchas aprovadas (dummy, materiais, armas, cabeças) |
+| Cel-shading de 1 sombra + 1 brilho por material | ✅ confirmado | `DB_REF_MATERIALS_V1` (8 objetos, 4 materiais) |
+| Half-shadow em membro traseiro | ✅ confirmado | `DB_REF_MATERIALS_V1` (coluna direita propositalmente escurecida) |
+| Luz de cima-frente-esquerda | ✅ confirmado | todas as pranchas, sem exceção |
+| Paleta limitada (5–8 cores/design) | ✅ confirmado | armas e cabeças dentro da paleta |
+| Silhueta legível / armas oversized | ✅ confirmado | arma de 2 mãos > 100% da altura do corpo |
+| Fundo magenta keyable | ✅ confirmado | halo 0,0% em 5 de 6 folhas |
+| **Proporção 5,5 cabeças por adjetivo** | ❌ **refutado** | ver §5.1 — usar percentual explícito |
+| **Peças simétricas saírem singulares** | ❌ **refutado** | o gerador desenha pares L/R; ver `ADR-0006` |
+
+Regras refutadas não foram removidas: foram **substituídas por controle numérico** (proporção) e por
+**aceitação explícita do par espelhado** (`mirrored_pair`).
 
 ## 12. Critério de aprovação visual (gate G1)
 

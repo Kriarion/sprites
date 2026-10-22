@@ -1,0 +1,196 @@
+{
+  "file": "../production/raw/DB-SESSION-0001/g8_product_sheet.png",
+  "image_size": [
+    1408,
+    768
+  ],
+  "grid": [
+    3,
+    3
+  ],
+  "cell_px": [
+    469,
+    256
+  ],
+  "key_color": [
+    246,
+    4,
+    239
+  ],
+  "covered_cells": 9,
+  "multi_fragment_cells": 3,
+  "gutter_violations": 9,
+  "cells": [
+    {
+      "index": 0,
+      "row": 0,
+      "col": 0,
+      "empty": false,
+      "coverage": 0.24,
+      "bbox": [
+        324,
+        11,
+        469,
+        242
+      ],
+      "size": [
+        145,
+        231
+      ],
+      "fragments": 1,
+      "touches_gutter": true
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "col": 1,
+      "empty": false,
+      "coverage": 0.354,
+      "bbox": [
+        0,
+        20,
+        469,
+        232
+      ],
+      "size": [
+        469,
+        212
+      ],
+      "fragments": 3,
+      "touches_gutter": true
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "col": 2,
+      "empty": false,
+      "coverage": 0.179,
+      "bbox": [
+        0,
+        30,
+        148,
+        222
+      ],
+      "size": [
+        148,
+        192
+      ],
+      "fragments": 1,
+      "touches_gutter": true
+    },
+    {
+      "index": 3,
+      "row": 1,
+      "col": 0,
+      "empty": false,
+      "coverage": 0.173,
+      "bbox": [
+        348,
+        19,
+        469,
+        236
+      ],
+      "size": [
+        121,
+        217
+      ],
+      "fragments": 1,
+      "touches_gutter": true
+    },
+    {
+      "index": 4,
+      "row": 1,
+      "col": 1,
+      "empty": false,
+      "coverage": 0.186,
+      "bbox": [
+        0,
+        14,
+        469,
+        242
+      ],
+      "size": [
+        469,
+        228
+      ],
+      "fragments": 3,
+      "touches_gutter": true
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "col": 2,
+      "empty": false,
+      "coverage": 0.157,
+      "bbox": [
+        0,
+        25,
+        114,
+        230
+      ],
+      "size": [
+        114,
+        205
+      ],
+      "fragments": 1,
+      "touches_gutter": true
+    },
+    {
+      "index": 6,
+      "row": 2,
+      "col": 0,
+      "empty": false,
+      "coverage": 0.187,
+      "bbox": [
+        317,
+        28,
+        469,
+        235
+      ],
+      "size": [
+        152,
+        207
+      ],
+      "fragments": 1,
+      "touches_gutter": true
+    },
+    {
+      "index": 7,
+      "row": 2,
+      "col": 1,
+      "empty": false,
+      "coverage": 0.241,
+      "bbox": [
+        0,
+        23,
+        469,
+        234
+      ],
+      "size": [
+        469,
+        211
+      ],
+      "fragments": 3,
+      "touches_gutter": true
+    },
+    {
+      "index": 8,
+      "row": 2,
+      "col": 2,
+      "empty": false,
+      "coverage": 0.148,
+      "bbox": [
+        0,
+        52,
+        170,
+        190
+      ],
+      "size": [
+        170,
+        138
+      ],
+      "fragments": 1,
+      "touches_gutter": true
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "placed": [
+    {
+      "part": "pelvis_belt",
+      "anchor": "pelvis",
+      "layer": 10,
+      "pivot_px": [
+        114.0,
+        36.6
+      ],
+      "pivot_norm": [
+        0.5,
+        0.2
+      ],
+      "normalized_scale": 0.219,
+      "placed_at": [
+        196,
+        272
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "chest",
+      "anchor": "spine_low",
+      "layer": 11,
+      "pivot_px": [
+        98.5,
+        212.5
+      ],
+      "pivot_norm": [
+        0.5,
+        0.92
+      ],
+      "normalized_scale": 0.416,
+      "placed_at": [
+        180,
+        156
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "thigh_guard",
+      "anchor": "hip.front",
+      "layer": 12,
+      "pivot_px": [
+        74.0,
+        17.4
+      ],
+      "pivot_norm": [
+        0.5,
+        0.08
+      ],
+      "normalized_scale": 0.369,
+      "placed_at": [
+        215,
+        274
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "shin_greave",
+      "anchor": "knee.front",
+      "layer": 13,
+      "pivot_px": [
+        62.0,
+        18.2
+      ],
+      "pivot_norm": [
+        0.5,
+        0.08
+      ],
+      "normalized_scale": 0.333,
+      "placed_at": [
+        222,
+        362
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "boot_single",
+      "anchor": "ankle.front",
+      "layer": 14,
+      "pivot_px": [
+        86.9,
+        45.5
+      ],
+      "pivot_norm": [
+        0.45,
+        0.22
+      ],
+      "normalized_scale": 0.309,
+      "placed_at": [
+        215,
+        438
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "pauldron_single",
+      "anchor": "shoulder.front",
+      "layer": 17,
+      "pivot_px": [
+        101.0,
+        153.6
+      ],
+      "pivot_norm": [
+        0.5,
+        0.8
+      ],
+      "normalized_scale": 0.188,
+      "placed_at": [
+        258,
+        139
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "forearm_bracer",
+      "anchor": "elbow.front",
+      "layer": 19,
+      "pivot_px": [
+        64.0,
+        20.5
+      ],
+      "pivot_norm": [
+        0.5,
+        0.1
+      ],
+      "normalized_scale": 0.273,
+      "placed_at": [
+        263,
+        226
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "hand_open",
+      "anchor": "wrist.front",
+      "layer": 20,
+      "pivot_px": [
+        108.5,
+        28.8
+      ],
+      "pivot_norm": [
+        0.45,
+        0.15
+      ],
+      "normalized_scale": 0.188,
+      "placed_at": [
+        262,
+        287
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "glove_single",
+      "anchor": "wrist.front",
+      "layer": 20,
+      "pivot_px": [
+        98.5,
+        21.4
+      ],
+      "pivot_norm": [
+        0.45,
+        0.15
+      ],
+      "normalized_scale": 0.252,
+      "placed_at": [
+        257,
+        287
+      ],
+      "offscreen": false
+    }
+  ]
+}
