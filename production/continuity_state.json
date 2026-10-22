@@ -4,8 +4,8 @@
   "current_phase": "FASE_2_EM_ANDAMENTO",
   "current_wave": "W2",
   "next_wave": "W1",
-  "last_completed_session": "DB-SESSION-0002",
-  "next_session": "DB-SESSION-0003",
+  "last_completed_session": "DB-SESSION-0003",
+  "next_session": "DB-SESSION-0004",
   "standards": {
     "visual_bible": "1.2.0",
     "technical": "1.1.0",
@@ -19,8 +19,8 @@
     "max_per_session": 10,
     "next_session_planned_new": 4,
     "next_session_reserved": 4,
-    "sessions_completed": 3,
-    "generations_executed_lifetime": 15
+    "sessions_completed": 4,
+    "generations_executed_lifetime": 17
   },
   "approved_assets": [
     "DB_REF_MATERIALS_V1",
@@ -59,13 +59,6 @@
       "title": "Escala relativa entre pecas",
       "detail": "Resolvido por normalizacao anatomica + dims canonicas (18 pecas consistentes).",
       "next_action": "-"
-    },
-    {
-      "id": "ISSUE-008",
-      "severity": "high",
-      "title": "Contorno fino (C3) - sistemico",
-      "detail": "Medido ~1,0 px em 1x contra padrao 1,6-2,8 px. Afeta TODAS as pecas geradas. Coerencia 83,3%.",
-      "next_action": "pedir 3-4 px no mestre; se falhar, dilatar linha 1 px em pos-processamento"
     },
     {
       "id": "ISSUE-009",
@@ -108,33 +101,58 @@
       "title": "Cabelo traseiro cobre o pescoco (D10)",
       "detail": "hair_back desce 24 u abaixo do topo do cranio, criando faixa escura sob o queixo.",
       "next_action": "art: cabelo traseiro com recorte de pescoco"
+    },
+    {
+      "id": "ISSUE-008",
+      "severity": "high",
+      "title": "Contorno fino (C3) - causa identificada",
+      "detail": "Gerador entrega 0,88% da altura da peca independentemente do prompt (testado com 2 folhas). Cadeia de escala reduz a peca ~3,5x, entao chega 0,94 px @1x. Opcao B (restroke) resolve sem geracao.",
+      "next_action": "aprovar restroke como etapa do pipeline (PENDING-004)"
+    },
+    {
+      "id": "ISSUE-015",
+      "severity": "medium",
+      "title": "Residuo magenta na borda das pecas exportadas",
+      "detail": "pack_parts nao faz despill de borda: max chroma 57 em pixel de borda. Visivel fora de fundo magenta.",
+      "next_action": "mover _despill/_edge_extend do restroke.py para o pack_parts.py (0 geracoes)"
+    },
+    {
+      "id": "ISSUE-016",
+      "severity": "low",
+      "title": "Metrica C3/C4 do coherence.py estavam erradas",
+      "detail": "C3 somava sombreado e usava escala da montagem para pecas; C4 amostrava a cor do contorno.",
+      "next_action": "corrigido nesta sessao; recalibrar o historico dos relatorios anteriores"
     }
   ],
   "next_priorities": [
-    "1. Decidir PENDING-004 (contorno) antes de gerar mais pecas",
-    "2. DB-SESSION-0003: D4 (contorno), D2/D3/D10 (rosto/cabelo), D1/D6 (punho com cap) - 4 novas / 4 reserva",
-    "3. Revisar ancora de ombro (+-28 -> +-22 u) e revalidar C2/C6",
-    "4. Teste de rotacao +-35 em 8 angulos nas 12 juntas -> assembly_report.json (fecha M1)",
-    "5. Automatizar contact sheet (BL-016) e integrar audit_geometry no validate.py"
+    "1. Aprovar PENDING-004 (restroke) e mover despill para o pack_parts",
+    "2. DB-SESSION-0004: regerar corpo base corrigindo D1/D2/D3/D6/D10 (4 novas)",
+    "3. Teste de rotacao +-35 em 8 angulos nas 12 juntas (fecha M1)",
+    "4. Reancorar ombro +-28 -> +-22 u e revalidar C2/C6",
+    "5. Recalibrar relatorios antigos com a metrica C3 corrigida"
   ],
   "decisions_pending_human": [
     {
       "id": "PENDING-004",
-      "title": "Como resolver o contorno fino (C3)?",
-      "detail": "Medido: 1,12 px @1x (0,56% da altura); padrao pede 1,6-2,8 px (0,8-1,4%). Opcao A: pedir 'contorno 3-4 px no mestre' e testar com 2 geracoes. Opcao B: pos-processar so o contorno (dilatacao com mascara de borda) - a versao ingenua foi testada e reprovada. Opcao C: revisar o padrao C3 para 0,5-0,7%, aceitando o traco deste gerador.",
-      "recommendation": "A, com C como plano B se o gerador nao obedecer em 2 tentativas",
-      "impact": "afeta TODAS as pecas do pacote; define o peso visual do jogo"
+      "title": "Contorno: adotar restroke +2,5 px como etapa do pipeline?",
+      "detail": "A (prompt) foi reprovada por medicao: 2 folhas, 0,88% em ambas. B (restroke) mede 1,81 px @1x e leva o pacote a 6/6 sem gastar geracao; o sombreado interno nao e tocado e a linha e a mesma cor mediana do contorno original. Custo: 1 passo extra no pipeline e o traco fica ~2x mais grosso.",
+      "recommendation": "adotar B e manter a faixa 0,008-0,014",
+      "impact": "define o peso visual de TODAS as pecas do pacote"
     }
   ],
   "last_updated": "2026-10-22",
-  "updated_by_session": "DB-SESSION-0002",
+  "updated_by_session": "DB-SESSION-0003",
   "coherence": {
     "score": 83.3,
     "evaluated": 6,
     "failed": [
       "C3_outline_weight"
     ],
-    "report": "production/coherence_report.json",
-    "note": "C3 sistemico (contorno fino). Corrigir antes da Fase 3."
+    "with_restroke": {
+      "score": 100.0,
+      "path": "exports/individual_png/body_m_v1_rs",
+      "report": "production/qa_reports/logs/coherence_body_m_v1_rs.json"
+    },
+    "note": "C3 medido por metodo calibrado (area do contorno / perimetro); metodos antigos descartados"
   }
 }

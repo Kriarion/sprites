@@ -17,10 +17,10 @@ kit de UI e documentação de integração — utilizável em Godot, Unity, Game
 | Item | Estado |
 |---|---|
 | Fase | **FASE 2 — Corpos e rigs em andamento** |
-| Versão do pacote | `0.3.1` |
+| Versão do pacote | `0.3.2` |
 | Assets registrados | `9` — 5 referências `APPROVED`, 1 `REWORK_REQUIRED`, 3 `QA_PENDING` |
-| Sessões de produção executadas | `2` (`DB-SESSION-0001`, `0002`) |
-| Gerações de imagem consumidas | `15` no total (10 + 5), ledger conciliado |
+| Sessões de produção executadas | `3` (`DB-SESSION-0001`, `0002`, `0003`) |
+| Gerações de imagem consumidas | `17` no total (10 + 5 + 2), ledger conciliado |
 | Padrão visual | `art_style_guide` **1.2.0** — proporção estabilizada em **5,9 cabeças** (ADR-0007) |
 | Assets canônicos de jogo | `0` |
 | Rig | `DB_RIG_HUMAN_M_001` (27 bones) — **não testado em rotação** |

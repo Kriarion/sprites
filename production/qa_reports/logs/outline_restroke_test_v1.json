@@ -1,0 +1,80 @@
+{
+  "parts_measured": 8,
+  "parts_skipped": [],
+  "unit": "px na escala das pe\u00e7as",
+  "contour_median_px": 2.95,
+  "contour_median_px_1x": 1.47,
+  "contour_pct_of_height_1x": 0.74,
+  "target_px_1x": [
+    1.6,
+    2.8
+  ],
+  "pass": false,
+  "verdict": "abaixo do piso",
+  "detail": [
+    {
+      "file": "forearm_back.png",
+      "contour_px": 2.9,
+      "contour_area": 476,
+      "silhouette_perimeter": 164,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 60
+    },
+    {
+      "file": "pelvis.png",
+      "contour_px": 2.57,
+      "contour_area": 493,
+      "silhouette_perimeter": 192,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 40
+    },
+    {
+      "file": "shin_back.png",
+      "contour_px": 2.99,
+      "contour_area": 693,
+      "silhouette_perimeter": 232,
+      "shade_area_frac_of_dark": 0.03,
+      "piece_h_px": 84
+    },
+    {
+      "file": "shin_front.png",
+      "contour_px": 2.85,
+      "contour_area": 702,
+      "silhouette_perimeter": 246,
+      "shade_area_frac_of_dark": 0.03,
+      "piece_h_px": 84
+    },
+    {
+      "file": "thigh_back.png",
+      "contour_px": 3.85,
+      "contour_area": 1379,
+      "silhouette_perimeter": 358,
+      "shade_area_frac_of_dark": 0.01,
+      "piece_h_px": 88
+    },
+    {
+      "file": "torso.png",
+      "contour_px": 3.24,
+      "contour_area": 1304,
+      "silhouette_perimeter": 402,
+      "shade_area_frac_of_dark": 0.01,
+      "piece_h_px": 96
+    },
+    {
+      "file": "upperarm_back.png",
+      "contour_px": 3.02,
+      "contour_area": 591,
+      "silhouette_perimeter": 196,
+      "shade_area_frac_of_dark": 0.01,
+      "piece_h_px": 64
+    },
+    {
+      "file": "upperarm_front.png",
+      "contour_px": 2.54,
+      "contour_area": 472,
+      "silhouette_perimeter": 186,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 64
+    }
+  ]
+}

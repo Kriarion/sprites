@@ -131,6 +131,11 @@ Cenário em camadas usa largura de 1536 px (1,2×) para permitir parallax horizo
    regeneração (arte com proporção errada), não a reajuste no código.
 0b. **`offset_u` (u; +x direita, +y sobe)** no spec corrige a **emenda** entre peças sem mexer no pivô.
    O pivô continua sendo o ponto de articulação; o offset é dado, versionado e auditável.
+0d. **Recontorno (`tools/restroke.py`) — etapa opcional-obrigatória do export.** O gerador entrega
+   contorno de ~0,9% da altura da peça, o que chega a ~0,94 px em 1x (abaixo do piso de C3). O recontorno
+   dilata **apenas a linha conectada à borda** (o sombreado interno não é tocado), em supersampling ×3,
+   com alfa pré-multiplicado, despill de magenta e extensão de borda. Valor medido: `--add-px 2,5` →
+   1,81 px em 1x. O mesmo passo corrige o resíduo de chroma key na borda.
 0c. **`tools/audit_geometry.py`** reconstrói o retângulo de cada peça com a mesma regra do `compose.py` e
    reporta sobreposição/folga por junta (+ = sobreposição) e drift de aspecto, em unidades do rig.
 

@@ -1,0 +1,36 @@
+{
+  "spec_version": "1.0.0",
+  "spec_id": "OUTLINE_TEST_V1",
+  "session": "DB-SESSION-0003",
+  "archetype": "line_weight_test",
+  "rig": "DB_RIG_HUMAN_M_001",
+  "body_height_u": 200,
+  "proportion": "5.9 heads (nao testado aqui)",
+  "coordinate_system": "top_left_y_down",
+  "notes": [
+    "Teste isolado de PESO DE CONTORNO (PENDING-004 opcao A). Nao e o corpo base completo.",
+    "Objetivo: saber se o prompt 'contorno 10 px no mestre (3% da altura da peca)' sobrevive ao pipeline.",
+    "As pecas de t2_back sao traseiras (shaded=true) para checar que o half-shadow nao engole o contorno."
+  ],
+  "sheets": [
+    {
+      "sheet": "t1_outline_front4",
+      "components": [
+        {"index": 0, "part": "torso", "anchor": "spine_low", "layer": 11},
+        {"index": 1, "part": "pelvis", "anchor": "pelvis", "layer": 10},
+        {"index": 2, "part": "upperarm_front", "anchor": "shoulder.front", "layer": 18},
+        {"index": 3, "part": "shin_front", "anchor": "knee.front", "layer": 14}
+      ]
+    },
+    {
+      "sheet": "t2_outline_back4",
+      "components": [
+        {"index": 0, "part": "upperarm_back", "anchor": "shoulder.back", "layer": 4, "shaded": true},
+        {"index": 1, "part": "forearm_back", "anchor": "elbow.back", "layer": 5, "shaded": true},
+        {"index": 2, "part": "thigh_back", "anchor": "hip.back", "layer": 7, "shaded": true},
+        {"index": 3, "part": "shin_back", "anchor": "knee.back", "layer": 8, "shaded": true}
+      ]
+    }
+  ],
+  "revision": "1.0.0"
+}

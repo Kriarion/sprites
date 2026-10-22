@@ -1,0 +1,93 @@
+{
+  "log": [
+    {
+      "sheet": "t1_outline_front4",
+      "part": "torso",
+      "bbox_src": [
+        171,
+        35,
+        533,
+        374
+      ],
+      "out": "torso.png"
+    },
+    {
+      "sheet": "t1_outline_front4",
+      "part": "pelvis",
+      "bbox_src": [
+        904,
+        60,
+        1206,
+        319
+      ],
+      "out": "pelvis.png"
+    },
+    {
+      "sheet": "t1_outline_front4",
+      "part": "upperarm_front",
+      "bbox_src": [
+        292,
+        415,
+        428,
+        718
+      ],
+      "out": "upperarm_front.png"
+    },
+    {
+      "sheet": "t1_outline_front4",
+      "part": "shin_front",
+      "bbox_src": [
+        988,
+        413,
+        1130,
+        730
+      ],
+      "out": "shin_front.png"
+    },
+    {
+      "sheet": "t2_outline_back4",
+      "part": "upperarm_back",
+      "bbox_src": [
+        259,
+        28,
+        430,
+        357
+      ],
+      "out": "upperarm_back.png"
+    },
+    {
+      "sheet": "t2_outline_back4",
+      "part": "forearm_back",
+      "bbox_src": [
+        971,
+        28,
+        1094,
+        355
+      ],
+      "out": "forearm_back.png"
+    },
+    {
+      "sheet": "t2_outline_back4",
+      "part": "thigh_back",
+      "bbox_src": [
+        228,
+        409,
+        461,
+        746
+      ],
+      "out": "thigh_back.png"
+    },
+    {
+      "sheet": "t2_outline_back4",
+      "part": "shin_back",
+      "bbox_src": [
+        974,
+        413,
+        1085,
+        743
+      ],
+      "out": "shin_back.png"
+    }
+  ],
+  "issues": []
+}

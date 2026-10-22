@@ -28,7 +28,7 @@ TOL = {
     "c1_height_u": 0.05,
     "c2_heads": (5.60, 6.20),
     "c2_joint_u": 4.0,
-    "c3_line_ratio": (0.008, 0.014),
+    "c3_line_ratio": (0.008, 0.014),  # 1,6-2,8 px @1x em 200 u
     "c4_dh": 8.0, "c4_ds": 0.10, "c4_dv": 0.10,
     "c5_half_shadow": 0.80,
 }
@@ -63,24 +63,34 @@ def silhouette_metrics(path: Path) -> dict:
 
 
 def outline_ratio(path: Path, ref_height_px: int | None = None) -> float:
-    """espessura media da linha escura / altura de referencia.
+    """espessura do CONTORNO / altura de referencia.
 
     A referencia e a ALTURA DO CORPO canonico (200 u * ppu), nao a altura da peca:
     uma peca de armadura de 300 px nao tem contorno 8x mais grosso que um corpo de 200 px.
+
+    Correcao `DB-SESSION-0003`: antes somava TODA a area escura (contorno + sombreado interno)
+    e dividia pelo perimetro — o sombreado inflava o numero e mascarava o contorno fino.
+    Agora so entra a linha escura CONECTADA A BORDA da silhueta, e a espessura e
+    area(contorno) / perimetro, calibrada em retangulos sinteticos de 1 a 12 px (erro < 8%).
     """
     rgba_arr = rgba(path)
     rgb = rgba_arr[..., :3].astype(float)
     a = rgba_arr[..., 3] > 127
     lum = 0.2126 * rgb[..., 0] + 0.7152 * rgb[..., 1] + 0.0722 * rgb[..., 2]
-    dark = (lum < 60) & a
+    dark = (lum < 90) & a
     if dark.sum() < 50:
         return 0.0
-    # espessura media = area de linha / perimetro da silhueta  (estavel, sem ridge detection)
     perim = a & ~ndimage.binary_erosion(a, iterations=1)
     perim_n = int(perim.sum())
     if perim_n == 0:
         return 0.0
-    thick = float(dark.sum()) / perim_n
+    seed = dark & perim
+    if seed.sum() < 20:
+        return 0.0
+    lab, _ = ndimage.label(dark)
+    ids = [i for i in set(np.unique(lab[seed]).tolist()) if i != 0]
+    contour = np.isin(lab, ids)
+    thick = float(contour.sum()) / perim_n
     ys, _ = np.where(a)
     height = ref_height_px or int(ys.max() - ys.min() + 1)
     return round(thick / max(height, 1), 5)
@@ -89,6 +99,17 @@ def outline_ratio(path: Path, ref_height_px: int | None = None) -> float:
 def dominant_colors(path: Path, k: int = 5) -> list[tuple[float, float, float]]:
     arr = rgba(path)
     mask = arr[..., 3] > 200
+    # C4 mede PALETA DE MATERIAL: o contorno (linha escura conectada a borda) fica fora da amostra,
+    # senao engrossar a linha muda o histograma e reprova paleta sem nenhuma cor ter mudado.
+    a = arr[..., 3] > 127
+    lum = 0.2126 * arr[..., 0] + 0.7152 * arr[..., 1] + 0.0722 * arr[..., 2]
+    dark = (lum < 90) & a
+    perim = a & ~ndimage.binary_erosion(a, iterations=1)
+    seed = dark & perim
+    if seed.sum() >= 20:
+        lab, _ = ndimage.label(dark)
+        ids = [i for i in set(np.unique(lab[seed]).tolist()) if i != 0]
+        mask = mask & ~np.isin(lab, ids)
     px = arr[mask][:, :3].astype(float)
     if len(px) < k * 10:
         return []
@@ -315,12 +336,14 @@ def main() -> int:
                     help="grupo da paleta do asset (ex.: body_neutral, characters/goku_base)")
     ap.add_argument("--parts-json", default=None,
                     help="parts.json do pack_parts: avalia proporcao pelo rig (confiavel) e nao pela silhueta")
+    ap.add_argument("--parts-ppu", type=float, default=2.0,
+                    help="px por unidade das PECAS (default 2); C3 usa 200u x isto, nao a escala do --ppu")
     ap.add_argument("--ref-height-px", type=int, default=200,
                     help="altura do corpo canonico em px na escala das pecas (200 * ppu)")
     a = ap.parse_args()
 
     inv = evaluate(a.full_body, a.parts, Path(a.palette), {"pixels_per_unit": a.ppu},
-                   a.ref_height_px, a.palette_group, a.parts_json)
+                   int(round(200 * a.parts_ppu)), a.palette_group, a.parts_json)
 
     # C2 por rig (preferencial): proporcao = altura canonica da cabeca / altura do corpo
     if a.parts_json and Path(a.parts_json).exists():

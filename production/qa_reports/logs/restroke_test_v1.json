@@ -1,0 +1,90 @@
+[
+  {
+    "file": "forearm_back.png",
+    "added_px_export": 1.0,
+    "ring_px": 1231,
+    "supersample": 3,
+    "line_color": [
+      25,
+      15,
+      25
+    ]
+  },
+  {
+    "file": "pelvis.png",
+    "added_px_export": 1.0,
+    "ring_px": 2217,
+    "supersample": 3,
+    "line_color": [
+      43,
+      37,
+      43
+    ]
+  },
+  {
+    "file": "shin_back.png",
+    "added_px_export": 1.0,
+    "ring_px": 1695,
+    "supersample": 3,
+    "line_color": [
+      27,
+      7,
+      26
+    ]
+  },
+  {
+    "file": "shin_front.png",
+    "added_px_export": 1.0,
+    "ring_px": 1784,
+    "supersample": 3,
+    "line_color": [
+      25,
+      9,
+      25
+    ]
+  },
+  {
+    "file": "thigh_back.png",
+    "added_px_export": 1.0,
+    "ring_px": 3596,
+    "supersample": 3,
+    "line_color": [
+      30,
+      14,
+      29
+    ]
+  },
+  {
+    "file": "torso.png",
+    "added_px_export": 1.0,
+    "ring_px": 4017,
+    "supersample": 3,
+    "line_color": [
+      29,
+      12,
+      29
+    ]
+  },
+  {
+    "file": "upperarm_back.png",
+    "added_px_export": 1.0,
+    "ring_px": 1727,
+    "supersample": 3,
+    "line_color": [
+      25,
+      13,
+      24
+    ]
+  },
+  {
+    "file": "upperarm_front.png",
+    "added_px_export": 1.0,
+    "ring_px": 1501,
+    "supersample": 3,
+    "line_color": [
+      26,
+      14,
+      25
+    ]
+  }
+]

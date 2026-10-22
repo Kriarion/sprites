@@ -38,9 +38,13 @@ superior) e calcula `altura / altura_da_cabeça`. A linha do ombro, quadril e jo
 tabela canônica de `technical_specification.md` §2.2.
 
 ### C3 — Peso de contorno
-Máscara de pixels escuros (luminância < 60) na silhueta; espessura estimada por
-`2 × mediana(distance_transform(escuro))` sobre a região de linha. Razão = espessura ÷ altura total.
-Alvo: **1,6–2,8 px em 1x** num corpo de 200 px.
+**Método v1.2 (calibrado na `DB-SESSION-0003`).** Contorno = linha escura (luminância < 90) **conectada
+à borda** da silhueta; sombreado interno é excluído. Espessura = `área(contorno) ÷ perímetro(silhueta)`.
+Razão = espessura ÷ altura canônica do corpo (200 u × px/u das peças). Alvo: **1,6–2,8 px em 1x**
+(razão 0,008–0,014) num corpo de 200 px.
+
+Calibração do método em retângulos sintéticos: 1 px → 1,0 · 3 px → 2,95 · 6 px → 5,75 · 12 px → 10,9
+(erro < 8%). Implementação: `tools/measure_outline.py` (e a mesma conta dentro de `coherence.py`).
 
 > **Revisão 1.1 (medida na `DB-SESSION-0002`):** a faixa original (0,9–1,3% ≈ 1,8–2,6 px) reprovou **todas** as
 > 18 peças do corpo base com mediana **1,7 px em 1x** (0,857%). A causa é o downscale do mestre de 1024 px:
@@ -55,8 +59,20 @@ Alvo: **1,6–2,8 px em 1x** num corpo de 200 px.
 > número que vale é o da transformada de distância (1,12 px), não a razão normalizada.
 > Correção tentada e descartada: dilatar 1 px a máscara escura engrossa também as linhas internas
 > (abdômen, orelha) e serrilha o traço — evidência em `production/qa_reports/logs/thicken_compare.png`.
-> Decisão pendente: `PENDING-004` em `production/continuity_state.json` (A: mestre com 3–4 px ·
-> B: máscara de borda · C: revisar a faixa).
+> **Medição 3 (`DB-SESSION-0003`) — a métrica anterior estava errada.** `2 × média(EDT)` devolve ~metade
+> da largura; recortar a faixa por dilatação satura em 2,67 px; e somar toda a área escura inflava o
+> número com sombreado interno. Com o método calibrado, o lote do corpo base mede **0,94 px em 1x
+> (0,47%)**, e não 1,12 px.
+>
+> **Teste da opção A (2 gerações):** pedir "contorno de 10 px / 3% da altura da peça" no prompt produziu
+> **0,88%** nas duas folhas — idêntico ao lote antigo. A espessura do traço é propriedade fixa do
+> gerador; não é parametrizável por prompt. **Opção A reprovada por medição.**
+>
+> **Opção B (recontorno determinístico, `tools/restroke.py`):** dilata **só** o contorno (nunca o
+> sombreado interno), em supersampling ×3, com alfa pré-multiplicado e *despill*. Com `--add-px 2,5` o
+> lote do corpo base mede **1,81 px em 1x (0,91%)** → C3 **PASS**, pacote em **6/6**.
+> A linha é a mediana da cor do contorno original; a arte interna não é tocada.
+> Estado: aguardando aprovação (`PENDING-004`).
 
 ### C4 — Paleta
 Cinco pontos canônicos são amostrados por k-means leve no interior da peça (pele, cabelo, tecido, metal,

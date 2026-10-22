@@ -196,3 +196,19 @@ o caminho B (dilatar) já foi testado e reprovado por engrossar linha interna.
 Encostar bbox não é unir peça. Com cotovelo e punho em **0,1 u de sobreposição**, o vão continua visível
 porque as duas peças afinam nas pontas (taper). A correção é de **arte**: cada segmento precisa de um
 **cap de sobreposição de 2–3 u** na ponta proximal (o mesmo truque de paper-doll clássico).
+
+## 15. O contorno não é parametrizável por prompt (`DB-SESSION-0003`)
+
+Duas folhas pedindo "outline ~10 px, ~3% da altura da peça" entregaram **0,88%** — exatamente o mesmo
+traço do lote anterior (0,88%). O gerador tem peso de linha fixo. Como a peça é reduzida ~3,5× do mestre
+para o tamanho canônico, esse traço chega ao 1x com **0,94 px**.
+
+Consequência de projeto: **peso de contorno se resolve no pipeline, não no prompt.** O recontorno
+determinístico (`tools/restroke.py`) leva o mesmo lote a 1,81 px @1x sem gastar geração.
+
+## 16. Três métricas erradas antes da certa
+
+A cronologia do erro vale mais que o número final: `2 × média(EDT)` devolve metade da largura; recortar
+a faixa por dilatação de 2 px **satura** em 2,67 px para qualquer linha ≥3 px; e somar toda a área escura
+soma o sombreado interno (dava 14 px de "linha" no cabelo traseiro). O método que passou na calibração
+(área do contorno ÷ perímetro, 1–12 px, erro < 8%) é o único que serve para decidir.

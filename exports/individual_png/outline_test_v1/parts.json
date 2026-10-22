@@ -1,0 +1,244 @@
+{
+  "spec": "OUTLINE_TEST_V1",
+  "session": "DB-SESSION-0003",
+  "rig": "DB_RIG_HUMAN_M_001",
+  "body_height_u": 200,
+  "scale_px_per_u": 2.0,
+  "proportional_system": "5.9 heads (nao testado aqui)",
+  "parts_count": 8,
+  "parts": [
+    {
+      "id": "upperarm_back",
+      "file": "upperarm_back.png",
+      "layer": 4,
+      "anchor": "shoulder.back",
+      "shaded": true,
+      "variant": false,
+      "source_sheet": "t2_outline_back4",
+      "component_index": 0,
+      "merge": null,
+      "rotated_deg": 0,
+      "normalized_scale": 0.195,
+      "size_px": [
+        33,
+        64
+      ],
+      "pivot_px": [
+        16.5,
+        3.8
+      ],
+      "pivot_norm": [
+        0.5,
+        0.06
+      ],
+      "offset_u": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "forearm_back",
+      "file": "forearm_back.png",
+      "layer": 5,
+      "anchor": "elbow.back",
+      "shaded": true,
+      "variant": false,
+      "source_sheet": "t2_outline_back4",
+      "component_index": 1,
+      "merge": null,
+      "rotated_deg": 0,
+      "normalized_scale": 0.183,
+      "size_px": [
+        23,
+        60
+      ],
+      "pivot_px": [
+        11.5,
+        3.6
+      ],
+      "pivot_norm": [
+        0.5,
+        0.06
+      ],
+      "offset_u": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "thigh_back",
+      "file": "thigh_back.png",
+      "layer": 7,
+      "anchor": "hip.back",
+      "shaded": true,
+      "variant": false,
+      "source_sheet": "t2_outline_back4",
+      "component_index": 2,
+      "merge": null,
+      "rotated_deg": 0,
+      "normalized_scale": 0.261,
+      "size_px": [
+        61,
+        88
+      ],
+      "pivot_px": [
+        30.5,
+        4.4
+      ],
+      "pivot_norm": [
+        0.5,
+        0.05
+      ],
+      "offset_u": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "shin_back",
+      "file": "shin_back.png",
+      "layer": 8,
+      "anchor": "knee.back",
+      "shaded": true,
+      "variant": false,
+      "source_sheet": "t2_outline_back4",
+      "component_index": 3,
+      "merge": null,
+      "rotated_deg": 0,
+      "normalized_scale": 0.255,
+      "size_px": [
+        28,
+        84
+      ],
+      "pivot_px": [
+        14.0,
+        4.2
+      ],
+      "pivot_norm": [
+        0.5,
+        0.05
+      ],
+      "offset_u": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pelvis",
+      "file": "pelvis.png",
+      "layer": 10,
+      "anchor": "pelvis",
+      "shaded": false,
+      "variant": false,
+      "source_sheet": "t1_outline_front4",
+      "component_index": 1,
+      "merge": null,
+      "rotated_deg": 0,
+      "normalized_scale": 0.154,
+      "size_px": [
+        47,
+        40
+      ],
+      "pivot_px": [
+        23.5,
+        12.0
+      ],
+      "pivot_norm": [
+        0.5,
+        0.3
+      ],
+      "offset_u": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "torso",
+      "file": "torso.png",
+      "layer": 11,
+      "anchor": "spine_low",
+      "shaded": false,
+      "variant": false,
+      "source_sheet": "t1_outline_front4",
+      "component_index": 0,
+      "merge": null,
+      "rotated_deg": 0,
+      "normalized_scale": 0.283,
+      "size_px": [
+        103,
+        96
+      ],
+      "pivot_px": [
+        51.5,
+        75.8
+      ],
+      "pivot_norm": [
+        0.5,
+        0.79
+      ],
+      "offset_u": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "shin_front",
+      "file": "shin_front.png",
+      "layer": 14,
+      "anchor": "knee.front",
+      "shaded": false,
+      "variant": false,
+      "source_sheet": "t1_outline_front4",
+      "component_index": 3,
+      "merge": null,
+      "rotated_deg": 0,
+      "normalized_scale": 0.265,
+      "size_px": [
+        38,
+        84
+      ],
+      "pivot_px": [
+        19.0,
+        4.2
+      ],
+      "pivot_norm": [
+        0.5,
+        0.05
+      ],
+      "offset_u": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "upperarm_front",
+      "file": "upperarm_front.png",
+      "layer": 18,
+      "anchor": "shoulder.front",
+      "shaded": false,
+      "variant": false,
+      "source_sheet": "t1_outline_front4",
+      "component_index": 2,
+      "merge": null,
+      "rotated_deg": 0,
+      "normalized_scale": 0.211,
+      "size_px": [
+        29,
+        64
+      ],
+      "pivot_px": [
+        14.5,
+        3.8
+      ],
+      "pivot_norm": [
+        0.5,
+        0.06
+      ],
+      "offset_u": [
+        0,
+        0
+      ]
+    }
+  ],
+  "issues": []
+}

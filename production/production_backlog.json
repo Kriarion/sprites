@@ -640,17 +640,44 @@
       "wave": "W2",
       "phase": 2,
       "category": "pipeline",
+      "status": "DONE",
+      "est_generations": 0,
+      "deps": [],
+      "acceptance": "tools/contactsheet.py gera folha rotulada a partir de parts.json",
+      "result": "tools/contactsheet.py (etapa obrigatoria por lote)"
+    },
+    {
+      "id": "BL-017",
+      "title": "Adotar restroke deterministico como etapa do pipeline",
+      "tier": "P0",
+      "wave": "W2",
+      "phase": 2,
+      "category": "pipeline",
+      "status": "PENDING_APPROVAL",
+      "est_generations": 0,
+      "deps": [
+        "BL-015"
+      ],
+      "acceptance": "C3 >= 0,008 em todo lote exportado; nenhum sombreado interno alterado"
+    },
+    {
+      "id": "BL-018",
+      "title": "Mover despill/extensao de borda do restroke para o pack_parts",
+      "tier": "P1",
+      "wave": "W2",
+      "phase": 2,
+      "category": "pipeline",
       "status": "PLANNED",
       "est_generations": 0,
       "deps": [],
-      "acceptance": "tools/contactsheet.py gera folha rotulada a partir de parts.json"
+      "acceptance": "chroma maxima na borda < 20 em qualquer peca exportada"
     }
   ],
   "next_up": [
+    "BL-017",
     "BL-015",
-    "BL-016",
-    "BL-007",
-    "BL-008"
+    "BL-018",
+    "BL-010"
   ],
   "last_updated": "2026-10-22"
 }

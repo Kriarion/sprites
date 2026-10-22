@@ -1,0 +1,106 @@
+{
+  "BASELINE g2_core4": {
+    "parts": [
+      {
+        "thickness_px": 2.83,
+        "height_px": 619,
+        "pct_of_height": 0.46
+      },
+      {
+        "thickness_px": 2.75,
+        "height_px": 288,
+        "pct_of_height": 0.95
+      },
+      {
+        "thickness_px": 2.81,
+        "height_px": 327,
+        "pct_of_height": 0.86
+      },
+      {
+        "thickness_px": 2.75,
+        "height_px": 305,
+        "pct_of_height": 0.9
+      }
+    ],
+    "median_px": 2.78,
+    "median_pct_of_height": 0.88
+  },
+  "BASELINE g3_limbs4": {
+    "parts": [
+      {
+        "thickness_px": 2.78,
+        "height_px": 686,
+        "pct_of_height": 0.41
+      },
+      {
+        "thickness_px": 2.75,
+        "height_px": 594,
+        "pct_of_height": 0.46
+      },
+      {
+        "thickness_px": 2.8,
+        "height_px": 490,
+        "pct_of_height": 0.57
+      },
+      {
+        "thickness_px": 2.81,
+        "height_px": 292,
+        "pct_of_height": 0.96
+      }
+    ],
+    "median_px": 2.79,
+    "median_pct_of_height": 0.52
+  },
+  "TESTE t1": {
+    "parts": [
+      {
+        "thickness_px": 2.75,
+        "height_px": 339,
+        "pct_of_height": 0.81
+      },
+      {
+        "thickness_px": 2.68,
+        "height_px": 259,
+        "pct_of_height": 1.04
+      },
+      {
+        "thickness_px": 2.75,
+        "height_px": 303,
+        "pct_of_height": 0.91
+      },
+      {
+        "thickness_px": 2.68,
+        "height_px": 317,
+        "pct_of_height": 0.84
+      }
+    ],
+    "median_px": 2.71,
+    "median_pct_of_height": 0.88
+  },
+  "TESTE t2": {
+    "parts": [
+      {
+        "thickness_px": 2.81,
+        "height_px": 329,
+        "pct_of_height": 0.85
+      },
+      {
+        "thickness_px": 2.73,
+        "height_px": 327,
+        "pct_of_height": 0.83
+      },
+      {
+        "thickness_px": 2.77,
+        "height_px": 337,
+        "pct_of_height": 0.82
+      },
+      {
+        "thickness_px": 2.76,
+        "height_px": 330,
+        "pct_of_height": 0.84
+      }
+    ],
+    "median_px": 2.76,
+    "median_pct_of_height": 0.83
+  }
+}

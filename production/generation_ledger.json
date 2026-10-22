@@ -16,10 +16,10 @@
     "rule": "total_executed must equal executed_new + executed_corrections; session must stop at 10"
   },
   "totals": {
-    "sessions_completed": 3,
-    "generations_executed": 15,
+    "sessions_completed": 4,
+    "generations_executed": 17,
     "assets_approved": 5,
-    "generations_per_approved_asset": 3.0
+    "generations_per_approved_asset": 3.4
   },
   "sessions": [
     {
@@ -236,32 +236,72 @@
           0.00461
         ]
       }
+    },
+    {
+      "session_id": "DB-SESSION-0003",
+      "date": "2026-10-22",
+      "type": "CALIBRATION",
+      "objective": "Testar opcao A de PENDING-004 (contorno no prompt) com 2 geracoes",
+      "planned_new": 2,
+      "reserved_corrections": 0,
+      "executed_new": 2,
+      "executed_corrections": 0,
+      "total_executed": 2,
+      "assets_created": [],
+      "assets_approved": [],
+      "assets_rejected": [],
+      "calls": [
+        {
+          "id": "G1",
+          "file": "t1_outline_front4.png",
+          "kind": "new",
+          "planned": true,
+          "result": "4/4 objetos isolados; contorno 2,71 px no mestre (0,88% da peca) = o mesmo do lote antigo"
+        },
+        {
+          "id": "G2",
+          "file": "t2_outline_back4.png",
+          "kind": "new",
+          "planned": true,
+          "result": "4/4 objetos isolados; contorno 2,76 px (0,83%) \u2014 instrucao de 3% ignorada"
+        }
+      ],
+      "findings": [
+        "Opcao A reprovada: pedir 'contorno 10 px / 3% da altura' nao muda o traco do gerador (0,88% nas 2 folhas)",
+        "Metrica C3 estava errada em 3 implementacoes anteriores; novo metodo calibrado em 1-12 px (erro < 8%)",
+        "Contorno real do lote 0002: 0,94 px @1x (0,47%), nao 1,12 px",
+        "Opcao B (restroke deterministico) atinge 1,81 px @1x e leva o pacote a 6/6 invariantes sem geracao"
+      ],
+      "corrections": [
+        "nenhuma geracao de correcao"
+      ],
+      "next_session": "DB-SESSION-0004"
     }
   ],
   "planned_next": {
-    "session_id": "DB-SESSION-0003",
+    "session_id": "DB-SESSION-0004",
     "type": "CORRECTION",
-    "objective": "Corrigir D1-D4 e executar teste de rotacao das 12 juntas",
+    "objective": "Corrigir D1/D2/D3/D6/D10 na arte e fechar o corpo base",
     "planned_new": 4,
     "reserved_corrections": 4,
     "calls": [
       {
         "id": "G1",
-        "content": "corpo frontal com contorno 3-4 px no mestre (teste A de D4)"
+        "content": "folha frontal de corpo com cap de sobreposicao nas juntas (D1/D6)"
       },
       {
         "id": "G2",
-        "content": "corpo traseiro half-shadow com contorno grosso (fecha C5 com a mesma arte)"
+        "content": "folha traseira correspondente, half-shadow"
       },
       {
         "id": "G3",
-        "content": "cabelo frontal com recorte de rosto + decal de olhos proporcional (D2/D3/D10)"
+        "content": "cabeca + cabelo com linha de testa (D3/D10) + decal de olhos sem sobrancelha (D2)"
       },
       {
         "id": "G4",
-        "content": "par antebraco+mao com cap de sobreposicao no punho (D1/D6)"
+        "content": "reserva: par antebraco+mao com punho medido"
       }
     ],
-    "contingency": "se G1/G2 nao entregarem contorno >=1,6 px @1x, abrir ADR-0008 com duas saidas: dilatacao com mascara so de contorno (nao de linha interna) ou revisao do padrao C3 para 0,5-0,7% (traco natural deste gerador)"
+    "note": "restroke deixa de ser teste e passa a etapa do pipeline se PENDING-004 for aprovado"
   }
 }

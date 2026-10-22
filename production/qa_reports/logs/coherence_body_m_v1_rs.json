@@ -1,0 +1,71 @@
+{
+  "standard": "docs/coherence_standard.md v1.0.0",
+  "tolerances": {
+    "c1_height_u": 0.05,
+    "c2_heads": [
+      5.6,
+      6.2
+    ],
+    "c2_joint_u": 4.0,
+    "c3_line_ratio": [
+      0.008,
+      0.014
+    ],
+    "c4_dh": 8.0,
+    "c4_ds": 0.1,
+    "c4_dv": 0.1,
+    "c5_half_shadow": 0.8
+  },
+  "invariants": {
+    "C1_scale": {
+      "pass": true,
+      "body_height_u": 193.5,
+      "ppu": 4,
+      "tolerance": "200 u \u00b15%"
+    },
+    "C2_proportion": {
+      "pass": true,
+      "method": "rig_defined",
+      "head_u": 34.0,
+      "body_u": 200,
+      "heads_tall": 5.88,
+      "tolerance": "5.6\u20136.2",
+      "note": "medido pelo rig (tamanho canonico da peca), nao pela silhueta"
+    },
+    "C3_outline_weight": {
+      "pass": true,
+      "median_ratio": 0.01082,
+      "tolerance": "0.008\u20130.014",
+      "samples": 20
+    },
+    "C4_palette": {
+      "pass": true,
+      "evaluated": true,
+      "worst_dh": 0.0,
+      "worst_ds": 0.0,
+      "worst_dv": 0.05,
+      "achromatic_colors_ignored": true,
+      "tolerance": "\u0394H<=8\u00b0 \u0394S<=10% \u0394V<=10%"
+    },
+    "C5_half_shadow": {
+      "pass": true,
+      "ratio": 0.614,
+      "tolerance": "<= 0.8",
+      "back_samples": 7,
+      "front_samples": 11
+    },
+    "C6_structure": {
+      "pass": true,
+      "bad_anchor": [],
+      "bad_layer": [],
+      "bad_pivot": [],
+      "layer_collisions": [
+        "face_eyes@15 vs head"
+      ],
+      "note": "colisao de camada nao reprova: pecas alternativas (fist/grip) compartilham camada"
+    }
+  },
+  "evaluated": 6,
+  "passed": 6,
+  "coherence_score": 100.0
+}

@@ -1,0 +1,170 @@
+{
+  "parts_measured": 19,
+  "parts_skipped": [
+    "hand_back.png"
+  ],
+  "unit": "px na escala das pe\u00e7as",
+  "contour_median_px": 1.88,
+  "contour_median_px_1x": 0.94,
+  "contour_pct_of_height_1x": 0.47,
+  "target_px_1x": [
+    1.6,
+    2.8
+  ],
+  "pass": false,
+  "verdict": "abaixo do piso",
+  "detail": [
+    {
+      "file": "face_eyes.png",
+      "contour_px": 2.37,
+      "contour_area": 473,
+      "silhouette_perimeter": 200,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 24
+    },
+    {
+      "file": "foot_back.png",
+      "contour_px": 4.48,
+      "contour_area": 636,
+      "silhouette_perimeter": 142,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 28
+    },
+    {
+      "file": "foot_front.png",
+      "contour_px": 0.75,
+      "contour_area": 92,
+      "silhouette_perimeter": 123,
+      "shade_area_frac_of_dark": 0.07,
+      "piece_h_px": 28
+    },
+    {
+      "file": "forearm_back.png",
+      "contour_px": 2.32,
+      "contour_area": 348,
+      "silhouette_perimeter": 150,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 60
+    },
+    {
+      "file": "forearm_fist.png",
+      "contour_px": 1.38,
+      "contour_area": 297,
+      "silhouette_perimeter": 216,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 30
+    },
+    {
+      "file": "forearm_front.png",
+      "contour_px": 1.84,
+      "contour_area": 294,
+      "silhouette_perimeter": 160,
+      "shade_area_frac_of_dark": 0.01,
+      "piece_h_px": 60
+    },
+    {
+      "file": "hair_back.png",
+      "contour_px": 8.24,
+      "contour_area": 1928,
+      "silhouette_perimeter": 234,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 52
+    },
+    {
+      "file": "hair_front.png",
+      "contour_px": 5.46,
+      "contour_area": 1000,
+      "silhouette_perimeter": 183,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 40
+    },
+    {
+      "file": "hand_front.png",
+      "contour_px": 0.5,
+      "contour_area": 78,
+      "silhouette_perimeter": 157,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 34
+    },
+    {
+      "file": "hand_grip.png",
+      "contour_px": 1.91,
+      "contour_area": 435,
+      "silhouette_perimeter": 228,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 34
+    },
+    {
+      "file": "head.png",
+      "contour_px": 1.65,
+      "contour_area": 400,
+      "silhouette_perimeter": 242,
+      "shade_area_frac_of_dark": 0.04,
+      "piece_h_px": 68
+    },
+    {
+      "file": "pelvis.png",
+      "contour_px": 1.53,
+      "contour_area": 300,
+      "silhouette_perimeter": 196,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 40
+    },
+    {
+      "file": "shin_back.png",
+      "contour_px": 3.74,
+      "contour_area": 815,
+      "silhouette_perimeter": 218,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 84
+    },
+    {
+      "file": "shin_front.png",
+      "contour_px": 1.18,
+      "contour_area": 265,
+      "silhouette_perimeter": 224,
+      "shade_area_frac_of_dark": 0.02,
+      "piece_h_px": 84
+    },
+    {
+      "file": "thigh_back.png",
+      "contour_px": 2.87,
+      "contour_area": 638,
+      "silhouette_perimeter": 222,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 88
+    },
+    {
+      "file": "thigh_front.png",
+      "contour_px": 1.18,
+      "contour_area": 291,
+      "silhouette_perimeter": 246,
+      "shade_area_frac_of_dark": 0.06,
+      "piece_h_px": 88
+    },
+    {
+      "file": "torso.png",
+      "contour_px": 1.88,
+      "contour_area": 813,
+      "silhouette_perimeter": 432,
+      "shade_area_frac_of_dark": 0.05,
+      "piece_h_px": 96
+    },
+    {
+      "file": "upperarm_back.png",
+      "contour_px": 3.02,
+      "contour_area": 519,
+      "silhouette_perimeter": 172,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 64
+    },
+    {
+      "file": "upperarm_front.png",
+      "contour_px": 1.7,
+      "contour_area": 306,
+      "silhouette_perimeter": 180,
+      "shade_area_frac_of_dark": 0.0,
+      "piece_h_px": 64
+    }
+  ]
+}
