@@ -1,0 +1,180 @@
+{
+  "spec_version": "1.0.0",
+  "spec_id": "BODY_M_V1",
+  "session": "DB-SESSION-0002",
+  "archetype": "human_male_standard",
+  "rig": "DB_RIG_HUMAN_M_001",
+  "body_height_u": 200,
+  "proportion": "5.9 heads (head 34 u = 17%)  ADR-0007",
+  "coordinate_system": "top_left_y_down",
+  "notes": [
+    "Cada entrada mapeia componentes conexos (por indice) de uma folha bruta para uma peca nomeada.",
+    "O indice e atribuido por tools/decompose.py em ordem de leitura (linha, coluna).",
+    "rotate_deg corrige pecas que o gerador desenhou horizontais; o pivo e recalculado depois.",
+    "shaded=true marca peca da camada traseira (half-shadow, invariante C5).",
+    "rev 1.1.0: mao e pe de g3_limbs4 estavam trocados (verificado em contact sheet); bbox de merge passa a ser a uniao dos componentes."
+  ],
+  "sheets": [
+    {
+      "sheet": "g2_core4",
+      "components": [
+        {
+          "index": 0,
+          "part": "torso",
+          "anchor": "spine_low",
+          "layer": 11
+        },
+        {
+          "index": 1,
+          "part": "pelvis",
+          "anchor": "pelvis",
+          "layer": 10
+        },
+        {
+          "index": 2,
+          "part": "upperarm_front",
+          "anchor": "shoulder.front",
+          "layer": 18
+        },
+        {
+          "index": 3,
+          "part": "forearm_front",
+          "anchor": "elbow.front",
+          "layer": 19
+        }
+      ]
+    },
+    {
+      "sheet": "g3_limbs4",
+      "components": [
+        {
+          "index": 0,
+          "part": "thigh_front",
+          "anchor": "hip.front",
+          "layer": 12
+        },
+        {
+          "index": 1,
+          "part": "shin_front",
+          "anchor": "knee.front",
+          "layer": 13
+        },
+        {
+          "index": 2,
+          "part": "hand_front",
+          "anchor": "wrist.front",
+          "layer": 14
+        },
+        {
+          "index": 3,
+          "part": "foot_front",
+          "anchor": "ankle.front",
+          "layer": 20
+        }
+      ]
+    },
+    {
+      "sheet": "g4_head4",
+      "components": [
+        {
+          "index": 0,
+          "part": "head",
+          "anchor": "neck",
+          "layer": 15
+        },
+        {
+          "index": 1,
+          "part": "hair_front",
+          "anchor": "hair.front",
+          "layer": 16
+        },
+        {
+          "index": 2,
+          "part": "hair_back",
+          "anchor": "hair.back",
+          "layer": 2,
+          "shaded": true
+        },
+        {
+          "index": 3,
+          "part": "face_eyes",
+          "anchor": "face",
+          "layer": 15,
+          "merge": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "g5_back4",
+      "components": [
+        {
+          "index": 0,
+          "part": "upperarm_back",
+          "anchor": "shoulder.back",
+          "layer": 4,
+          "shaded": true
+        },
+        {
+          "index": 1,
+          "part": "forearm_back",
+          "anchor": "elbow.back",
+          "layer": 5,
+          "shaded": true,
+          "rotate_deg": 90
+        },
+        {
+          "index": 2,
+          "part": "shin_back",
+          "anchor": "knee.back",
+          "layer": 8,
+          "shaded": true
+        },
+        {
+          "index": 3,
+          "part": "thigh_back",
+          "anchor": "hip.back",
+          "layer": 7,
+          "shaded": true,
+          "rotate_deg": -90
+        }
+      ]
+    },
+    {
+      "sheet": "g6_back_hands_feet",
+      "components": [
+        {
+          "index": 0,
+          "part": "hand_back",
+          "anchor": "wrist.back",
+          "layer": 6,
+          "shaded": true
+        },
+        {
+          "index": 1,
+          "part": "foot_back",
+          "anchor": "ankle.back",
+          "layer": 9,
+          "shaded": true
+        },
+        {
+          "index": 2,
+          "part": "hand_grip",
+          "anchor": "grip.front",
+          "layer": 20,
+          "variant": true
+        },
+        {
+          "index": 3,
+          "part": "forearm_fist",
+          "anchor": "elbow.front",
+          "layer": 19,
+          "variant": true
+        }
+      ]
+    }
+  ],
+  "revision": "1.1.0"
+}

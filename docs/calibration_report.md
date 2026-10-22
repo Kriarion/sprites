@@ -135,3 +135,45 @@ Sejamos explícitos, para não repetir o erro de declarar mais do que existe:
 - Nada aqui é canônico de Dragon Ball: tudo é referência de estilo ou design original de teste.
 
 Esses itens migram para `DB-SESSION-0002` e para a Fase 2, com a arquitetura revisada.
+
+---
+
+# ADENDO — DB-SESSION-0002 (corpo base)
+
+**Orçamento:** 5 de 10 (5 novas, 0 correções) · **Resultado:** corpo montável, **0 assets aprovados**
+
+## 10. Formato de folha: 9 objetos falha, 4 objetos funciona
+
+| Folha | Objetos pedidos | Componentes isolados | Problema |
+|---|---:|---:|---|
+| `g1_body_parts_front` | 9 (3×3) | 10 | o modelo desenhou **um corpo inteiro** + 6 peças; torso, pernas e pelve fundiram |
+| `g2_core4` | 4 (2×2) | 4 | limpo |
+| `g3_limbs4` | 4 (2×2) | 4 | limpo |
+| `g4_head4` | 4 (2×2) | 5 | olhos saíram como **dois objetos** (resolvido por `merge` no spec) |
+| `g5_back4` | 4 (2×2) | 4 | peças desenhadas **horizontais** → correção por `rotate_deg` |
+| `g6_back_hands_feet` | 4 (2×2) | 4 | limpo |
+
+**Regra adotada:** **4 objetos por folha** (2×2), cada um descrito por função. Acima disso o modelo
+começa a "compor uma figura" em vez de listar peças. Custo: ~5 folhas por corpo completo — ainda dentro
+do orçamento de 10 por sessão.
+
+## 11. O que o corpo base provou e o que não provou
+
+**Provou:**
+- 18 peças isoladas, nomeadas e montadas **apenas por dados** (`parts.json` + rig JSON).
+- Proporção **5,88 cabeças** por construção (cabeça 34 u / corpo 200 u), dentro de 5,6–6,2.
+- Half-shadow medido: traseiras/frontais = **0,69** (limite 0,80).
+- Escala: 193,5 u medidos (alvo 200 ±5%).
+
+**Não provou:**
+- **Contorno:** ~1,0 px em 1x, contra o padrão de 1,6–2,8 px → **C3 reprovado**, score 83,3%.
+- **Rotação:** nenhuma junta foi testada em ±35°. M1 continua aberto.
+- **Articulação:** folga visível entre antebraço e mão (pivô de tipo ≠ punho real da peça).
+- **Decais:** olhos e cabelo frontal precisam de normalização por largura e recorte de rosto.
+
+## 12. Lição de processo
+
+Duas trocas de identidade (`mão↔pé`, `cabelo↔face`) passaram despercebidas pelo pipeline e só apareceram
+na **folha de contato** (`production/qa_reports/logs/contact_sheet_body_m_v1.png`).
+Índice de componente **não** é identidade semântica: a conferência visual por folha de contato passa a ser
+etapa obrigatória do processamento (`BL-016`).

@@ -16,18 +16,20 @@ kit de UI e documentação de integração — utilizável em Godot, Unity, Game
 
 | Item | Estado |
 |---|---|
-| Fase | **FASE 1 — Visual Bible em andamento** (estilo validado, rig pendente) |
-| Versão do pacote | `0.2.0` |
-| Assets registrados | `7` — 5 referências de estilo `APPROVED`, 1 `REWORK_REQUIRED`, 1 `QA_PENDING` |
-| Sessões de produção executadas | `1` (`DB-SESSION-0001`) |
-| Gerações de imagem consumidas | `10` de 10 na sessão 0001 (ledger conciliado) |
-| Padrão visual | `art_style_guide` **1.1.0**, calibrado em imagem — ver `docs/calibration_report.md` |
+| Fase | **FASE 2 — Corpos e rigs em andamento** |
+| Versão do pacote | `0.3.0` |
+| Assets registrados | `9` — 5 referências `APPROVED`, 1 `REWORK_REQUIRED`, 3 `QA_PENDING` |
+| Sessões de produção executadas | `2` (`DB-SESSION-0001`, `0002`) |
+| Gerações de imagem consumidas | `15` no total (10 + 5), ledger conciliado |
+| Padrão visual | `art_style_guide` **1.2.0** — proporção estabilizada em **5,9 cabeças** (ADR-0007) |
 | Assets canônicos de jogo | `0` |
-| Rig / animação / máscara de cor | **nenhum** |
+| Rig | `DB_RIG_HUMAN_M_001` (27 bones) — **não testado em rotação** |
+| Corpo base | `DB_CHAR_BASE_HUMAN_M` — 18 peças montáveis, **não aprovado** (coerência 83,3%) |
+| Animação / máscara de cor | **nenhuma** |
 
-O estilo está **provado** (5 pranchas aprovadas, keying com 0% de halo) e o pipeline de decomposição está
-**funcionando** (9/9 objetos isolados de uma folha). O que **não** existe ainda: corpo completo montado,
-rig validado, animação e qualquer personagem canônico. O marco M1 (vertical slice montável) não foi atingido.
+O estilo está **provado** (5 pranchas aprovadas) e o corpo humano base **monta por dados** (18 peças, 5,88 cabeças).
+O que **não** existe ainda: rig validado em rotação, animação, máscaras de cor e qualquer personagem canônico.
+O marco M1 não foi atingido — o gargalo atual é o **peso de contorno** (C3) e o teste de rotação.
 
 Leia `docs/project_plan.md` para a visão completa e `docs/roadmap.md` para a sequência de execução.
 
@@ -77,7 +79,8 @@ Os documentos derivados em `docs/` (este conjunto) **operacionalizam** essa hier
 | `docs/integration_guide.md` | Integração engine-agnostic (Godot/Unity/GameMaker/exemplos) |
 | `docs/quality_checklist.md` | Máquina de estados, checklists, testes automáticos e gates |
 | `docs/character_catalog.md` | Catálogo canônico priorizado por saga/continuidade (tiers P0–P2) |
-| `docs/calibration_report.md` | **Números medidos** na Sessão 0001 (o que o gerador faz de verdade) |
+| `docs/calibration_report.md` | **Números medidos** nas Sessões 0001–0002 (o que o gerador faz de verdade) |
+| `docs/coherence_standard.md` | **Coerência auditável**: 6 invariantes que fazem o pacote "conversar entre si" |
 | `docs/decisions/` | ADRs — decisões arquiteturais registradas (0001–0006) |
 
 Registros de produção (máquina):

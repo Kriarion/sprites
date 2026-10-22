@@ -1,0 +1,346 @@
+{
+  "placed": [
+    {
+      "part": "hair_back",
+      "anchor": "hair.back",
+      "layer": 2,
+      "pivot_px": [
+        25.0,
+        7.8
+      ],
+      "pivot_norm": [
+        0.5,
+        0.15
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        183,
+        124
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "upperarm_back",
+      "anchor": "shoulder.back",
+      "layer": 4,
+      "pivot_px": [
+        11.0,
+        3.8
+      ],
+      "pivot_norm": [
+        0.5,
+        0.06
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        141,
+        168
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "forearm_back",
+      "anchor": "elbow.back",
+      "layer": 5,
+      "pivot_px": [
+        8.0,
+        3.6
+      ],
+      "pivot_norm": [
+        0.5,
+        0.06
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        140,
+        232
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "hand_back",
+      "anchor": "wrist.back",
+      "layer": 6,
+      "pivot_px": [
+        33.0,
+        3.4
+      ],
+      "pivot_norm": [
+        0.5,
+        0.1
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        113,
+        293
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "thigh_back",
+      "anchor": "hip.back",
+      "layer": 7,
+      "pivot_px": [
+        12.0,
+        4.4
+      ],
+      "pivot_norm": [
+        0.5,
+        0.05
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        174,
+        280
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "shin_back",
+      "anchor": "knee.back",
+      "layer": 8,
+      "pivot_px": [
+        13.0,
+        4.2
+      ],
+      "pivot_norm": [
+        0.5,
+        0.05
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        173,
+        368
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "foot_back",
+      "anchor": "ankle.back",
+      "layer": 9,
+      "pivot_px": [
+        17.6,
+        6.2
+      ],
+      "pivot_norm": [
+        0.42,
+        0.22
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        168,
+        450
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "pelvis",
+      "anchor": "pelvis",
+      "layer": 10,
+      "pivot_px": [
+        25.0,
+        4.8
+      ],
+      "pivot_norm": [
+        0.5,
+        0.12
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        195,
+        275
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "torso",
+      "anchor": "spine_low",
+      "layer": 11,
+      "pivot_px": [
+        49.5,
+        91.2
+      ],
+      "pivot_norm": [
+        0.5,
+        0.95
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        170,
+        153
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "thigh_front",
+      "anchor": "hip.front",
+      "layer": 12,
+      "pivot_px": [
+        18.5,
+        4.4
+      ],
+      "pivot_norm": [
+        0.5,
+        0.05
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        224,
+        276
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "shin_front",
+      "anchor": "knee.front",
+      "layer": 13,
+      "pivot_px": [
+        14.5,
+        4.2
+      ],
+      "pivot_norm": [
+        0.5,
+        0.05
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        228,
+        364
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "hand_front",
+      "anchor": "wrist.front",
+      "layer": 14,
+      "pivot_px": [
+        9.5,
+        3.4
+      ],
+      "pivot_norm": [
+        0.5,
+        0.1
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        272,
+        289
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "head",
+      "anchor": "neck",
+      "layer": 15,
+      "pivot_px": [
+        26.5,
+        64.6
+      ],
+      "pivot_norm": [
+        0.5,
+        0.95
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        194,
+        91
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "face_eyes",
+      "anchor": "face",
+      "layer": 15,
+      "pivot_px": [
+        28.5,
+        12.0
+      ],
+      "pivot_norm": [
+        0.5,
+        0.5
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        192,
+        104
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "hair_front",
+      "anchor": "hair.front",
+      "layer": 16,
+      "pivot_px": [
+        21.0,
+        36.8
+      ],
+      "pivot_norm": [
+        0.5,
+        0.92
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        199,
+        91
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "upperarm_front",
+      "anchor": "shoulder.front",
+      "layer": 18,
+      "pivot_px": [
+        13.5,
+        3.8
+      ],
+      "pivot_norm": [
+        0.5,
+        0.06
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        262,
+        164
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "forearm_front",
+      "anchor": "elbow.front",
+      "layer": 19,
+      "pivot_px": [
+        11.0,
+        3.6
+      ],
+      "pivot_norm": [
+        0.5,
+        0.06
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        269,
+        228
+      ],
+      "offscreen": false
+    },
+    {
+      "part": "foot_front",
+      "anchor": "ankle.front",
+      "layer": 20,
+      "pivot_px": [
+        14.3,
+        6.2
+      ],
+      "pivot_norm": [
+        0.42,
+        0.22
+      ],
+      "normalized_scale": 1.0,
+      "placed_at": [
+        228,
+        446
+      ],
+      "offscreen": false
+    }
+  ]
+}

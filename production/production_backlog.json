@@ -101,12 +101,13 @@
       "wave": "W2",
       "phase": 2,
       "category": "character",
-      "status": "PLANNED",
+      "status": "IN_PROGRESS",
       "est_generations": 4,
       "deps": [
         "BL-005"
       ],
-      "acceptance": "montagem por JSON, rotacao +-35 sem gap, rig valida no schema"
+      "acceptance": "montagem por JSON, rotacao +-35 sem gap, rig valida no schema",
+      "result": "corpo base masculino montavel; requer correcao de contorno antes de aprovar"
     },
     {
       "id": "BL-011",
@@ -585,13 +586,14 @@
       "wave": "W2",
       "phase": 2,
       "category": "character",
-      "status": "PLANNED",
+      "status": "IN_PROGRESS",
       "est_generations": 6,
       "deps": [
         "BL-004",
         "BL-005"
       ],
-      "acceptance": "21 pecas isoladas, montagem por JSON reproduz o corpo, rotacao \u00b135 em 12 juntas sem gap > 4u, rig valida no schema"
+      "acceptance": "21 pecas isoladas, montagem por JSON reproduz o corpo, rotacao \u00b135 em 12 juntas sem gap > 4u, rig valida no schema",
+      "result": "18 pecas montaveis + rig JSON; G3 PARTIAL (D1-D4). Nao aprovado."
     },
     {
       "id": "BL-007",
@@ -616,13 +618,39 @@
       "est_generations": 0,
       "deps": [],
       "acceptance": "integration_guide e equipment_standard descrevem par espelhado e escala normalizada"
+    },
+    {
+      "id": "BL-015",
+      "title": "Corrigir D1-D4 e rodar teste de rotacao das 12 juntas",
+      "tier": "P0",
+      "wave": "W2",
+      "phase": 2,
+      "category": "character",
+      "status": "PLANNED",
+      "est_generations": 4,
+      "deps": [
+        "BL-010"
+      ],
+      "acceptance": "assembly_report.json com PASS por junta em 8 angulos; contorno >=1,6px em 1x"
+    },
+    {
+      "id": "BL-016",
+      "title": "Automatizar contact sheet por lote (deteccao de troca de identidade)",
+      "tier": "P1",
+      "wave": "W2",
+      "phase": 2,
+      "category": "pipeline",
+      "status": "PLANNED",
+      "est_generations": 0,
+      "deps": [],
+      "acceptance": "tools/contactsheet.py gera folha rotulada a partir de parts.json"
     }
   ],
   "next_up": [
-    "BL-006",
+    "BL-015",
+    "BL-016",
     "BL-007",
-    "BL-008",
-    "BL-010"
+    "BL-008"
   ],
   "last_updated": "2026-10-22"
 }

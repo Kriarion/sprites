@@ -2,12 +2,12 @@
   "$comment": "Manifesto p\u00fablico do pacote. Fonte da verdade detalhada e mut\u00e1vel \u00e9 production/asset_registry.json. Este arquivo lista somente assets APPROVED, com hash, e \u00e9 regenerado por tools/build_manifest.py.",
   "manifest_schema_version": "1.0.0",
   "project": "dragonball-aqw-asset-pack",
-  "pack_version": "0.2.0",
-  "generated_at": "2026-10-22T13:34:16Z",
-  "generated_by": "FASE_1_SESSION_0001",
+  "pack_version": "0.3.0",
+  "generated_at": "2026-10-22T14:04:22Z",
+  "generated_by": "FASE_2_SESSION_0002",
   "standards": {
-    "visual_bible": "1.1.0",
-    "technical": "1.0.0",
+    "visual_bible": "1.2.0",
+    "technical": "1.1.0",
     "naming": "1.0.0",
     "rig": "1.0.0",
     "animation": "1.0.0",
@@ -86,8 +86,21 @@
     }
   ],
   "notes": [
-    "FASE 1 em andamento: 5 assets de REFERENCIA DE ESTILO aprovados. Nenhum asset canonico de jogo.",
-    "Nenhum rig, animacao, mascara de cor ou asset jogavel existe ainda.",
-    "pack 0.2.0 = Visual Bible validada em imagem + pipeline de decomposicao provado (M1 parcial)."
+    "FASE 2 em andamento. 5 referencias de estilo APPROVED; corpo base e rig montados mas NAO aprovados.",
+    "Corpo base: 18 pecas montaveis por dados, coerencia 83,3% (C3 reprovado: contorno fino).",
+    "Nenhum asset canonico de Dragon Ball. Nenhuma animacao. Nenhuma mascara de cor."
+  ],
+  "in_progress": [
+    {
+      "asset_id": "DB_CHAR_BASE_HUMAN_M",
+      "status": "QA_PENDING",
+      "parts": 18,
+      "coherence_score": 83.3
+    },
+    {
+      "asset_id": "DB_RIG_HUMAN_M_001",
+      "status": "QA_PENDING",
+      "bones": 27
+    }
   ]
 }

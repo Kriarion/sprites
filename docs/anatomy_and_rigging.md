@@ -1,6 +1,6 @@
 # ANATOMIA E RIGGING (normativo)
 
-**Versão:** 1.0.0 · **Base:** guia1 §2, guia2 §2, master §7 · **Schema:** `production/schemas/rig.schema.json`
+**Versão:** 1.1.0 · **Base:** guia1 §2, guia2 §2, master §7 · **Schema:** `production/schemas/rig.schema.json`
 
 O corpo é um **paper-doll**: 21 peças independentes, cada uma presa a uma âncora por um pivô. O rig é
 **dado** (JSON), não binário de software — essa é a decisão `ADR-0003`.
@@ -53,9 +53,9 @@ Camadas de efeito (fora do corpo, não contam nas 21):
 root                         (0,0 no chão, eixo de gravidade)
 ├── pelvis                   (+0, +100 u)
 │   ├── spine_low            (+0, +118 u)
-│   │   └── spine_high       (+0, +140 u)
-│   │       ├── neck         (+0, +162 u)
-│   │       │   └── head     (+0, +164 u)
+│   │   └── spine_high       (+0, +142 u)
+│   │       ├── neck         (+0, +164 u)
+│   │       │   └── head     (+0, +166 u)
 │   │       │       ├── face_eyes
 │   │       │       ├── face_mouth
 │   │       │       ├── hair_front
@@ -79,6 +79,7 @@ root                         (0,0 no chão, eixo de gravidade)
 ```
 
 Convenções:
+- Proporção canônica: **5,9 cabeças** (cabeça 34 u em corpo de 200 u) — ADR-0007.
 - `front` = lado **mais próximo do observador** (o lado da tela em 3/4). `back` = lado oposto, escurecido.
 - Nome de bone = nome da âncora correspondente. Sem sinônimos.
 - Cadeias (cauda, capa, cabelo) usam índices de 2 dígitos (`tail.01`).
@@ -88,7 +89,7 @@ Convenções:
 | ID de rig | Arquétipo | Bones | Reutiliza | Particularidades |
 |---|---|---:|---|---|
 | `DB_RIG_HUMAN_M_001` | Humano masculino padrão | 27 | — | base de Goku, Kuririn, Yamcha, Trunks |
-| `DB_RIG_HUMAN_F_001` | Humano feminino padrão | 27 | M_001 (mesma topologia) | quadril +2 u, ombro −8 u, altura 192 u |
+| `DB_RIG_HUMAN_F_001` | Humano feminino padrão | 27 | M_001 (mesma topologia) | quadril +2 u, ombro −8 u, altura 192 u (5,6 cabeças) |
 | `DB_RIG_HUMAN_MUSC_001` | Musculoso | 29 | M_001 + bones de trapézio | ombros 68 u, braço mais grosso |
 | `DB_RIG_HUMAN_CHILD_001` | Infantil | 27 | M_001 | altura 128 u, cabeça 40 u |
 | `DB_RIG_SAIYAN_M_001` | Saiyajin masculino | 30 | M_001 + `tail.01–03` | cauda animável, cabelo com 3 bones |

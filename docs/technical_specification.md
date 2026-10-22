@@ -1,6 +1,6 @@
 # ESPECIFICAÇÃO TÉCNICA (normativa)
 
-**Versão:** 1.0.0 · **Base:** master §18, guia1 §2/§7, guia2 §2/§10
+**Versão:** 1.1.0 · **Base:** master §18, guia1 §2/§7, guia2 §2/§10
 **Escopo:** unidades, escala, resoluções, coordenadas, pivôs, alpha, atlas, performance, metadados.
 
 ---
@@ -38,42 +38,45 @@ Regra de ouro: **reduzir sempre, nunca ampliar**. Se um asset só existe em 1x, 
 
 ### 2.2 Tabela de medidas do humanoide padrão (em u, origem no chão)
 
-| Ponto | y | x (relativo ao centro) | Observação |
-|---|---|---|---|
-| Topo do crânio | 200 | 0 | sem cabelo volumoso |
-| Linha dos olhos | 182 | ±7 | |
-| Base do queixo | 164 | 0 | |
-| **Pescoço (pivô da cabeça)** | **162** | 0 | âncora `neck` |
-| **Ombro (pivô do braço)** | **156** | ±28 | âncora `shoulder.front/back` |
-| Peitoral (linha do mamilo) | 142 | — | |
-| **Cotovelo** | **124** | ±30 | `elbow.*` |
-| Cintura (estreitamento) | 120 | — | |
-| **Quadril (pivô da perna)** | **100** | ±11 | `hip.*` |
-| **Punho** | **94** | ±31 | `wrist.*` |
-| Ponta dos dedos | 80 | — | |
-| **Pelve / root (topo)** | **118** | 0 | |
-| **Joelho** | **56** | ±11 | `knee.*` |
-| **Tornozelo** | **14** | ±11 | `ankle.*` |
-| Planta do pé | 0 | — | |
+**Proporção canônica: 5,9 cabeças** (ADR-0007). Cabeça = **34 u = 17,0%** da altura. Tolerância **±5%**.
+
+| Ponto | y | x (relativo ao centro) | % da altura | Observação |
+|---|---|---|---|---|
+| Topo do crânio | 200 | 0 | 100% | sem cabelo volumoso |
+| Linha dos olhos | 184 | ±7 | 92% | |
+| Base do queixo | 166 | 0 | 83% | |
+| **Pescoço (pivô da cabeça)** | **164** | 0 | 82% | âncora `neck` |
+| **Ombro (pivô do braço)** | **156** | ±28 | 78% | `shoulder.front/back` |
+| Esterno | 144 | — | 72% | |
+| **Cotovelo** | **124** | ±30 | 62% | `elbow.*` |
+| Cintura (estreitamento) | 118 | — | 59% | |
+| **Pelve / pivô do quadril** | **100** | ±11 | 50% | `hip.*`; raiz visual |
+| **Punho** | **94** | ±31 | 47% | `wrist.*` |
+| Ponta dos dedos | 80 | — | 40% | |
+| **Joelho** | **56** | ±11 | 28% | `knee.*` |
+| **Tornozelo** | **14** | ±11 | 7% | `ankle.*` |
+| Planta do pé | 0 | — | 0% | |
 
 Medidas transversais:
 
-| Medida | Valor (u) |
-|---|---|
-| Largura dos ombros (externo a externo) | 56 |
-| Largura do tórax | 46 |
-| Largura da cintura | 34 |
-| Largura do quadril | 40 |
-| Altura da cabeça (crânio+mandíbula) | 36 |
-| Largura da cabeça | 30 |
-| Comprimento do braço (ombro→punho) | 62 |
-| Comprimento da perna (quadril→tornozelo) | 86 |
-| Comprimento do pé | 26 |
-| Largura da mão | 12 · altura 18 |
-| Espessura do braço (superior/antebraço) | 13 / 10 |
-| Espessura da coxa / canela | 17 / 12 |
+| Medida | Valor (u) | % da altura |
+|---|---|---|
+| Largura dos ombros (externo a externo) | 56 | 28% |
+| Largura do tórax | 46 | 23% |
+| Largura da cintura | 34 | 17% |
+| Largura do quadril | 40 | 20% |
+| Altura da cabeça (crânio + mandíbula) | **34** | **17%** |
+| Largura da cabeça | 29 | 14,5% |
+| Comprimento do braço (ombro→punho) | 62 | 31% |
+| Comprimento da perna (quadril→tornozelo) | 86 | 43% |
+| Comprimento do pé | 26 | 13% |
+| Largura da mão | 11 · altura 17 | |
+| Espessura do braço (superior / antebraço) | 13 / 10 | |
+| Espessura da coxa / canela | 17 / 12 | |
 
 > Desvio máximo aceito em montagem: **±5%** na altura total e **±4 u** em qualquer articulação.
+> Razão cabeça/altura aceita: **5,60 a 6,20 cabeças** (5,9 ± 5%).
+> Medição obrigatória por `tools/measure.py` antes do gate G1.
 
 ### 2.3 Conversão
 

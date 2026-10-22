@@ -120,26 +120,109 @@
     }
   },
   "elements": {
-    "ki_standard": { "core": "#FFFFFF", "mid": "#8FE3FF", "edge": "#2E9BFF", "blend": "add" },
-    "kamehameha": { "core": "#FFFFFF", "mid": "#9FE8FF", "edge": "#1F6FE0", "blend": "add" },
-    "ki_evil": { "core": "#FFFFFF", "mid": "#E8B4FF", "edge": "#8A2BE2", "blend": "add" },
-    "fire": { "core": "#FFF8D0", "mid": "#FFC24B", "edge": "#E0411B", "blend": "add" },
-    "electric": { "core": "#FFFFFF", "mid": "#C8F0FF", "edge": "#4FD2FF", "blend": "add" },
-    "divine_god": { "core": "#FFFFFF", "mid": "#FFD9A0", "edge": "#C77BFF", "blend": "screen" },
-    "divine_blue": { "core": "#FFFFFF", "mid": "#A0E4FF", "edge": "#2E6BFF", "blend": "screen" },
-    "hakai": { "core": "#FFFFFF", "mid": "#C9A0FF", "edge": "#5B1FA8", "blend": "add" },
-    "heal_buff": { "core": "#FFFFFF", "mid": "#B8FFD0", "edge": "#2FD07A", "blend": "screen" },
-    "shadow_drain": { "core": "#E9D8FF", "mid": "#6E4B9E", "edge": "#1A0F2B", "blend": "normal" },
-    "dust_smoke": { "core": "#D8C9B4", "mid": "#A8977E", "edge": "#6E6152", "blend": "normal" }
+    "ki_standard": {
+      "core": "#FFFFFF",
+      "mid": "#8FE3FF",
+      "edge": "#2E9BFF",
+      "blend": "add"
+    },
+    "kamehameha": {
+      "core": "#FFFFFF",
+      "mid": "#9FE8FF",
+      "edge": "#1F6FE0",
+      "blend": "add"
+    },
+    "ki_evil": {
+      "core": "#FFFFFF",
+      "mid": "#E8B4FF",
+      "edge": "#8A2BE2",
+      "blend": "add"
+    },
+    "fire": {
+      "core": "#FFF8D0",
+      "mid": "#FFC24B",
+      "edge": "#E0411B",
+      "blend": "add"
+    },
+    "electric": {
+      "core": "#FFFFFF",
+      "mid": "#C8F0FF",
+      "edge": "#4FD2FF",
+      "blend": "add"
+    },
+    "divine_god": {
+      "core": "#FFFFFF",
+      "mid": "#FFD9A0",
+      "edge": "#C77BFF",
+      "blend": "screen"
+    },
+    "divine_blue": {
+      "core": "#FFFFFF",
+      "mid": "#A0E4FF",
+      "edge": "#2E6BFF",
+      "blend": "screen"
+    },
+    "hakai": {
+      "core": "#FFFFFF",
+      "mid": "#C9A0FF",
+      "edge": "#5B1FA8",
+      "blend": "add"
+    },
+    "heal_buff": {
+      "core": "#FFFFFF",
+      "mid": "#B8FFD0",
+      "edge": "#2FD07A",
+      "blend": "screen"
+    },
+    "shadow_drain": {
+      "core": "#E9D8FF",
+      "mid": "#6E4B9E",
+      "edge": "#1A0F2B",
+      "blend": "normal"
+    },
+    "dust_smoke": {
+      "core": "#D8C9B4",
+      "mid": "#A8977E",
+      "edge": "#6E6152",
+      "blend": "normal"
+    }
   },
   "materials": {
-    "metal_polished": { "base": "#9AA6B5", "shadow": "#5C6675", "highlight": "#F2F6FF" },
-    "metal_dark": { "base": "#4A4E58", "shadow": "#25282F", "highlight": "#A8B0BC" },
-    "gold_trim": { "base": "#C9A227", "shadow": "#7D6114", "highlight": "#F1DC8A" },
-    "leather": { "base": "#6B4A32", "shadow": "#3F2A1C", "highlight": "#9C7250" },
-    "cloth": { "base": "#F26B21", "shadow": "#B54A12", "highlight": "#FFA166" },
-    "stone": { "base": "#6E6A63", "shadow": "#43403B", "highlight": "#9A958C" },
-    "wood": { "base": "#8A5A33", "shadow": "#573620", "highlight": "#B98552" }
+    "metal_polished": {
+      "base": "#9AA6B5",
+      "shadow": "#5C6675",
+      "highlight": "#F2F6FF"
+    },
+    "metal_dark": {
+      "base": "#4A4E58",
+      "shadow": "#25282F",
+      "highlight": "#A8B0BC"
+    },
+    "gold_trim": {
+      "base": "#C9A227",
+      "shadow": "#7D6114",
+      "highlight": "#F1DC8A"
+    },
+    "leather": {
+      "base": "#6B4A32",
+      "shadow": "#3F2A1C",
+      "highlight": "#9C7250"
+    },
+    "cloth": {
+      "base": "#F26B21",
+      "shadow": "#B54A12",
+      "highlight": "#FFA166"
+    },
+    "stone": {
+      "base": "#6E6A63",
+      "shadow": "#43403B",
+      "highlight": "#9A958C"
+    },
+    "wood": {
+      "base": "#8A5A33",
+      "shadow": "#573620",
+      "highlight": "#B98552"
+    }
   },
   "ui": {
     "panel_bg": "#14121A",
@@ -161,9 +244,39 @@
     "alert": "#FF5A3C"
   },
   "environments": {
-    "kame_house": { "sky_dawn": "#FFD9A0", "sky_day": "#8FD4F5", "sea": "#2E9BC4", "sand": "#E8D6A8", "palm_green": "#4E8C3A" },
-    "namek": { "sky_green": "#7FD1B0", "ground_blue": "#4E9BB8", "water_green": "#2FA98A", "sky_dusk": "#C98FB0" },
-    "beerus_planet": { "sky_violet": "#3C2C5A", "ground_rose": "#B4708A", "stars": "#F2EFE6" },
-    "tournament_of_power": { "sky_void": "#101018", "arena_white": "#D8D8D0", "arena_shadow": "#8E8E86", "ring_gold": "#C9A227" }
+    "kame_house": {
+      "sky_dawn": "#FFD9A0",
+      "sky_day": "#8FD4F5",
+      "sea": "#2E9BC4",
+      "sand": "#E8D6A8",
+      "palm_green": "#4E8C3A"
+    },
+    "namek": {
+      "sky_green": "#7FD1B0",
+      "ground_blue": "#4E9BB8",
+      "water_green": "#2FA98A",
+      "sky_dusk": "#C98FB0"
+    },
+    "beerus_planet": {
+      "sky_violet": "#3C2C5A",
+      "ground_rose": "#B4708A",
+      "stars": "#F2EFE6"
+    },
+    "tournament_of_power": {
+      "sky_void": "#101018",
+      "arena_white": "#D8D8D0",
+      "arena_shadow": "#8E8E86",
+      "ring_gold": "#C9A227"
+    }
+  },
+  "body_neutral": {
+    "_note": "Rampa de cinza para corpos base/dummies. Nao e personagem: e material de teste e base neutral.",
+    "skin_grey": "#A5ABA1",
+    "skin_grey_shadow": "#6E7469",
+    "skin_grey_highlight": "#CDD2C8",
+    "skin_grey_deep": "#4C5148",
+    "hair_black": "#1B1F1A",
+    "eye_white": "#F0F2EE",
+    "eye_black": "#12140F"
   }
 }

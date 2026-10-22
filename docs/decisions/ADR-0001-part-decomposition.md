@@ -1,6 +1,6 @@
 # ADR-0001 — Decomposição de peças a partir de imagens geradas
 
-- **Status:** Aceita (a validar na `DB-SESSION-0001`)
+- **Status:** Parcialmente substituída pelo `ADR-0006` (2026-10-22). O modo `grid` permanece como secundário.
 - **Data:** 2026-10-22
 - **Decisores:** Diretor de Arte + Technical Artist + Engenheiro de Pipeline
 - **Afeta:** Fases 1–13, orçamento de gerações, gate G2, `tools/decompose.py`

@@ -1,0 +1,410 @@
+{
+  "rig_id": "DB_RIG_HUMAN_M_001",
+  "archetype": "human_male_standard",
+  "version": "1.0.0",
+  "body_height_u": 200,
+  "coordinate_system": "top_left_y_down",
+  "proportion": {
+    "heads_tall": 5.88,
+    "head_u": 34,
+    "head_percent": 17.0,
+    "adr": "ADR-0007"
+  },
+  "bones": [
+    {
+      "id": "root",
+      "parent": null,
+      "x": 0,
+      "y": 0,
+      "length": 0
+    },
+    {
+      "id": "pelvis",
+      "parent": "root",
+      "x": 0,
+      "y": 100,
+      "length": 18
+    },
+    {
+      "id": "spine_low",
+      "parent": "pelvis",
+      "x": 0,
+      "y": 118,
+      "length": 24
+    },
+    {
+      "id": "spine_high",
+      "parent": "spine_low",
+      "x": 0,
+      "y": 142,
+      "length": 22,
+      "min": -25,
+      "max": 25
+    },
+    {
+      "id": "neck",
+      "parent": "spine_high",
+      "x": 0,
+      "y": 164,
+      "length": 2,
+      "min": -25,
+      "max": 30
+    },
+    {
+      "id": "head",
+      "parent": "neck",
+      "x": 0,
+      "y": 166,
+      "length": 34,
+      "min": -35,
+      "max": 35
+    },
+    {
+      "id": "shoulder.front",
+      "parent": "spine_high",
+      "x": 28,
+      "y": 156,
+      "length": 6,
+      "min": -15,
+      "max": 20
+    },
+    {
+      "id": "upperarm.front",
+      "parent": "shoulder.front",
+      "x": 30,
+      "y": 154,
+      "length": 32,
+      "min": -150,
+      "max": 90
+    },
+    {
+      "id": "forearm.front",
+      "parent": "upperarm.front",
+      "x": 31,
+      "y": 124,
+      "length": 30,
+      "min": -150,
+      "max": 0
+    },
+    {
+      "id": "hand.front",
+      "parent": "forearm.front",
+      "x": 31,
+      "y": 94,
+      "length": 17,
+      "min": -60,
+      "max": 60
+    },
+    {
+      "id": "grip.front",
+      "parent": "hand.front",
+      "x": 31,
+      "y": 92,
+      "length": 0
+    },
+    {
+      "id": "shoulder.back",
+      "parent": "spine_high",
+      "x": -28,
+      "y": 156,
+      "length": 6,
+      "min": -15,
+      "max": 20
+    },
+    {
+      "id": "upperarm.back",
+      "parent": "shoulder.back",
+      "x": -30,
+      "y": 154,
+      "length": 32,
+      "min": -150,
+      "max": 90
+    },
+    {
+      "id": "forearm.back",
+      "parent": "upperarm.back",
+      "x": -31,
+      "y": 124,
+      "length": 30,
+      "min": -150,
+      "max": 0
+    },
+    {
+      "id": "hand.back",
+      "parent": "forearm.back",
+      "x": -31,
+      "y": 94,
+      "length": 17,
+      "min": -60,
+      "max": 60
+    },
+    {
+      "id": "grip.back",
+      "parent": "hand.back",
+      "x": -31,
+      "y": 92,
+      "length": 0
+    },
+    {
+      "id": "hip.front",
+      "parent": "pelvis",
+      "x": 11,
+      "y": 100,
+      "length": 10,
+      "min": -120,
+      "max": 45
+    },
+    {
+      "id": "thigh.front",
+      "parent": "hip.front",
+      "x": 11,
+      "y": 100,
+      "length": 44,
+      "min": -120,
+      "max": 45
+    },
+    {
+      "id": "shin.front",
+      "parent": "thigh.front",
+      "x": 11,
+      "y": 56,
+      "length": 42,
+      "min": 0,
+      "max": 145
+    },
+    {
+      "id": "foot.front",
+      "parent": "shin.front",
+      "x": 11,
+      "y": 14,
+      "length": 26,
+      "min": -35,
+      "max": 40
+    },
+    {
+      "id": "hip.back",
+      "parent": "pelvis",
+      "x": -11,
+      "y": 100,
+      "length": 10,
+      "min": -120,
+      "max": 45
+    },
+    {
+      "id": "thigh.back",
+      "parent": "hip.back",
+      "x": -11,
+      "y": 100,
+      "length": 44,
+      "min": -120,
+      "max": 45
+    },
+    {
+      "id": "shin.back",
+      "parent": "thigh.back",
+      "x": -11,
+      "y": 56,
+      "length": 42,
+      "min": 0,
+      "max": 145
+    },
+    {
+      "id": "foot.back",
+      "parent": "shin.back",
+      "x": -11,
+      "y": 14,
+      "length": 26,
+      "min": -35,
+      "max": 40
+    },
+    {
+      "id": "hair.front",
+      "parent": "head",
+      "x": 0,
+      "y": 176,
+      "length": 20
+    },
+    {
+      "id": "hair.back",
+      "parent": "head",
+      "x": 0,
+      "y": 176,
+      "length": 26
+    },
+    {
+      "id": "face",
+      "parent": "head",
+      "x": 0,
+      "y": 184,
+      "length": 0
+    }
+  ],
+  "slots": [
+    {
+      "layer": 2,
+      "anchor": "hair.back",
+      "allowed_categories": [
+        "hair"
+      ]
+    },
+    {
+      "layer": 4,
+      "anchor": "shoulder.back",
+      "allowed_categories": [
+        "arm"
+      ]
+    },
+    {
+      "layer": 5,
+      "anchor": "elbow.back",
+      "allowed_categories": [
+        "arm"
+      ]
+    },
+    {
+      "layer": 6,
+      "anchor": "wrist.back",
+      "allowed_categories": [
+        "hand"
+      ]
+    },
+    {
+      "layer": 7,
+      "anchor": "hip.back",
+      "allowed_categories": [
+        "leg"
+      ]
+    },
+    {
+      "layer": 8,
+      "anchor": "knee.back",
+      "allowed_categories": [
+        "leg",
+        "boots"
+      ]
+    },
+    {
+      "layer": 9,
+      "anchor": "ankle.back",
+      "allowed_categories": [
+        "foot"
+      ]
+    },
+    {
+      "layer": 10,
+      "anchor": "pelvis",
+      "allowed_categories": [
+        "pelvis",
+        "belt"
+      ]
+    },
+    {
+      "layer": 11,
+      "anchor": "spine_low",
+      "allowed_categories": [
+        "torso",
+        "chest"
+      ]
+    },
+    {
+      "layer": 12,
+      "anchor": "hip.front",
+      "allowed_categories": [
+        "leg"
+      ]
+    },
+    {
+      "layer": 13,
+      "anchor": "knee.front",
+      "allowed_categories": [
+        "leg",
+        "boots"
+      ]
+    },
+    {
+      "layer": 14,
+      "anchor": "ankle.front",
+      "allowed_categories": [
+        "foot"
+      ]
+    },
+    {
+      "layer": 15,
+      "anchor": "neck",
+      "allowed_categories": [
+        "head",
+        "face"
+      ]
+    },
+    {
+      "layer": 16,
+      "anchor": "hair.front",
+      "allowed_categories": [
+        "hair",
+        "helm"
+      ]
+    },
+    {
+      "layer": 17,
+      "anchor": "spine_high",
+      "allowed_categories": [
+        "pauldrons"
+      ]
+    },
+    {
+      "layer": 18,
+      "anchor": "shoulder.front",
+      "allowed_categories": [
+        "arm"
+      ]
+    },
+    {
+      "layer": 19,
+      "anchor": "elbow.front",
+      "allowed_categories": [
+        "arm"
+      ]
+    },
+    {
+      "layer": 20,
+      "anchor": "wrist.front",
+      "allowed_categories": [
+        "hand",
+        "gloves"
+      ]
+    },
+    {
+      "layer": 21,
+      "anchor": "grip.front",
+      "allowed_categories": [
+        "weapon"
+      ]
+    }
+  ],
+  "optional_bones": [
+    "cape.01",
+    "cape.02",
+    "cape.03",
+    "tail.01",
+    "tail.02",
+    "tail.03",
+    "wing.front",
+    "wing.back"
+  ],
+  "recolor_masks": [
+    "mask_skin",
+    "mask_hair",
+    "mask_eyes",
+    "mask_cloth",
+    "mask_metal",
+    "mask_energy"
+  ],
+  "compatible_bodies": [
+    "DB_CHAR_BASE_HUMAN_M"
+  ],
+  "approval": {
+    "session": "DB-SESSION-0002",
+    "status": "PENDING_ROTATION_TEST",
+    "report": "production/qa_reports/db_session_0002_20261022.md"
+  }
+}

@@ -1,0 +1,420 @@
+{
+  "asset_id": "DB_CHAR_BASE_HUMAN_M",
+  "version": "0.3.0",
+  "status": "QA_PENDING",
+  "category": "character",
+  "subcategory": "base",
+  "character": null,
+  "continuity": null,
+  "form": "base",
+  "ownership": "original_design",
+  "restrictions": [
+    "non_commercial_study_only"
+  ],
+  "standards": {
+    "visual_bible": "1.2.0",
+    "technical": "1.1.0",
+    "rig": "1.0.0",
+    "naming": "1.0.0"
+  },
+  "scale": {
+    "rig_unit_px_1x": 1,
+    "pixels_per_unit": 2,
+    "body_height_u": 200
+  },
+  "proportion": {
+    "heads_tall": 5.88,
+    "head_u": 34,
+    "adr": "ADR-0007"
+  },
+  "canvas": {
+    "width": 440,
+    "height": 500,
+    "coordinate_system": "top_left_y_down"
+  },
+  "rig": "DB_RIG_HUMAN_M_001",
+  "parts": [
+    {
+      "id": "hair_back",
+      "file": "exports/individual_png/body_m_v1/hair_back.png",
+      "layer": 2,
+      "anchor": "hair.back",
+      "pivot_px": [
+        25.0,
+        7.8
+      ],
+      "pivot_norm": [
+        0.5,
+        0.15
+      ],
+      "size_px": [
+        50,
+        52
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "upperarm_back",
+      "file": "exports/individual_png/body_m_v1/upperarm_back.png",
+      "layer": 4,
+      "anchor": "shoulder.back",
+      "pivot_px": [
+        11.0,
+        3.8
+      ],
+      "pivot_norm": [
+        0.5,
+        0.06
+      ],
+      "size_px": [
+        22,
+        64
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "forearm_back",
+      "file": "exports/individual_png/body_m_v1/forearm_back.png",
+      "layer": 5,
+      "anchor": "elbow.back",
+      "pivot_px": [
+        8.0,
+        3.6
+      ],
+      "pivot_norm": [
+        0.5,
+        0.06
+      ],
+      "size_px": [
+        16,
+        60
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "hand_back",
+      "file": "exports/individual_png/body_m_v1/hand_back.png",
+      "layer": 6,
+      "anchor": "wrist.back",
+      "pivot_px": [
+        33.0,
+        3.4
+      ],
+      "pivot_norm": [
+        0.5,
+        0.1
+      ],
+      "size_px": [
+        66,
+        34
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "thigh_back",
+      "file": "exports/individual_png/body_m_v1/thigh_back.png",
+      "layer": 7,
+      "anchor": "hip.back",
+      "pivot_px": [
+        12.0,
+        4.4
+      ],
+      "pivot_norm": [
+        0.5,
+        0.05
+      ],
+      "size_px": [
+        24,
+        88
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "shin_back",
+      "file": "exports/individual_png/body_m_v1/shin_back.png",
+      "layer": 8,
+      "anchor": "knee.back",
+      "pivot_px": [
+        13.0,
+        4.2
+      ],
+      "pivot_norm": [
+        0.5,
+        0.05
+      ],
+      "size_px": [
+        26,
+        84
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "foot_back",
+      "file": "exports/individual_png/body_m_v1/foot_back.png",
+      "layer": 9,
+      "anchor": "ankle.back",
+      "pivot_px": [
+        17.6,
+        6.2
+      ],
+      "pivot_norm": [
+        0.42,
+        0.22
+      ],
+      "size_px": [
+        42,
+        28
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "pelvis",
+      "file": "exports/individual_png/body_m_v1/pelvis.png",
+      "layer": 10,
+      "anchor": "pelvis",
+      "pivot_px": [
+        25.0,
+        4.8
+      ],
+      "pivot_norm": [
+        0.5,
+        0.12
+      ],
+      "size_px": [
+        50,
+        40
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "torso",
+      "file": "exports/individual_png/body_m_v1/torso.png",
+      "layer": 11,
+      "anchor": "spine_low",
+      "pivot_px": [
+        49.5,
+        91.2
+      ],
+      "pivot_norm": [
+        0.5,
+        0.95
+      ],
+      "size_px": [
+        99,
+        96
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "thigh_front",
+      "file": "exports/individual_png/body_m_v1/thigh_front.png",
+      "layer": 12,
+      "anchor": "hip.front",
+      "pivot_px": [
+        18.5,
+        4.4
+      ],
+      "pivot_norm": [
+        0.5,
+        0.05
+      ],
+      "size_px": [
+        37,
+        88
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "shin_front",
+      "file": "exports/individual_png/body_m_v1/shin_front.png",
+      "layer": 13,
+      "anchor": "knee.front",
+      "pivot_px": [
+        14.5,
+        4.2
+      ],
+      "pivot_norm": [
+        0.5,
+        0.05
+      ],
+      "size_px": [
+        29,
+        84
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "hand_front",
+      "file": "exports/individual_png/body_m_v1/hand_front.png",
+      "layer": 14,
+      "anchor": "wrist.front",
+      "pivot_px": [
+        9.5,
+        3.4
+      ],
+      "pivot_norm": [
+        0.5,
+        0.1
+      ],
+      "size_px": [
+        19,
+        34
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "head",
+      "file": "exports/individual_png/body_m_v1/head.png",
+      "layer": 15,
+      "anchor": "neck",
+      "pivot_px": [
+        26.5,
+        64.6
+      ],
+      "pivot_norm": [
+        0.5,
+        0.95
+      ],
+      "size_px": [
+        53,
+        68
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "face_eyes",
+      "file": "exports/individual_png/body_m_v1/face_eyes.png",
+      "layer": 15,
+      "anchor": "face",
+      "pivot_px": [
+        28.5,
+        12.0
+      ],
+      "pivot_norm": [
+        0.5,
+        0.5
+      ],
+      "size_px": [
+        57,
+        24
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "hair_front",
+      "file": "exports/individual_png/body_m_v1/hair_front.png",
+      "layer": 16,
+      "anchor": "hair.front",
+      "pivot_px": [
+        21.0,
+        36.8
+      ],
+      "pivot_norm": [
+        0.5,
+        0.92
+      ],
+      "size_px": [
+        42,
+        40
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "upperarm_front",
+      "file": "exports/individual_png/body_m_v1/upperarm_front.png",
+      "layer": 18,
+      "anchor": "shoulder.front",
+      "pivot_px": [
+        13.5,
+        3.8
+      ],
+      "pivot_norm": [
+        0.5,
+        0.06
+      ],
+      "size_px": [
+        27,
+        64
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "forearm_front",
+      "file": "exports/individual_png/body_m_v1/forearm_front.png",
+      "layer": 19,
+      "anchor": "elbow.front",
+      "pivot_px": [
+        11.0,
+        3.6
+      ],
+      "pivot_norm": [
+        0.5,
+        0.06
+      ],
+      "size_px": [
+        22,
+        60
+      ],
+      "origin_session": "DB-SESSION-0002"
+    },
+    {
+      "id": "foot_front",
+      "file": "exports/individual_png/body_m_v1/foot_front.png",
+      "layer": 20,
+      "anchor": "ankle.front",
+      "pivot_px": [
+        14.3,
+        6.2
+      ],
+      "pivot_norm": [
+        0.42,
+        0.22
+      ],
+      "size_px": [
+        34,
+        28
+      ],
+      "origin_session": "DB-SESSION-0002"
+    }
+  ],
+  "animations": {},
+  "dependencies": [
+    "DB_RIG_HUMAN_M_001"
+  ],
+  "files": [
+    "exports/individual_png/body_m_v1/parts.json",
+    "characters/rigs/db_rig_human_m_001.rig.json",
+    "exports/previews/assembly_body_m_v1.png",
+    "production/coherence_report.json"
+  ],
+  "provenance": {
+    "session": "DB-SESSION-0002",
+    "method": "generated_single_keyed",
+    "canonical_reference": "nenhuma (corpo base neutro de teste; nao e personagem de Dragon Ball)",
+    "aqw_reference": "ordem de camadas paper-doll; half-shadow; proporcao decidida por medicao"
+  },
+  "qa": {
+    "report": "production/qa_reports/db_session_0002_20261022.md",
+    "gates": {
+      "G0": "PASS",
+      "G1": "PASS",
+      "G2": "PASS",
+      "G3": "PARTIAL",
+      "G4": "PASS"
+    }
+  },
+  "known_defects": [
+    "G3 parcial: monta e e legivel, mas ha folga visivel entre antebraco e mao (pivo de mao por tipo, nao medido na peca)",
+    "face_eyes normalizado por altura esmaga o decal (virou faixa tipo viseira)",
+    "hair_front cobre parcialmente a face (camada 16 sobre cabeca 15 sem recorte)",
+    "C3 reprovado: contorno ~1 px em 1x (padrao pede 1,6-2,8 px) - arte gerada com traco fino",
+    "C5/C6 ok; C1/C2/C4 ok (proporcao 5,88 cabecas por rig)"
+  ],
+  "changelog": [
+    {
+      "version": "0.3.0",
+      "date": "2026-10-22",
+      "note": "corpo base masculino: 18 pecas montaveis (9 frontais + 7 traseiras + cabeca/cabelo/face) + 2 variantes de mao"
+    }
+  ]
+}

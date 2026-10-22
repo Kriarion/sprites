@@ -1,26 +1,26 @@
 {
   "state_schema_version": "1.0.0",
   "project": "dragonball-aqw-asset-pack",
-  "current_phase": "FASE_1_EM_ANDAMENTO",
-  "current_wave": "W1",
+  "current_phase": "FASE_2_EM_ANDAMENTO",
+  "current_wave": "W2",
   "next_wave": "W1",
-  "last_completed_session": "DB-SESSION-0001",
-  "next_session": "DB-SESSION-0002",
+  "last_completed_session": "DB-SESSION-0002",
+  "next_session": "DB-SESSION-0003",
   "standards": {
-    "visual_bible": "1.1.0",
-    "technical": "1.0.0",
+    "visual_bible": "1.2.0",
+    "technical": "1.1.0",
     "naming": "1.0.0",
     "rig": "1.0.0",
     "animation": "1.0.0",
     "ui": "1.0.0",
-    "pack": "0.2.0"
+    "pack": "0.3.0"
   },
   "gen_budget": {
     "max_per_session": 10,
-    "next_session_planned_new": 6,
+    "next_session_planned_new": 4,
     "next_session_reserved": 4,
-    "sessions_completed": 2,
-    "generations_executed_lifetime": 10
+    "sessions_completed": 3,
+    "generations_executed_lifetime": 15
   },
   "approved_assets": [
     "DB_REF_MATERIALS_V1",
@@ -30,7 +30,9 @@
     "DB_REF_STYLE_DUMMY_V1"
   ],
   "pending_assets": [
-    "DB_EQUIP_ARMOR_TESTPLATE_M"
+    "DB_EQUIP_ARMOR_TESTPLATE_M",
+    "DB_CHAR_BASE_HUMAN_M",
+    "DB_RIG_HUMAN_M_001"
   ],
   "blocked_assets": [],
   "reworked_assets": [
@@ -40,72 +42,77 @@
     {
       "id": "ISSUE-001",
       "severity": "resolved",
-      "title": "Separacao de pecas nao validada em imagem",
-      "detail": "RESOLVIDO em 2026-10-22: 9/9 objetos isolados por componentes conexos (G8). Grid r\u00edgida refutada.",
-      "next_action": "aplicar em corpo completo na DB-SESSION-0002"
-    },
-    {
-      "id": "ISSUE-002",
-      "severity": "resolved",
-      "title": "Ferramentas de pipeline nao implementadas",
-      "detail": "RESOLVIDO: key.py, decompose.py, compose.py, validate.py, measure.py, cellstats.py implementados e usados.",
-      "next_action": "atlas.py e build_manifest.py ainda pendentes (nao bloqueiam Fase 2)"
-    },
-    {
-      "id": "ISSUE-003",
-      "severity": "resolved",
-      "title": "Visual Bible nao validada em imagem",
-      "detail": "RESOLVIDO: art_style_guide 1.1.0 calibrada; 5 pranchas aprovadas em references/visual_bible/.",
-      "next_action": "manter controle de drift por overlay e medida"
-    },
-    {
-      "id": "ISSUE-004",
-      "severity": "low",
-      "title": "Sem fontes de sistema para previews com texto",
-      "detail": "fc-list retorna 0 fontes.",
-      "next_action": "decidir em W11; UI e entregue sem texto por desenho"
+      "title": "Separacao de pecas",
+      "detail": "Resolvido: formato de 4 objetos por folha, 100% de extracao.",
+      "next_action": "-"
     },
     {
       "id": "ISSUE-005",
-      "severity": "high",
-      "title": "Rig nao validado e nenhum corpo completo montado",
-      "detail": "O conjunto de teste tem 9 de 21 pecas e G3 FAIL. Nenhuma rotacao de junta foi testada. Marco M1 nao atingido.",
-      "next_action": "DB-SESSION-0002: corpo completo + teste de rotacao \u00b135 em 8 angulos"
+      "severity": "medium",
+      "title": "Rig nao testado em rotacao",
+      "detail": "Rig JSON existe (27 bones) e o corpo monta, mas nenhuma junta foi rotacionada. M1 segue aberto.",
+      "next_action": "DB-SESSION-0003: teste +-35 em 8 angulos nas 12 juntas"
     },
     {
       "id": "ISSUE-006",
-      "severity": "medium",
-      "title": "Escala relativa entre pecas e arbitraria no gerador",
-      "detail": "Montagem direta produziu boneco desmontado. Mitigado por normalizacao anatomica em compose.py, mas a tabela PART_DIMS_U ainda nao foi validada em corpo real.",
-      "next_action": "validar/adjustar PART_DIMS_U com medicoes da DB-SESSION-0002"
+      "severity": "resolved",
+      "title": "Escala relativa entre pecas",
+      "detail": "Resolvido por normalizacao anatomica + dims canonicas (18 pecas consistentes).",
+      "next_action": "-"
     },
     {
-      "id": "ISSUE-007",
+      "id": "ISSUE-008",
+      "severity": "high",
+      "title": "Contorno fino (C3) - sistemico",
+      "detail": "Medido ~1,0 px em 1x contra padrao 1,6-2,8 px. Afeta TODAS as pecas geradas. Coerencia 83,3%.",
+      "next_action": "pedir 3-4 px no mestre; se falhar, dilatar linha 1 px em pos-processamento"
+    },
+    {
+      "id": "ISSUE-009",
       "severity": "medium",
-      "title": "Pares espelhados vem no mesmo objeto",
-      "detail": "Pecas simetricas saem como par L/R. Aceito como mirrored_pair, mas nenhuma engine testou o espelhamento ainda.",
-      "next_action": "documentar mirrored_pair no integration_guide na proxima sessao"
+      "title": "Folga entre antebraco e mao (D1)",
+      "detail": "Pivo de mao e fracao fixa do tipo; nao mede o punho real da peca.",
+      "next_action": "gerar par antebraco+mao (DB-SESSION-0003 G4)"
+    },
+    {
+      "id": "ISSUE-010",
+      "severity": "medium",
+      "title": "Decal de olhos deformado (D2) e cabelo sobre a face (D3)",
+      "detail": "Normalizacao por altura deforma decal largo; hair_front sem recorte cobre o rosto.",
+      "next_action": "normalizar decal por largura + cabelo com recorte"
+    },
+    {
+      "id": "ISSUE-011",
+      "severity": "low",
+      "title": "2 trocas de identidade indice->peca",
+      "detail": "Mao/pe (g3) e cabelo/face (g4) foram detectadas pela folha de contato e corrigidas no spec. Contact sheet passa a ser obrigatoria por lote.",
+      "next_action": "incluir contact sheet no pipeline (feito manualmente nesta sessao)"
     }
   ],
   "next_priorities": [
-    "1. DB-SESSION-0002: corpo completo 21 pecas + montagem + rotacao + rig JSON (6 novas / 4 reserva)",
-    "2. Validar PART_DIMS_U com medicao real e ajustar normalizacao",
+    "1. DB-SESSION-0003: corrigir D1-D4 + teste de rotacao (4 novas / 4 reserva)",
+    "2. Fechar M1 com assembly_report.json (PASS por junta)",
     "3. Implementar tools/atlas.py e tools/build_manifest.py",
-    "4. Fechar M1: exemplos/sample_character/assembly_report.json com PASS por junta",
-    "5. So depois: W3 vertical slice Goku"
+    "4. W3: vertical slice Goku sobre corpo base aprovado",
+    "5. Automatizar contact sheet no pipeline"
   ],
   "decisions_pending_human": [
     {
-      "id": "PENDING-002",
-      "title": "Aprovacao do ADR-0006 (decomposicao por componentes) e do desvio de orcamento",
-      "detail": "7 novas + 3 correcoes em vez de 6+4. Teto de 10 respeitado; a 8a geracao nao estava planejada e mudou a arquitetura."
-    },
-    {
-      "id": "PENDING-003",
-      "title": "Confirmar alvo de proporcao 5,5 cabecas (18,2%) vs 5,89 medido",
-      "detail": "O gerador entrega ~5,9 quando instruido com 18%. Aceitar 5,9 como canonico do pacote ou insistir em 5,5?"
+      "id": "PENDING-004",
+      "title": "Como corrigir o contorno fino (C3)?",
+      "detail": "Opcao A: pedir 3-4 px no prompt (custa geracoes, resultado incerto). Opcao B: pos-processar com dilatacao de 1 px na linha escura (deterministico, sem custo de geracao, muda levemente o traco). Opcao C: aceitar 1 px e revisar o padrao para 0,8-1,0%.",
+      "impact": "afeta TODAS as pecas do pacote; decide o 'peso visual' do jogo"
     }
   ],
   "last_updated": "2026-10-22",
-  "updated_by_session": "DB-SESSION-0001"
+  "updated_by_session": "DB-SESSION-0002",
+  "coherence": {
+    "score": 83.3,
+    "evaluated": 6,
+    "failed": [
+      "C3_outline_weight"
+    ],
+    "report": "production/coherence_report.json",
+    "note": "C3 sistemico (contorno fino). Corrigir antes da Fase 3."
+  }
 }

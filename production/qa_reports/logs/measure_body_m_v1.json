@@ -1,0 +1,19 @@
+{
+  "body_height_px": 369,
+  "head_height_px": 48,
+  "heads_tall": 7.69,
+  "shoulder_width_px": 110,
+  "hip_width_px": 142,
+  "head_height_u": 26.0,
+  "shoulder_width_u": 59.6,
+  "hip_width_u": 77.0,
+  "leg_length_u_est": 99.7,
+  "neck_y_px": 158,
+  "bbox": [
+    113,
+    107,
+    287,
+    475
+  ],
+  "px_per_u": 1.845
+}

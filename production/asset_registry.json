@@ -3,12 +3,12 @@
   "project": "dragonball-aqw-asset-pack",
   "notice": "Fonte da verdade de IDs, status e arquivos. Assets de referencia de estilo aprovados na DB-SESSION-0001; nenhum asset canonico de jogo produzido.",
   "counters": {
-    "total": 7,
+    "total": 9,
     "by_status": {
       "PLANNED": 0,
       "GENERATED": 0,
       "PROCESSING": 0,
-      "QA_PENDING": 1,
+      "QA_PENDING": 3,
       "APPROVED": 5,
       "REWORK_REQUIRED": 1,
       "BLOCKED": 0,
@@ -228,6 +228,101 @@
         "canonical_reference": "nenhuma (design original de teste)",
         "aqw_reference": "ordem de camadas paper-doll"
       }
+    },
+    {
+      "asset_id": "DB_CHAR_BASE_HUMAN_M",
+      "version": "0.3.0",
+      "status": "QA_PENDING",
+      "category": "character",
+      "subcategory": "base",
+      "ownership": "original_design",
+      "restrictions": [
+        "non_commercial_study_only"
+      ],
+      "standards": {
+        "visual_bible": "1.2.0",
+        "technical": "1.1.0",
+        "rig": "1.0.0"
+      },
+      "description": "Corpo base masculino neutro: 18 pecas + 2 variantes de mao, montavel por dados.",
+      "files": [
+        "exports/metadata/db_char_base_human_m.asset.json",
+        "exports/individual_png/body_m_v1/parts.json",
+        "characters/rigs/db_rig_human_m_001.rig.json",
+        "exports/previews/assembly_body_m_v1.png"
+      ],
+      "parts_count": 18,
+      "variants": [
+        "hand_grip",
+        "forearm_fist"
+      ],
+      "proportion": {
+        "heads_tall": 5.88,
+        "head_u": 34,
+        "adr": "ADR-0007"
+      },
+      "coherence": {
+        "score": 83.3,
+        "failed": [
+          "C3_outline_weight"
+        ]
+      },
+      "session": "DB-SESSION-0002",
+      "qa": {
+        "report": "production/qa_reports/db_session_0002_20261022.md",
+        "gates": {
+          "G0": "PASS",
+          "G1": "PASS",
+          "G2": "PASS",
+          "G3": "PARTIAL",
+          "G4": "PASS"
+        }
+      },
+      "known_defects": [
+        "D1 folga punho",
+        "D2 decal olhos esmagado",
+        "D3 cabelo cobre face",
+        "D4 contorno ~1px em 1x"
+      ],
+      "provenance": {
+        "session": "DB-SESSION-0002",
+        "method": "generated_single_keyed",
+        "canonical_reference": "nenhuma (corpo base neutro)",
+        "aqw_reference": "ordem de camadas paper-doll, half-shadow"
+      }
+    },
+    {
+      "asset_id": "DB_RIG_HUMAN_M_001",
+      "version": "1.0.0",
+      "status": "QA_PENDING",
+      "category": "rig",
+      "subcategory": "HUMAN",
+      "ownership": "pipeline_artifact",
+      "restrictions": [
+        "non_commercial_study_only"
+      ],
+      "standards": {
+        "technical": "1.1.0",
+        "rig": "1.0.0"
+      },
+      "description": "Rig humanoide masculino padrao: 27 bones, 19 slots, ROM documentado. Rotacao ainda nao testada.",
+      "files": [
+        "characters/rigs/db_rig_human_m_001.rig.json"
+      ],
+      "session": "DB-SESSION-0002",
+      "qa": {
+        "report": "production/qa_reports/db_session_0002_20261022.md",
+        "gates": {
+          "G0": "PASS",
+          "G1": "n/a",
+          "G2": "PASS",
+          "G3": "PENDING",
+          "G4": "PASS"
+        }
+      },
+      "known_defects": [
+        "teste de rotacao +-35 em 8 angulos nao executado"
+      ]
     }
   ],
   "migrations": []

@@ -1,6 +1,6 @@
 # ADR-0006 — Decomposição por componentes conexos + normalização anatômica
 
-- **Status:** Aceita
+- **Status:** **Aprovada pelo usuário em 2026-10-22**
 - **Data:** 2026-10-22
 - **Substitui parcialmente:** ADR-0001 §2 (grade determinística como modo primário)
 - **Evidência:** `docs/calibration_report.md` §2–§6, logs em `production/qa_reports/logs/`
@@ -95,3 +95,9 @@ Um pivô só é aceito após o **teste de montagem** e o **teste de rotação ±
 - Contorno, cel-shading, luz e paleta (Visual Bible 1.1.0).
 - Entrega neutra PNG + JSON (ADR-0003).
 - Regra de honestidade: peça incompleta não é asset aprovado.
+
+## 7. Registro de aprovação
+
+Aprovada explicitamente pelo usuário em **2026-10-22**, junto da decisão de estabilizar a proporção em
+5,9 cabeças (`ADR-0007`). A aprovação cobre também o desvio de orçamento da `DB-SESSION-0001`
+(7 novas + 3 correções em vez de 6 + 4), com o teto de 10 gerações respeitado.

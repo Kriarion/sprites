@@ -16,10 +16,10 @@
     "rule": "total_executed must equal executed_new + executed_corrections; session must stop at 10"
   },
   "totals": {
-    "sessions_completed": 2,
-    "generations_executed": 10,
+    "sessions_completed": 3,
+    "generations_executed": 15,
     "assets_approved": 5,
-    "generations_per_approved_asset": 2.0
+    "generations_per_approved_asset": 3.0
   },
   "sessions": [
     {
@@ -143,38 +143,97 @@
       "deviation": "1 geracao NOVA alem das 6 planejadas (G8), consumindo 1 da reserva. Teto de 10 respeitado.",
       "notes": "Nenhum asset canonico. Estilo validado; decomposicao por componentes validada; rig nao validado.",
       "next_session": "DB-SESSION-0002"
+    },
+    {
+      "session_id": "DB-SESSION-0002",
+      "date": "2026-10-22",
+      "type": "ANATOMY",
+      "objective": "Corpo humano base montavel (ADR-0006) + rig JSON + montagem",
+      "planned_new": 6,
+      "reserved_corrections": 4,
+      "executed_new": 5,
+      "executed_corrections": 0,
+      "total_executed": 5,
+      "assets_created": [
+        "DB_CHAR_BASE_HUMAN_M",
+        "DB_RIG_HUMAN_M_001"
+      ],
+      "assets_approved": [],
+      "assets_rejected": [],
+      "corrections": [
+        "nenhuma geracao de correcao: defeitos corrigidos em spec/codigo"
+      ],
+      "calls": [
+        {
+          "id": "G1",
+          "file": "g1_body_parts_front.png",
+          "kind": "new",
+          "planned": true,
+          "result": "reprovada: misturou corpo inteiro com pecas"
+        },
+        {
+          "id": "G2",
+          "file": "g2_core4.png",
+          "kind": "new",
+          "planned": true,
+          "result": "4/4 objetos isolados"
+        },
+        {
+          "id": "G3",
+          "file": "g3_limbs4.png",
+          "kind": "new",
+          "planned": true,
+          "result": "4/4 objetos isolados"
+        },
+        {
+          "id": "G4",
+          "file": "g4_head4.png",
+          "kind": "new",
+          "planned": true,
+          "result": "5 componentes (olhos separados), merge aplicado"
+        },
+        {
+          "id": "G5",
+          "file": "g5_back4.png",
+          "kind": "new",
+          "planned": true,
+          "result": "4/4 componentes isolados"
+        },
+        {
+          "id": "G6",
+          "file": "g6_back_hands_feet.png",
+          "kind": "new",
+          "planned": true,
+          "result": "4/4 componentes isolados"
+        }
+      ],
+      "deviation": "1 geracao planejada (G6) nao consumida; 5 de 10 usadas. Reserva intacta.",
+      "notes": "Formato estavel: 4 objetos por folha. Corpo base montavel; C3 (contorno) reprovado.",
+      "next_session": "DB-SESSION-0003"
     }
   ],
   "planned_next": {
-    "session_id": "DB-SESSION-0002",
-    "type": "ANATOMY",
-    "objective": "Corpo humano completo em 21 pecas (ADR-0006) + montagem + teste de rotacao + rig JSON",
-    "planned_new": 6,
+    "session_id": "DB-SESSION-0003",
+    "type": "CORRECTION",
+    "objective": "Corrigir D1-D4 e executar teste de rotacao das 12 juntas",
+    "planned_new": 4,
     "reserved_corrections": 4,
     "calls": [
       {
         "id": "G1",
-        "content": "9 objetos distintos: torso, pelvis, coxa, canela, pe, braco sup, antebraco, mao, cabeca"
+        "content": "corpo frontal com contorno 3-4px no mestre (D4)"
       },
       {
         "id": "G2",
-        "content": "9 objetos distintos: versoes TRASEIRAS (half-shadow) das mesmas pecas"
+        "content": "corpo traseiro half-shadow com contorno grosso (D4)"
       },
       {
         "id": "G3",
-        "content": "cabeca + cabelo frontal/traseiro + 2 expressoes + 4 poses de mao"
+        "content": "cabelo frontal com recorte de rosto + decal de olhos proporcional (D2/D3)"
       },
       {
         "id": "G4",
-        "content": "dummy colorido com 6 mascaras de cor (skin, hair, eyes, cloth, metal, energy)"
-      },
-      {
-        "id": "G5",
-        "content": "3 poses do corpo completo (idle, corrida, ataque) para teste de ROM"
-      },
-      {
-        "id": "G6",
-        "content": "correcao reservada: pec\u0430 que falhar na montagem"
+        "content": "par antebraco+mao unico para eliminar folga (D1)"
       }
     ]
   }

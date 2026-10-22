@@ -1,7 +1,7 @@
 # VISUAL BIBLE — Guia de Estilo (normativo)
 
-**Versão:** 1.1.0 — **calibrada em imagem** na `DB-SESSION-0001`
-**Status:** `VIGENTE` (calibração parcial: estilo validado, proporção com controle numérico)
+**Versão:** 1.2.0 — **proporção estabilizada em 5,9 cabeças** (ADR-0007)
+**Status:** `VIGENTE` (estilo validado em imagem; proporção decidida e mensurável; coerência auditada por `tools/coherence.py`)
 **Base:** `asset_guide1.md` §1, `asset_guide2.md` §1 e §10, `master-prompt.md` §6,
 evidência em `docs/calibration_report.md`
 
@@ -122,17 +122,19 @@ Regra: membro traseiro **nunca** tem brilho próprio; membro frontal concentra o
 
 Referência completa e medidas em `docs/technical_specification.md` §2.
 
-> **CALIBRAÇÃO 1.1.0 (medido na DB-SESSION-0001):** adjetivos **não controlam** proporção.
-> "heroic 5.5-head proportions" produziu **7,5 cabeças** (realista); "exactly 6 heads" supercorrigiu para
-> **4,1**; só **percentual explícito por segmento** funcionou — "head = 18% da altura" entregou **5,89**.
-> Portanto: **todo prompt de corpo declara percentuais medidos**, e toda ficha é verificada por
-> `tools/measure.py` antes do gate G1. Tolerância **±5%**.
+> **DECISÃO 1.2.0 (ADR-0007):** a proporção canônica do pacote é **5,9 cabeças** — a faixa em que o gerador
+> é estável e reproduzível. Adjetivos **não controlam** proporção ("heroic 5.5-head" → 7,5; "exactly 6 heads"
+> → 4,1); só **percentual explícito** funciona ("head = 17%" → 5,88). Portanto: **todo prompt de corpo declara
+> percentuais medidos**, e toda ficha é verificada por `tools/measure.py` antes do gate G1. Tolerância **±5%**
+> (5,60–6,20 cabeças).
+> Estabilidade > ambição: um pacote coerente em 5,9 conversa entre si; um pacote em 5,5 com metade das peças
+> corrigidas não conversa com nada.
 
 Percentuais obrigatórios no prompt (base = altura total do corpo):
 
 | Segmento | Percentual | Equivalente em u (200 u) |
 |---|---:|---:|
-| Cabeça (queixo → topo) | **18,2%** | 36 u |
+| Cabeça (queixo → topo) | **17,0%** | 34 u |
 | Topo do ombro | 78,0% | 156 u |
 | Cintura | 60,0% | 120 u |
 | Quadril | 50,0% | 100 u |
@@ -143,7 +145,7 @@ Percentuais obrigatórios no prompt (base = altura total do corpo):
 
 Resumo do cânone:
 
-- Altura total **200 u**; cabeça **36 u** → **5,5 cabeças** (heroico estilizado, não realista 7,5).
+- Altura total **200 u**; cabeça **34 u** → **5,9 cabeças** (heroico estilizado, não realista 7,5).
 - Cabeça **maior** que o real: destaca cabelo, capacete e expressão (exigência do guia 1).
 - Ombros **56 u** de largura; mãos **18 u**; pés **26 u** de comprimento (grandes e estáveis).
 - Tronco atlético em "V" suave; cintura 34 u; quadril 40 u.
@@ -245,7 +247,7 @@ Prompting"; aqui eles foram adaptados para **grade determinística** (ADR-0001) 
 |---|---|
 | Contorno 2 px a 1x, constante | Contorno "orgânico" variável por humor |
 | 1 sombra + 1 brilho por material | Gradiente para "dar volume" |
-| Cabeça 5,5× no corpo | Proporção realista 8 cabeças |
+| Cabeça 5,9× no corpo | Proporção realista 7,5+ cabeças |
 | Membro traseiro escurecido | Braço de trás com brilho próprio |
 | Arma 60–120% da altura | Arma "realista" pequena |
 | Ícone com 1 ideia, 64 px legível | Ícone com 8 detalhes e texto |
@@ -266,6 +268,7 @@ Prompting"; aqui eles foram adaptados para **grade determinística** (ADR-0001) 
 | Silhueta legível / armas oversized | ✅ confirmado | arma de 2 mãos > 100% da altura do corpo |
 | Fundo magenta keyable | ✅ confirmado | halo 0,0% em 5 de 6 folhas |
 | **Proporção 5,5 cabeças por adjetivo** | ❌ **refutado** | ver §5.1 — usar percentual explícito |
+| **Proporção 5,9 cabeças por percentual** | ✅ **adotado** (ADR-0007) | "head = 17%" → 5,88 medido |
 | **Peças simétricas saírem singulares** | ❌ **refutado** | o gerador desenha pares L/R; ver `ADR-0006` |
 
 Regras refutadas não foram removidas: foram **substituídas por controle numérico** (proporção) e por
@@ -285,3 +288,20 @@ Um asset passa no G1 somente se **todos** forem verdadeiros:
 - [ ] Zero artefato: sem membro extra, sem fusão, sem dedo a mais, sem texto.
 
 Reprovação é registrada com o motivo exato (`production/qa_reports/`), não com "ficou estranho".
+
+## 13. Coerência entre assets — a regra que faz o pacote "conversar"
+
+Um asset bonito isolado é inútil se não encaixa. Ficam instituídos seis invariantes medidos
+(`docs/coherence_standard.md`), auditados por `tools/coherence.py` em **toda** sessão:
+
+| # | Invariante | Tolerância |
+|---|---|---|
+| C1 | Escala em u | 200 u ±5%, `pixels_per_unit` ∈ {1,2,4} |
+| C2 | Proporção 5,9 cabeças | ±5% na razão, ±4 u nas articulações |
+| C3 | Peso de contorno | 0,9–1,3% da altura |
+| C4 | Paleta | ΔH ≤ 8°, ΔS ≤ 10°, ΔV ≤ 10% |
+| C5 | Half-shadow | traseira ≤ 80% da luminância da frontal |
+| C6 | Estrutura (âncora/camada/pivô) | 100% |
+
+**Nenhum asset é `APPROVED` com invariante fora de tolerância.** Se um invariante falha em todos os
+assets, o padrão está errado — e revisa-se o padrão por ADR, não o asset por conveniência.

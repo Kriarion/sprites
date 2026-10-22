@@ -39,15 +39,17 @@ BODY_H = 200
 # Usadas para normalizar pecas geradas em escalas arbitrarias (cada celula e desenhada
 # "preenchendo" seu espaco, entao a escala relativa entre pecas NAO e confiavel).
 PART_DIMS_U = {
-    "head": (30, 36), "hair_front": (34, 20), "hair_back": (34, 26), "helm": (32, 24),
+    # Proporcao canonica 5,9 cabecas / 200 u (ADR-0007, technical_specification.md 2.2)
+    "head": (29, 34), "hair_front": (33, 20), "hair_back": (33, 26), "helm": (31, 24),
     "torso": (46, 48), "chest": (46, 48), "pelvis": (40, 20), "pelvis_belt": (40, 20),
     "thigh_front": (17, 44), "thigh_back": (17, 44), "thigh_guard": (19, 40),
     "shin_front": (12, 42), "shin_back": (12, 42), "shin_greave": (14, 38),
     "foot_front": (26, 14), "foot_back": (26, 14), "boot_single": (26, 32),
     "upperarm_front": (13, 32), "upperarm_back": (13, 32),
     "forearm_front": (10, 30), "forearm_back": (10, 30), "forearm_bracer": (12, 28),
-    "hand_front": (12, 18), "hand_back": (12, 18), "hand_open": (12, 18), "glove_single": (12, 18),
+    "hand_front": (11, 17), "hand_back": (11, 17), "hand_open": (11, 17), "glove_single": (11, 17),
     "pauldron_single": (20, 18), "pauldrons": (56, 18),
+    "face_eyes": (29, 12), "hand_grip": (11, 17), "forearm_fist": (11, 15),
     "weapon_01": (40, 120), "weapon_02": (40, 120), "weapon_03": (20, 130), "weapon_04": (10, 90),
 }
 
@@ -64,15 +66,22 @@ def compose(parts_doc: dict, directory: Path, scale: float, body_h: int = BODY_H
         ax, ay = ANCHORS[anchor]
         return canvas_w / 2 + ax * scale, canvas_h - 20 - ay * scale
 
+    # deslocamento de profundidade: pecas traseiras sao levemente deslocadas (leitura 3/4 + half-shadow)
+    DEPTH_OFFSET_U = {"back": (-6, -2)}
+
     for p in sorted(parts, key=lambda q: (q.get("layer") or 0)):
+        pname0 = p.get("part") or p.get("id")
+        if p.get("variant"):
+            continue
         f = directory / p["file"]
         if not f.exists():
             continue
         piece = Image.open(f).convert("RGBA")
         # normalizacao anatomica: escala a peca para a dimensao canonica do seu tipo
         k = 1.0
-        if normalize and p["part"] in PART_DIMS_U:
-            tw_u, th_u = PART_DIMS_U[p["part"]]
+        pname = p.get("part") or p.get("id")
+        if normalize and pname in PART_DIMS_U:
+            tw_u, th_u = PART_DIMS_U[pname]
             target_h = int(round(th_u * scale))
             k = target_h / piece.height
             piece = piece.resize((max(1, int(piece.width * k)), max(1, target_h)),
@@ -84,10 +93,13 @@ def compose(parts_doc: dict, directory: Path, scale: float, body_h: int = BODY_H
         else:
             px, py = p["pivot_px"][0] * k, p["pivot_px"][1] * k
         ax, ay = anchor_px(p["anchor"])
+        if str(p["anchor"]).endswith(".back"):
+            dx, dy = DEPTH_OFFSET_U["back"]
+            ax, ay = ax + dx * scale, ay - dy * scale
         left, top = int(round(ax - px)), int(round(ay - py))
         img.alpha_composite(piece, dest=(max(left, 0), max(top, 0)))
         report.append({
-            "part": p["part"], "anchor": p["anchor"], "layer": p["layer"],
+            "part": pname, "anchor": p["anchor"], "layer": p["layer"],
             "pivot_px": p.get("pivot_px"), "pivot_norm": p.get("pivot_norm"),
             "normalized_scale": round(k, 3), "placed_at": [left, top],
             "offscreen": left < 0 or top < 0,

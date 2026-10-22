@@ -1,0 +1,225 @@
+{
+  "log": [
+    {
+      "sheet": "g2_core4",
+      "part": "torso",
+      "bbox_src": [
+        58,
+        43,
+        698,
+        662
+      ],
+      "out": "torso.png"
+    },
+    {
+      "sheet": "g2_core4",
+      "part": "pelvis",
+      "bbox_src": [
+        889,
+        56,
+        1248,
+        344
+      ],
+      "out": "pelvis.png"
+    },
+    {
+      "sheet": "g2_core4",
+      "part": "upperarm_front",
+      "bbox_src": [
+        835,
+        394,
+        973,
+        721
+      ],
+      "out": "upperarm_front.png"
+    },
+    {
+      "sheet": "g2_core4",
+      "part": "forearm_front",
+      "bbox_src": [
+        1174,
+        417,
+        1285,
+        722
+      ],
+      "out": "forearm_front.png"
+    },
+    {
+      "sheet": "g3_limbs4",
+      "part": "thigh_front",
+      "bbox_src": [
+        56,
+        41,
+        345,
+        727
+      ],
+      "out": "thigh_front.png"
+    },
+    {
+      "sheet": "g3_limbs4",
+      "part": "shin_front",
+      "bbox_src": [
+        429,
+        108,
+        637,
+        702
+      ],
+      "out": "shin_front.png"
+    },
+    {
+      "sheet": "g3_limbs4",
+      "part": "hand_front",
+      "bbox_src": [
+        1081,
+        136,
+        1352,
+        626
+      ],
+      "out": "hand_front.png"
+    },
+    {
+      "sheet": "g3_limbs4",
+      "part": "foot_front",
+      "bbox_src": [
+        723,
+        410,
+        1076,
+        702
+      ],
+      "out": "foot_front.png"
+    },
+    {
+      "sheet": "g4_head4",
+      "part": "head",
+      "bbox_src": [
+        213,
+        30,
+        474,
+        362
+      ],
+      "out": "head.png"
+    },
+    {
+      "sheet": "g4_head4",
+      "part": "hair_front",
+      "bbox_src": [
+        856,
+        43,
+        1193,
+        362
+      ],
+      "out": "hair_front.png"
+    },
+    {
+      "sheet": "g4_head4",
+      "part": "hair_back",
+      "bbox_src": [
+        185,
+        412,
+        503,
+        740
+      ],
+      "out": "hair_back.png"
+    },
+    {
+      "sheet": "g4_head4",
+      "part": "face_eyes",
+      "bbox_src": [
+        860,
+        506,
+        1033,
+        645
+      ],
+      "out": "face_eyes.png"
+    },
+    {
+      "sheet": "g5_back4",
+      "part": "upperarm_back",
+      "bbox_src": [
+        114,
+        48,
+        239,
+        404
+      ],
+      "out": "upperarm_back.png"
+    },
+    {
+      "sheet": "g5_back4",
+      "part": "forearm_back",
+      "bbox_src": [
+        802,
+        92,
+        1294,
+        222
+      ],
+      "out": "forearm_back.png"
+    },
+    {
+      "sheet": "g5_back4",
+      "part": "shin_back",
+      "bbox_src": [
+        1164,
+        317,
+        1287,
+        720
+      ],
+      "out": "shin_back.png"
+    },
+    {
+      "sheet": "g5_back4",
+      "part": "thigh_back",
+      "bbox_src": [
+        114,
+        427,
+        1029,
+        678
+      ],
+      "out": "thigh_back.png"
+    },
+    {
+      "sheet": "g6_back_hands_feet",
+      "part": "hand_back",
+      "bbox_src": [
+        82,
+        56,
+        634,
+        340
+      ],
+      "out": "hand_back.png"
+    },
+    {
+      "sheet": "g6_back_hands_feet",
+      "part": "foot_back",
+      "bbox_src": [
+        813,
+        53,
+        1274,
+        362
+      ],
+      "out": "foot_back.png"
+    },
+    {
+      "sheet": "g6_back_hands_feet",
+      "part": "hand_grip",
+      "bbox_src": [
+        81,
+        438,
+        628,
+        688
+      ],
+      "out": "hand_grip.png"
+    },
+    {
+      "sheet": "g6_back_hands_feet",
+      "part": "forearm_fist",
+      "bbox_src": [
+        730,
+        450,
+        1354,
+        700
+      ],
+      "out": "forearm_fist.png"
+    }
+  ],
+  "issues": []
+}
